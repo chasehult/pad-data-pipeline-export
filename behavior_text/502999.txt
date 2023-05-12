@@ -1,0 +1,27 @@
+#502999 - Hell Eye's Evil Duchess, Gremory
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 502999
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (36600:83) This is the end of the line! + I'll capture you here and now!
+ | Void damage >= 150,000 for 4 turns + ATK -50% for 3 turns
+ group:
+ | group:
+   | condition: 33% chance
+   | (36607:109) Mysterious Scythe
+   | Random 1 orbs change every 1.0s for 1 turn, Deal 80% damage
+   | condition: 33% chance
+   | (36608:92) Mysterious Darkness
+   | Spawn 3 random Dark orbs, Deal 100% damage
+   | condition: 34% chance
+   | (36606:92) Mysterious Words
+   | Spawn 3 random Dark and Heal orbs, Deal 100% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | (36603:83) Heheh, playtime is over! + I'll get serious now!
+   | Reduce damage from all sources by 75% for 3 turns + Increase damage to 150% for the next 3 turns

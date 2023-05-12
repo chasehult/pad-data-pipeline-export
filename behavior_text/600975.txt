@@ -1,0 +1,24 @@
+#600975 - Blue Pirate Dragon, Awilda
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 600975
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (36392:83) Be ye ready?! + Hand o'er the Blue Rose!
+ | ATK -50% for 3 turns + Absorb Water damage for 3 turns
+ group:
+ | group:
+   | condition: 50% chance
+   | (36398:77) Blue Saber
+   | Change the 1st column to Water orbs, Deal 80% damage
+   | condition: 50% chance
+   | (36399:15) Brilliant Slash
+   | Deal 100% damage (4 hits, 25% each)
+ | group:
+ | condition: turn 1, hp <= 49
+   | (36395:83) Ye dunno when to give up, do ye?! + I'll trample ye!
+   | Increase damage to 150% for the next 3 turns + Player -50% HP

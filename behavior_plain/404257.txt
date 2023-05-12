@@ -1,0 +1,76 @@
+#404257 - Cyclonic Demon Princess, Fujin
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:42831) -> Protection of the Demon Princess
+	Voids status ailments for 999 turns
+	[1] ESAbsorbThresholdBig(138:42832) -> Wild Wind
+	Absorb damage when damage >= 1,000,000,000 for 3 turns
+	[2] ESDebuffATKTarget(143:42833) -> Green-Horned Whirlwind
+	For 3 turns, 50% ATK for 4 random cards, Deal 100% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 16
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 14
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 3, target rnd 10
+
+#7: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESCloud(104:42837) -> Cloud Barrier of the Jade Princess
+	A row of clouds appears for 1 turn at a random location
+	[1] ESTargetedSkillHaste(139:42838) -> Peerless Pinwheel
+	Haste all cards' skills by 1~2 turns, Deal 100% damage
+
+#8: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESCloud(104:42840) -> Cloud Barrier of the Jade Princess
+	A 2×2 square of clouds appears for 1 turn at a random location
+	[1] ESSkillDelay(89:42841) -> Peerless Pinwheel
+	Delay active skills by 1~2 turns, Deal 100% damage
+
+#9: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#10: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+
+#11: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#12: ESAbsorbAttribute(53:42835) -> Tempestuous Wind
+Absorb Fire and Wood damage for 4 turns, Deal 125% damage
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESAttackMultihit(15:42834) -> Great Cyclonic Wind
+Deal 1,000% damage (10 hits, 100% each)
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: SkillSet:
+	[0] ESBindAwoken(88:42623) -> Longevity Surge
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:42624) -> Universal Demise
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESResolve(73:42619) -> Resolve
+Survive attacks with 1 HP when HP > 50%

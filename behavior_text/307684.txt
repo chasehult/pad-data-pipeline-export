@@ -1,0 +1,29 @@
+#307684 - Mega Awoken Sunset God, Aten's Gem
+monster size: 4
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 307684
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (37038:129) Super Resolve
+ | Damage which would reduce HP from above 50% to below 50% is nullified
+ | (37020:72) Dark reduced
+ | Reduce damage from Dark attrs by 50%
+ type: PREEMPT
+ | (37360:20) Mystic Gem
+ | Voids status ailments for 999 turns
+ group:
+ | group:
+   | (37363:46) Aurora Flash
+   | Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | (42523:143) Mystic Light Source
+   | For 3 turns, 1% ATK for 1 random card, Deal 200% damage
+ type: REMAINING
+ condition: when 1 enemies remain, always turn 1
+ | (37364:17) Gem's Miracle
+ | Increase damage to 1,000% for the next 999 turns

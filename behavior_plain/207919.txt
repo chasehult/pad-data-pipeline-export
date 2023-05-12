@@ -1,0 +1,259 @@
+#207919 - Sadaharu Inui
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level >= 2, target rnd 32
+
+#3: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+#4: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#5: SkillSet:
+	[0] ESDebuffMovetime(39:29982) -> Zoning practice through rally
+	Movetime 300% for 99 turns
+	[1] ESBoardChange(84:29983) -> If you're still standing after five shots, you win.
+	Change all orbs to Fire
+	[2] ESRandomSpawn(92:29984) -> First Shot
+	Spawn 4 random Water orbs
+
+#6: ESBranchAttrOnBoard(133:30053) -> ESBranchAttrOnBoard
+Branch on attributes on board HAS 0, target rnd 21
+
+#7: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 4, target rnd 19
+
+#8: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 17
+
+#9: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 15
+
+#10: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 13
+
+#11: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#12: SkillSet:
+	[0] ESBoardChange(84:30052) -> Next!
+	Change all orbs to Fire
+	[1] ESRandomSpawn(92:29986) -> Second Shot
+	Spawn 5 random Water orbs
+
+#13: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#14: SkillSet:
+	[0] ESBoardChange(84:30052) -> Next!
+	Change all orbs to Fire
+	[1] ESRandomSpawn(92:29988) -> Third Shot
+	Spawn 6 random Water orbs
+
+#15: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#16: SkillSet:
+	[0] ESBoardChange(84:30052) -> Next!
+	Change all orbs to Fire
+	[1] ESRandomSpawn(92:29990) -> Fourth Shot
+	Spawn 7 random Water orbs
+
+#17: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#18: SkillSet:
+	[0] ESBoardChange(84:29992) -> This is the last.
+	Change all orbs to Fire
+	[1] ESRandomSpawn(92:29993) -> Fifth Shot
+	Spawn 8 random Water orbs
+
+#19: ESEndBattle(40:29994) -> Great Job.
+Reduce self HP to 0
+
+#20: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#21: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 4, target rnd 29
+
+#22: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 28
+
+#23: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 27
+
+#24: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 26
+
+#25: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBoardChange(84:30431) -> Let's try that again.
+	Change all orbs to Fire
+	[1] ESRandomSpawn(92:29984) -> First Shot
+	Spawn 4 random Water orbs
+
+#26: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBoardChange(84:30431) -> Let's try that again.
+	Change all orbs to Fire
+	[1] ESRandomSpawn(92:29986) -> Second Shot
+	Spawn 5 random Water orbs
+
+#27: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBoardChange(84:30431) -> Let's try that again.
+	Change all orbs to Fire
+	[1] ESRandomSpawn(92:29988) -> Third Shot
+	Spawn 6 random Water orbs
+
+#28: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBoardChange(84:30431) -> Let's try that again.
+	Change all orbs to Fire
+	[1] ESRandomSpawn(92:29990) -> Fourth Shot
+	Spawn 7 random Water orbs
+
+#29: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBoardChange(84:30431) -> Let's try that again.
+	Change all orbs to Fire
+	[1] ESRandomSpawn(92:29993) -> Fifth Shot
+	Spawn 8 random Water orbs
+
+#30: ESGravity(50:29996) -> How unfortunate... This is the end for you.
+Player -500% HP
+
+#31: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#32: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 35
+
+#33: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#34: SkillSet:
+	[0] ESDebuffMovetime(39:29982) -> Zoning practice through rally
+	Movetime 300% for 99 turns
+	[1] ESFixedStart(101:30054) -> If you're still standing after five shots, you win.
+	Fix orb movement starting point to random position on the board
+	[2] ESRandomSpawn(92:29998) -> First Shot
+	Spawn 4 random Water orbs
+
+#35: ESBranchAttrOnBoard(133:30053) -> ESBranchAttrOnBoard
+Branch on attributes on board HAS 0, target rnd 50
+
+#36: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 4, target rnd 48
+
+#37: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 46
+
+#38: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 44
+
+#39: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 42
+
+#40: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#41: SkillSet:
+	[0] ESFixedStart(101:30055) -> Next!
+	Fix orb movement starting point to random position on the board
+	[1] ESRandomSpawn(92:30000) -> Second Shot
+	Spawn 5 random Water orbs
+
+#42: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#43: SkillSet:
+	[0] ESFixedStart(101:30056) -> Next!
+	Fix orb movement starting point to random position on the board
+	[1] ESRandomSpawn(92:30002) -> Third Shot
+	Spawn 6 random Water orbs
+
+#44: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#45: SkillSet:
+	[0] ESFixedStart(101:30418) -> Next!
+	Fix orb movement starting point to random position on the board
+	[1] ESRandomSpawn(92:30004) -> Fourth Shot
+	Spawn 7 random Water orbs
+
+#46: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#47: SkillSet:
+	[0] ESFixedStart(101:30006) -> This is the last.
+	Fix orb movement starting point to random position on the board
+	[1] ESRandomSpawn(92:30007) -> Fifth Shot
+	Spawn 8 random Water orbs
+
+#48: ESEndBattle(40:29994) -> Great Job.
+Reduce self HP to 0
+
+#49: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#50: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 4, target rnd 58
+
+#51: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 57
+
+#52: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 56
+
+#53: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 55
+
+#54: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESFixedStart(101:29995) -> Let's try that again.
+	Fix orb movement starting point to random position on the board
+	[1] ESRandomSpawn(92:29998) -> First Shot
+	Spawn 4 random Water orbs
+
+#55: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESFixedStart(101:30457) -> Let's try that again.
+	Fix orb movement starting point to random position on the board
+	[1] ESRandomSpawn(92:30000) -> Second Shot
+	Spawn 5 random Water orbs
+
+#56: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESFixedStart(101:30458) -> Let's try that again.
+	Fix orb movement starting point to random position on the board
+	[1] ESRandomSpawn(92:30002) -> Third Shot
+	Spawn 6 random Water orbs
+
+#57: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESFixedStart(101:30459) -> Let's try that again.
+	Fix orb movement starting point to random position on the board
+	[1] ESRandomSpawn(92:30004) -> Fourth Shot
+	Spawn 7 random Water orbs
+
+#58: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESFixedStart(101:30460) -> Let's try that again.
+	Fix orb movement starting point to random position on the board
+	[1] ESRandomSpawn(92:30007) -> Fifth Shot
+	Spawn 8 random Water orbs
+
+#59: ESGravity(50:29996) -> How unfortunate... This is the end for you.
+Player -500% HP
+
+#60: ESEndPath(36:26) -> ESEndPath
+end_turn

@@ -1,0 +1,33 @@
+#508935 - Pang Nuan
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 508935
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (39434:129) ＿Fixed Team Super Resolve
+ | Damage which would reduce HP from above 50% to below 50% is nullified
+ type: PREEMPT
+ | (39061:83) I come, Wang Yi! + I shall kill thee!
+ | Locked random skyfall +25% for 5 turns + Change the 1st and 6th columns to Fire orbs
+ group:
+ | group:
+ | condition: always turn 1
+   | (39064:83) There is only one on earth whom the heavens fear. + Only me.
+   | A row of clouds appears for 1 turn at 1st row, 1st column + Blind all orbs on the board, Deal 100% damage
+ | group:
+   | group:
+   | condition: execute repeatedly, turn 1 of 2
+     | (39067:15) A waste of breath.
+     | Deal 90% damage (2 hits, 45% each)
+   | group:
+   | condition: execute repeatedly, turn 2 of 2
+     | (39071:107) I shall allow no complaints.
+     | Unable to match Water orbs for 1 turn, Deal 80% damage
+ | group:
+ | condition: turn 2, hp <= 49
+   | (39068:83) This is precisely... + ...why war is worthless.
+   | No skyfall for 3 turns + RCV 50% for 3 turns, Deal 75% damage

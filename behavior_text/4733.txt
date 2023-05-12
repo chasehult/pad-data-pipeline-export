@@ -16,25 +16,25 @@ level: 1
  group:
  | group:
    | condition: 20% chance
-   | (11071:83) Longing for Life + Demonic Region
+   | (11071:83) Longing for Life + Demonic Realm
    | Void damage >= 15,000,000 for 1 turn + Seal the 1st row for 1 turn, Deal 100% damage
    | condition: 20% chance
    | (11072:83) Starvation + Meteor Shower
    | Absorb damage when damage >= 20,000,000 for 1 turn + Water and Wood skyfall +20% for 1 turn, Deal 105% damage
    | condition: 4% chance
-   | (11073:83) Scaly Transformation + Required Force
+   | (11073:83) Scaly Transformation + Desire for Power
    | Absorb Fire damage for 1 turn + Change a random attribute to Fire orbs, Deal 102% damage
    | condition: 4% chance
-   | (11074:83) Scaly Transformation + Required Force
+   | (11074:83) Scaly Transformation + Desire for Power
    | Absorb Water damage for 1 turn + Change a random attribute to Water orbs, Deal 102% damage
    | condition: 4% chance
-   | (11075:83) Scaly Transformation + Required Force
+   | (11075:83) Scaly Transformation + Desire for Power
    | Absorb Wood damage for 1 turn + Change a random attribute to Wood orbs, Deal 102% damage
    | condition: 4% chance
-   | (11076:83) Scaly Transformation + Required Force
+   | (11076:83) Scaly Transformation + Desire for Power
    | Absorb Light damage for 1 turn + Change a random attribute to Light orbs, Deal 102% damage
    | condition: 4% chance
-   | (11077:83) Scaly Transformation + Required Force
+   | (11077:83) Scaly Transformation + Desire for Power
    | Absorb Dark damage for 1 turn + Change a random attribute to Dark orbs, Deal 102% damage
    | condition: 20% chance
    | (11078:83) Withering Hope + Clouds of Yonder
@@ -44,7 +44,7 @@ level: 1
    | Reduce damage from all sources by 75% for 1 turn + Change all orbs to Heal, Deal 150% damage
  | group:
  | condition: turn 1 while HP > 19, hp <= 49
-   | (11292:83) Life Constricting + Glint of Despair
+   | (11292:83) Life Constriction + Glint of Despair
    | Player -99% HP + Delay active skills by 0~7 turns
  | group:
  | condition: hp <= 19

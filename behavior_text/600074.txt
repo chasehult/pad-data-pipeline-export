@@ -1,0 +1,14 @@
+#600074 - White Fighter
+monster size: 1
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 600074
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (2637:73) Takemi Resolve
+ | Survive attacks with 1 HP when HP > 50%
+ | (1774:72) Halve Light
+ | Reduce damage from Light attrs by 50%

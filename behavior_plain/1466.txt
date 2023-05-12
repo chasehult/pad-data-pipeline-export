@@ -22,11 +22,11 @@ flag SET 0b1
 #6: ESBindSkill(14:1608) -> Silent Smile
 Bind active skills for 5 turns
 
-#7: ESInactivity66(66:1799) -> Go Away-TAMA!
+#7: ESInactivity66(66:1799) -> Go away-TAMA...
 Do nothing
 
 #8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-#9: ESAttackMultihit(15:1250) -> Soler Lazer
+#9: ESAttackMultihit(15:1250) -> Solar Laser
 Deal 100% damage

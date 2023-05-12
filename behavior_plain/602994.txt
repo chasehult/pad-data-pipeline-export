@@ -1,0 +1,44 @@
+#602994 - Great Earl of Hell, Ronove
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESSkyfall(68:36628) -> Behold the awakening of our lord!
+	Jammer skyfall +10% for 3 turns
+	[1] ESSkillDelay(89:36629) -> Offer your souls in sacrifice!
+	Delay active skills by 2 turns
+
+#3: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 7
+
+#4: ESOrbChangeAttackBits(108:36560) -> High-pitched Shout
+Condition: 50% chance (ai:0 rnd:50)
+Change all Jammer orbs to Dark orbs, Deal 120% damage
+
+#5: ESRandomSpawn(92:36561) -> Death Growl
+Condition: 50% chance & when Fire, Water, Light, Poison, or Mortal Poison orbs are on the board (ai:0 rnd:50)
+Spawn 3 random Wood, Dark, and Jammer orbs, Deal 100% damage
+
+#6: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#7: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 4
+
+#8: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#9: SkillSet:
+	[0] ESDamageShield(74:36631) -> You damn punks!
+	Reduce damage from all sources by 75% for 2 turns
+	[1] ESDebuffATK(130:36632) -> Get drunk off the beat!
+	ATK -75% for 2 turns
+
+#10: ESEndPath(36:26) -> ESEndPath
+end_turn

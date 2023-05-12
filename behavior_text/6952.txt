@@ -8,29 +8,29 @@ approved: False
 
 level: 1
  type: PREEMPT
- | (22574:83) It's against my beliefs to fight the weak. + Please just get out of my way.
+ | (22574:83) 弱き者と矛を交えるなど道義に反する + そこをどいてはもらえまいか？
  | Voids status ailments for 999 turns + Seal the 1st row for 4 turns
  group:
  | group:
    | condition: 33% chance
-   | (22580:104) I am a god!
+   | (22580:104) 我は神なるぞ！
    | A 1×3 rectangle of clouds appears for 1 turn at a random location, Deal 80% damage
    | condition: 33% chance
-   | (22579:48) I am no man!
+   | (22579:48) 我は人に非ず！
    | Change a random attribute to Light orbs, Deal 90% damage
    | condition: 34% chance
-   | (22578:15) Know your place!
+   | (22578:15) 身の程を知れ
    | Deal 100% damage
  | group:
  | condition: hp <= 49
    | group:
    | condition: turn 1
-     | (22582:83) You ruffians! + No longer will I let you do as you please!
+     | (22582:83) 不届きものめ + これ以上の好き勝手は許さんぞ！
      | Bind 3 random cards for 3 turns + Increase damage to 150% for the next 3 turns
    | group:
      | condition: 50% chance
-     | (22577:92) Mjölnir is displeased!
+     | (22577:92) このムジョルニアはお気に召すまい
      | Spawn 6 random Light orbs, Deal 80% damage
      | condition: 50% chance
-     | (22581:104) You will not sway me with your prattle.
+     | (22581:104) 戯言に心動かされる我ではない
      | A 2×2 square of clouds appears for 1 turn at a random location, Deal 90% damage

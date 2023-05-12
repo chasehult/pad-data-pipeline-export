@@ -8,30 +8,30 @@ approved: False
 
 level: 4
  type: PREEMPT
- | (22540:83) I am Thanos! + Let us begin this fight for real!
+ | (22540:83) 吾はサノスなり！ + 本格的に戦いを始めよう！
  | Reduce damage from all sources by 50% for 4 turns + Specific orbs change every 1.0s for 4 turns
  group:
  | group:
    | condition: 50% chance
-   | (22544:15) GRAAAAAAAARGH!
+   | (22544:15) グオオオオオオ！
    | Deal 99% damage (3 hits, 33% each)
    | condition: 50% chance
-   | (22545:92) You fools!
+   | (22545:92) 愚か者め！
    | Spawn 6 random Dark orbs, Deal 80% damage
  | group:
  | condition: turn 1 while HP > 19, hp <= 49
-   | (22546:75) I have shown you despair.
+   | (22546:75) お前には失望した
    | Leader changes to random sub for 3 turns
  | group:
  | condition: hp <= 19
    | group:
    | condition: turn 1
-     | (22543:17) I will erase you from this world!
+     | (22543:17) この世界から消し去ってやろう
      | Increase damage to 150% for the next 5 turns
    | group:
      | condition: 50% chance
-     | (22548:85) Infinity Stone!
+     | (22548:85) インフィニティストーン！
      | Change all orbs to Fire, Water, Wood, Light, Dark, and Heal, Deal 120% damage
      | condition: 50% chance
-     | (22547:15) Behold my glory!
+     | (22547:15) 栄光は吾にあり
      | Deal 100% damage

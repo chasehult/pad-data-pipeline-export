@@ -1,0 +1,107 @@
+#301076 - Alt. Red Sky Fruit, Strawberry Dragon
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESStatusShield(20:38305) -> Strawberry Barrier
+	Voids status ailments for 999 turns
+	[1] ESSkyfallLocked(96:38306) -> Strawberry Shower
+	Locked random skyfall +25% for 10 turns
+
+#3: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 23
+
+#4: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 15, target rnd 17
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 9
+
+#6: SkillSet:
+	Condition: 50% chance (ai:50 rnd:0)
+	[0] ESBombRandomSpawn(102:38324) -> Strawberry Bomb
+	Spawn 5 random Bomb orbs
+	[1] ESAttackMultihit(15:38325) -> Strawberry Breath
+	Deal 102% damage (3 hits, 34% each)
+
+#7: SkillSet:
+	[0] ESRandomSpawn(92:38327) -> Red Fruit Vitality
+	Spawn 3 random Fire and Wood orbs
+	[1] ESAttackMultihit(15:38328) -> Strawberry Breath
+	Deal 102% damage (3 hits, 34% each)
+
+#8: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#9: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESOrbChangeAttackBits(108:38315) -> Strawberry Tackle
+	Change all Heal orbs to Wood orbs, Deal 100% damage
+	[1] ESRandomSpawn(92:38316) -> Red Fruit Mischief
+	Spawn 3 random Fire and Jammer orbs
+
+#10: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 1, target rnd 14
+
+#11: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#12: SkillSet:
+	[0] ESDebuffMovetime(39:38318) -> Tempting Fragrance
+	Movetime 50% for 1 turn
+	[1] ESColumnSpawnMulti(77:38319) -> Red Fruit Blessing
+	Change the 3rd column to Wood orbs, Deal 100% damage
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+#15: SkillSet:
+	[0] ESBlindStickyRandom(97:38321) -> Red Fruit Melancholy
+	Blind random 5 orbs for 1 turn
+	[1] ESDamageShield(74:38322) -> Red Sky Protection
+	Reduce damage from all sources by 50% for 1 turn, Deal 101% damage
+
+#16: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#17: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 21
+
+#18: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#19: ESInactivity66(66:38310) -> He jumps up!
+Do nothing
+
+#20: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#21: SkillSet:
+	[0] ESChangeAttribute(46:38312) -> Colorful Fruit
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
+	[1] ESAttackMultihit(15:38313) -> Red Sky Rage
+	Deal 700% damage (7 hits, 100% each)
+
+#22: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#23: SkillSet:
+	[0] ESRecoverEnemy86(86:38308) -> Red Sky Blessing
+	Enemy recover 100% HP
+	[1] ESBindAwoken(88:38309) -> Strawberry Flash
+	Bind awoken skills for 1 turn
+
+#24: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#25: ESResolve(73:38329) -> Resolve 50%
+Survive attacks with 1 HP when HP > 50%

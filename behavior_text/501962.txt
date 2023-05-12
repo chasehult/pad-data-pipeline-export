@@ -1,0 +1,15 @@
+#501962 - Red DeviNyan
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 501962
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (36700:94) Meow Lock
+ | Lock 3 random orbs
+ group:
+ | (36701:15) Meow Claw
+ | Deal 100% damage

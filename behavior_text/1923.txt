@@ -1,0 +1,35 @@
+#1923 - Loving Heavenly Deities, Zeus & Hera
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 1923
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (33124:73) ＿Zeus Hera Resolve
+ | Survive attacks with 1 HP when HP > 50%
+ | (33125:72) ＿Zeus Hera Light & Dark halved
+ | Reduce damage from Light and Dark attrs by 50%
+ type: PREEMPT
+ | (33126:83) Show us your conviction. + Let's have some fun♪
+ | Void damage >= 500,000,000 for 2 turns + Absorb damage when combos <= 6 for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (33132:83) Zeus Blade + Boundless Light
+     | Change the 3rd column to Light orbs + Absorb Light damage for 1 turn, Deal 95% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | (33135:83) Gravitia + Boundless Darkness
+     | Change the 4th column to Dark orbs + Absorb Dark damage for 1 turn
+   | group:
+   | condition: execute repeatedly, turn 3 of 3
+     | (33138:83) Nova Stream + Zenith of Creation
+     | Change all orbs to Light, Dark, and Heal + Absorb Light and Dark damage for 1 turn
+ | group:
+ | condition: turn 1, hp <= 49
+   | (33129:83) Blessing of the Gods + Dominion Over Natural Calamities
+   | Enemy recover 50% HP + Absorb Fire, Water, and Wood damage for 1 turn

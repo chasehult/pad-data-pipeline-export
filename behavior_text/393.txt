@@ -11,13 +11,13 @@ level: 1
  | (4338:73) 30% Resolve
  | Survive attacks with 1 HP when HP > 30%
  type: PREEMPT
- | (4321:83) Dark Melancholy + Divine Protection of the Good Harvest
+ | (4321:83) Dark Melancholy + Protection of the Bountiful Harvest
  | Absorb damage when combos <= 6 for 999 turns + Voids status ailments for 999 turns
  group:
  | group:
    | group:
    | condition: execute repeatedly, turn 1 of 2
-     | (4322:85) Sephiroth Anger
+     | (4322:85) Zephyrus' Anger
      | Change all orbs to Fire, Water, Wood, Light, Dark, and Heal, Deal 240% damage
    | group:
    | condition: execute repeatedly, turn 2 of 2
@@ -27,17 +27,17 @@ level: 1
  | condition: hp <= 49
    | group:
    | condition: turn 1 while HP > 29
-     | (4326:83) Lucent Blessing + Sephiroth Rage
+     | (4326:83) Lucent Blessing + Zephyrus' Rage
      | Light skyfall +20% for 5 turns + Change all orbs to Fire, Water, Wood, Light, Dark, and Heal, Deal 340% damage
    | group:
-     | (4325:85) Sephiroth Rage
+     | (4325:85) Zephyrus' Rage
      | Change all orbs to Fire, Water, Wood, Light, Dark, and Heal, Deal 340% damage
  | group:
  | condition: hp <= 29
    | group:
    | condition: turn 1
      | (4329:83) God Tree's Basket + Plant Fascination
-     | Void damage >= 500,000 for 99 turns + Absorb Wood damage for 1 turn
+     | Void damage >= 3,000,000 for 99 turns + Absorb Wood damage for 1 turn
    | group:
      | condition: 25% chance
      | (4334:83) Flame Fascination + Natural Disaster

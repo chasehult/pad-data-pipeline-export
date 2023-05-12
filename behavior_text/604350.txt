@@ -1,0 +1,15 @@
+#604350 - Ceramics Enthusiast, Risuko
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 604350
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (35489:66) Happy first day of school!
+ | Do nothing
+ group:
+ | (35491:66) This is the start of your new school life!
+ | Do nothing

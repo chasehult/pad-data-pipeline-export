@@ -1,0 +1,87 @@
+#306359 - Reincarnated Oichi
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:39984) -> Spirit of the Virtuous Goddess
+	Voids status ailments for 999 turns
+	[1] ESBindAwoken(88:39985) -> Quince Crest
+	Bind awoken skills for 3 turns
+	[2] ESAbsorbCombo(67:39986) -> Virtuous Prayer
+	Absorb damage when combos <= 10 for 3 turns
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 18
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 16
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 6, target rnd 14
+
+#7: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 3, target rnd 11
+
+#8: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESTargetedSkillHaste(139:39996) -> Virtuous Compassion
+	Haste all cards' skills by 1 turn
+	[1] ESBlindStickyRandom(97:39997) -> Black Skull
+	Blind random 6~8 orbs for 1 turn, Deal 100% damage
+
+#9: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESTargetedSkillDelay(140:39999) -> Eerie Skull
+	Delay both leaders' skills by 1~2 turns
+	[1] ESOrbLock(94:40000) -> Adamant Skull
+	Lock 15 random orbs, Deal 100% damage
+
+#10: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#11: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 4, target rnd 8
+
+#12: SkillSet:
+	[0] ESAbsorbCombo(67:39989) -> Virtuous Prayer
+	Absorb damage when combos <= 9 for 3 turns
+	[1] ESVoidShieldBig(137:39990) -> Virtuous Anguish
+	Void damage >= 500,000,000 for 3 turns
+	[2] ESUnknown(151:39991) -> Eerie Cranium
+	No description set
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: SkillSet:
+	[0] ESTargetedSkillDelay(140:39993) -> Eerie Skull
+	Delay random sub's skills by 2~4 turns
+	[1] ESAttackUPRemainingEnemies(17:39994) -> Virtuous Wrath
+	Increase damage to 1,000% for the next 1 turn
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: ESAttackMultihit(15:39987) -> Vile Skeleton Figure
+Deal 1,000% damage (2 hits, 500% each)
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: SkillSet:
+	[0] ESBindAwoken(88:39740) -> Azure Sky Surge
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:39741) -> Thousandfold Demise
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#19: ESEndPath(36:26) -> ESEndPath
+end_turn

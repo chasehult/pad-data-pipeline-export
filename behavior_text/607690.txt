@@ -1,0 +1,15 @@
+#607690 - Mega Awoken Wind Dragon Caller, Kaede's Gem
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 607690
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (24888:129) Super Resolve
+ | Damage which would reduce HP from above 75% to below 75% is nullified
+ type: PREEMPT
+ | (24891:92) Bright Magic
+ | Spawn 15 random Heal orbs

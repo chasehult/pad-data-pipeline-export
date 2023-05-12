@@ -1,0 +1,21 @@
+#404068 - Patissiere of the Sanctuary, Cockatrice
+monster size: 3
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 404068
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (28961:107) Candleless Night
+ | Unable to match Fire and Light orbs for 3 turns
+ group:
+ | condition: 34% chance
+ | (28965:66) ♪
+ | Do nothing
+ | condition: 50% chance
+ | (28966:65) Whipped Cream Bind
+ | Bind 1 random sub for 2 turns
+ | (28967:104) Sweet Temptation
+ | A 2×1 rectangle of clouds appears for 1 turn at a random location

@@ -1,0 +1,21 @@
+#705068 - Saline's Magical Hat, Khoza
+monster size: 5
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 705068
+approved: False
+
+level: 1
+ group:
+ | group:
+ | condition: turns 1-5
+   | condition: 40% chance
+   | (37581:104) Light Cloud
+   | A 1×2 rectangle of clouds appears for 2 turns at a random location
+   | condition: 60% chance
+   | (37582:4) Dispatching Light
+   | Change a random attribute to Light orbs
+ | group:
+   | (37580:92) Dispatching Light
+   | Spawn 10 random Light orbs, Deal 100% damage

@@ -1,0 +1,84 @@
+#201422 - True Guardian of the Sacred City, Athena
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+#3: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#4: SkillSet:
+	[0] ESStatusShield(20:33206) -> You finally made it!
+	Voids status ailments for 999 turns
+	[1] ESDamageShield(74:33207) -> Aegis
+	Reduce damage from all sources by 90% for 3 turns
+
+#5: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#6: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 18
+
+#7: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 15
+
+#8: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 12
+
+#9: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#10: SkillSet:
+	[0] ESTargetedSkillHaste(139:33209) -> God's Command
+	Haste all cards' skills by 1 turn
+	[1] ESOrbChangeAttack(48:33210) -> Holy Rain
+	Change a random attribute to Light orbs, Deal 100% damage
+
+#11: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#12: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#13: SkillSet:
+	[0] ESTargetedSkillHaste(139:33212) -> God's Command
+	Haste all cards' skills by 2 turns
+	[1] ESColumnSpawnMulti(77:33213) -> Divine Spear's Roaring Tremble
+	Change the 1st and 6th columns to Light orbs, Deal 100% damage
+
+#14: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#15: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#16: SkillSet:
+	[0] ESTargetedSkillHaste(139:33215) -> God's Command
+	Haste all cards' skills by 3 turns
+	[1] ESAbsorbCombo(67:33216) -> Praise of the Gods
+	Absorb damage when combos <= 12 for 1 turn
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+#19: SkillSet:
+	[0] ESSkillDelay(89:33218) -> Delaying Illusion
+	Delay active skills by 10 turns
+	[1] ESAttackMultihit(15:33219) -> Siculus Strike Ray
+	Deal 125% damage (5 hits, 25% each)
+
+#20: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#21: ESDeathCry(69:22664) -> ＿Athena Transformation
+Condition: On death (ai:100 rnd:0)
+Show message: Awaken, divine light!|I shall give you a glimpse of my power!

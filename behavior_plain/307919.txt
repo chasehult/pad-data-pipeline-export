@@ -1,0 +1,259 @@
+#307919 - Sadaharu Inui
+monster size: 5
+new AI: True
+start/max counter: 2
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: ESBranchLevel(35:25) -> ESBranchLevel
+Branch on level >= 4, target rnd 32
+
+#3: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+#4: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#5: SkillSet:
+	[0] ESDebuffMovetime(39:29982) -> Zoning practice through rally
+	Movetime 300% for 99 turns
+	[1] ESCloud(104:30419) -> If you're still standing after five shots, you win.
+	A 1×1 square of clouds appears for 1 turn at a random location
+	[2] ESRandomSpawn(92:30009) -> First Shot
+	Spawn 5 random Water orbs
+
+#6: ESBranchAttrOnBoard(133:30053) -> ESBranchAttrOnBoard
+Branch on attributes on board HAS 0, target rnd 21
+
+#7: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 4, target rnd 19
+
+#8: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 17
+
+#9: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 15
+
+#10: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 13
+
+#11: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#12: SkillSet:
+	[0] ESCloud(104:30420) -> Next!
+	A 2×1 rectangle of clouds appears for 1 turn at a random location
+	[1] ESRandomSpawn(92:30011) -> Second Shot
+	Spawn 5 random Water orbs
+
+#13: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#14: SkillSet:
+	[0] ESCloud(104:30421) -> Next!
+	A 3×1 rectangle of clouds appears for 1 turn at a random location
+	[1] ESRandomSpawn(92:30013) -> Third Shot
+	Spawn 5 random Water orbs
+
+#15: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#16: SkillSet:
+	[0] ESCloud(104:30422) -> Next!
+	A 4×1 rectangle of clouds appears for 1 turn at a random location
+	[1] ESRandomSpawn(92:30015) -> Fourth Shot
+	Spawn 5 random Water orbs
+
+#17: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#18: SkillSet:
+	[0] ESCloud(104:30017) -> This is the last.
+	A 5×1 rectangle of clouds appears for 1 turn at a random location
+	[1] ESRandomSpawn(92:30018) -> Fifth Shot
+	Spawn 5 random Water orbs
+
+#19: ESEndBattle(40:29994) -> Great Job.
+Reduce self HP to 0
+
+#20: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#21: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 4, target rnd 29
+
+#22: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 28
+
+#23: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 27
+
+#24: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 26
+
+#25: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESCloud(104:30461) -> Let's try that again.
+	A 1×1 square of clouds appears for 1 turn at a random location
+	[1] ESRandomSpawn(92:30009) -> First Shot
+	Spawn 5 random Water orbs
+
+#26: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESCloud(104:30462) -> Let's try that again.
+	A 2×1 rectangle of clouds appears for 1 turn at a random location
+	[1] ESRandomSpawn(92:30011) -> Second Shot
+	Spawn 5 random Water orbs
+
+#27: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESCloud(104:30463) -> Let's try that again.
+	A 3×1 rectangle of clouds appears for 1 turn at a random location
+	[1] ESRandomSpawn(92:30013) -> Third Shot
+	Spawn 5 random Water orbs
+
+#28: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESCloud(104:30464) -> Let's try that again.
+	A 4×1 rectangle of clouds appears for 1 turn at a random location
+	[1] ESRandomSpawn(92:30015) -> Fourth Shot
+	Spawn 5 random Water orbs
+
+#29: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESCloud(104:30465) -> Let's try that again.
+	A 5×1 rectangle of clouds appears for 1 turn at a random location
+	[1] ESRandomSpawn(92:30018) -> Fifth Shot
+	Spawn 5 random Water orbs
+
+#30: ESGravity(50:29996) -> How unfortunate... This is the end for you.
+Player -500% HP
+
+#31: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#32: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 35
+
+#33: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#34: SkillSet:
+	[0] ESDebuffMovetime(39:29982) -> Zoning practice through rally
+	Movetime 300% for 99 turns
+	[1] ESBlindStickyRandom(97:30423) -> If you're still standing after five shots, you win.
+	Blind random 4 orbs for 1 turn
+	[2] ESRandomSpawn(92:30020) -> First Shot
+	Spawn 4 random Water orbs
+
+#35: ESBranchAttrOnBoard(133:30053) -> ESBranchAttrOnBoard
+Branch on attributes on board HAS 0, target rnd 50
+
+#36: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 4, target rnd 48
+
+#37: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 46
+
+#38: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 44
+
+#39: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 42
+
+#40: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#41: SkillSet:
+	[0] ESBlind5(5:30424) -> Next!
+	Blind all orbs on the board
+	[1] ESRandomSpawn(92:30022) -> Second Shot
+	Spawn 4 random Water orbs
+
+#42: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#43: SkillSet:
+	[0] ESBlindStickyRandom(97:30425) -> Next!
+	Blind random 8 orbs for 1 turn
+	[1] ESRandomSpawn(92:30024) -> Third Shot
+	Spawn 4 random Water orbs
+
+#44: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#45: SkillSet:
+	[0] ESBlindStickyRandom(97:30426) -> Next!
+	Blind random 10 orbs for 1 turn
+	[1] ESRandomSpawn(92:30026) -> Fourth Shot
+	Spawn 4 random Water orbs
+
+#46: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#47: SkillSet:
+	[0] ESBlindStickyRandom(97:30028) -> This is the last.
+	Blind random 12 orbs for 1 turn
+	[1] ESRandomSpawn(92:30029) -> Fifth Shot
+	Spawn 4 random Water orbs
+
+#48: ESEndBattle(40:29994) -> Great Job.
+Reduce self HP to 0
+
+#49: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#50: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 4, target rnd 58
+
+#51: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 57
+
+#52: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 56
+
+#53: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 55
+
+#54: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBlindStickyRandom(97:30466) -> Let's try that again.
+	Blind random 4 orbs for 1 turn
+	[1] ESRandomSpawn(92:30020) -> First Shot
+	Spawn 4 random Water orbs
+
+#55: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBlind5(5:30467) -> Let's try that again.
+	Blind all orbs on the board
+	[1] ESRandomSpawn(92:30022) -> Second Shot
+	Spawn 4 random Water orbs
+
+#56: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBlindStickyRandom(97:30468) -> Let's try that again.
+	Blind random 8 orbs for 1 turn
+	[1] ESRandomSpawn(92:30024) -> Third Shot
+	Spawn 4 random Water orbs
+
+#57: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBlindStickyRandom(97:30469) -> Let's try that again.
+	Blind random 10 orbs for 1 turn
+	[1] ESRandomSpawn(92:30026) -> Fourth Shot
+	Spawn 4 random Water orbs
+
+#58: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBlindStickyRandom(97:30470) -> Let's try that again.
+	Blind random 12 orbs for 1 turn
+	[1] ESRandomSpawn(92:30029) -> Fifth Shot
+	Spawn 4 random Water orbs
+
+#59: ESGravity(50:29996) -> How unfortunate... This is the end for you.
+Player -500% HP
+
+#60: ESEndPath(36:26) -> ESEndPath
+end_turn

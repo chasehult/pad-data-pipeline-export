@@ -1,0 +1,35 @@
+#508194 - Dominator of the Universe, Boros
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 508194
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (32841:72) ＿Boros Light Halved
+ | Reduce damage from Light attrs by 50%
+ | (32840:129) ＿Boros Super Resolve
+ | Damage which would reduce HP from above 50% to below 50% is nullified
+ type: PREEMPT
+ | (32843:83) Elevating speed beyond the limitations of living flesh! + Elevating power beyond the limitations of living flesh!
+ | Reduce damage from all sources by 99% for 3 turns + Jammer and Poison skyfall +10% for 3 turns
+ group:
+ | group:
+   | (32846:105) You make me want to go all out!
+   | RCV 25% for 1 turn, Deal 100% damage
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (32847:83) Ha + aaaaaaah!
+     | Spawn 2 random Light and Dark orbs + Deal 90% damage (6 hits, 15% each), Deal 90% damage (6 hits, 15% each)
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | (32850:83) If so... + Then have a taste of my other trump card!
+     | Blind all orbs on the board + ATK -75% for 1 turn, Deal 80% damage
+   | group:
+   | condition: execute repeatedly, turn 3 of 3
+     | (32853:85) Collapsing Star, Roaring Cannon
+     | Change all orbs to Light, Dark, and Jammer, Deal 125% damage

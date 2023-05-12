@@ -25,7 +25,7 @@ Branch on hp > 40, target rnd 8
 
 #6: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 60)
-	[0] ESRecoverEnemy86(86:7878) -> I'm no pushover, you know. Scared yet?
+	[0] ESRecoverEnemy86(86:7878) -> Scared yet? I'm no pushover, you know!
 	Enemy recover 30% HP
 	[1] ESOrbLock(94:7879) -> Well, let's continue!
 	Lock all orbs
@@ -77,7 +77,7 @@ flag SET 0b11
 	[2] ESAttackUPRemainingEnemies(17:7889) -> Now we're getting somewhere!
 	Increase damage to 150% for the next 999 turns
 
-#19: ESOrbLock(94:7891) -> Left yourself wide open!
+#19: ESOrbLock(94:7891) -> You left yourself wide open!
 Lock all Jammer orbs, Deal 250% damage
 
 #20: ESRandomSpawn(92:7892) -> Burn!

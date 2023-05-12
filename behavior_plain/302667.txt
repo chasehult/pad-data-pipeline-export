@@ -21,9 +21,9 @@ Branch on counter >= 5, target rnd 11
 counter + 1
 
 #5: ESBranchHP(28:18) -> ESBranchHP
-Branch on hp < 5, target rnd 9
+Branch on hp < 3, target rnd 9
 
-#6: ESRandomSpawn(92:24462) -> Panther Charm
+#6: ESRandomSpawn(92:24462) -> Leopard Charm
 Condition: 50% chance (ai:0 rnd:50)
 Spawn 3 random Water orbs, Deal 100% damage
 

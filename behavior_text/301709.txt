@@ -1,0 +1,19 @@
+#301709 - Gold TAMADRA
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 301709
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (44193:66) Happy New Year-TAMA!
+ | Do nothing
+ group:
+ | condition: 50% chance
+ | (44194:66) May your fortune be golden-TAMA!
+ | Do nothing
+ | condition: 50% chance
+ | (44195:66) Here's to a shiny 2023-TAMA!
+ | Do nothing

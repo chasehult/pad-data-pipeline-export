@@ -1,0 +1,12 @@
+#908405 - Super Purple Shieldra
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 908405
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (41019:53) Purple Shield
+ | Absorb Dark damage for 2 turns

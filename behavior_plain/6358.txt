@@ -1,0 +1,166 @@
+#6358 - Reincarnated Nene
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:29941) -> Spirit of the Benevolent Goddess
+	Voids status ailments for 999 turns
+	[1] ESBoardChange(84:29901) -> I won't let you pass.
+	Change all orbs to Water
+	[2] ESSkyfall(68:29902) -> Falling Blades
+	Water skyfall +40% for 1 turn
+	[3] ESAbsorbAttribute(53:29903) -> Vivid Five-Colored Blades
+	Absorb Water damage for 1 turn
+
+#3: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 24
+
+#4: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 20
+
+#5: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 11
+
+#6: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 13
+
+#7: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 15
+
+#8: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 4, target rnd 17
+
+#9: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#10: SkillSet:
+	[0] ESBoardChange(84:29905) -> Dyeing Blades
+	Change all orbs to Wood
+	[1] ESSkyfall(68:29906) -> Falling Blades
+	Wood skyfall +40% for 1 turn
+	[2] ESAbsorbAttribute(53:29907) -> Vivid Five-Colored Blades
+	Absorb Wood damage for 1 turn, Deal 200% damage
+
+#11: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#12: SkillSet:
+	[0] ESBoardChange(84:29909) -> Dyeing Blades
+	Change all orbs to Light
+	[1] ESSkyfall(68:29910) -> Falling Blades
+	Light skyfall +40% for 1 turn
+	[2] ESAbsorbAttribute(53:29911) -> Vivid Five-Colored Blades
+	Absorb Light damage for 1 turn, Deal 200% damage
+
+#13: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#14: SkillSet:
+	[0] ESBoardChange(84:29913) -> Dyeing Blades
+	Change all orbs to Dark
+	[1] ESSkyfall(68:29914) -> Falling Blades
+	Dark skyfall +40% for 1 turn
+	[2] ESAbsorbAttribute(53:29915) -> Vivid Five-Colored Blades
+	Absorb Dark damage for 1 turn, Deal 200% damage
+
+#15: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#16: SkillSet:
+	[0] ESBoardChange(84:29917) -> Dyeing Blades
+	Change all orbs to Fire
+	[1] ESSkyfall(68:29918) -> Falling Blades
+	Fire skyfall +40% for 1 turn
+	[2] ESAbsorbAttribute(53:29919) -> Vivid Five-Colored Blades
+	Absorb Fire damage for 1 turn, Deal 200% damage
+
+#17: ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+#18: SkillSet:
+	[0] ESBoardChange(84:29921) -> Dyeing Blades
+	Change all orbs to Water
+	[1] ESSkyfall(68:29922) -> Falling Blades
+	Water skyfall +40% for 1 turn
+	[2] ESAbsorbAttribute(53:29923) -> Vivid Five-Colored Blades
+	Absorb Water damage for 1 turn, Deal 200% damage
+
+#19: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#20: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 24
+
+#21: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+#22: SkillSet:
+	[0] ESBoardSizeChange(126:29925) -> Benevolent Scheme
+	Change board size to 6x5 for 1 turn
+	[1] ESSkyfall(68:29926) -> Falling Blades
+	Heal skyfall +40% for 1 turn
+	[2] ESAbsorbCombo(67:29927) -> Can you make 14 combos?
+	Absorb damage when combos <= 13 for 1 turn
+	[3] ESRandomSpawn(92:29937) -> Benevolent Support
+	Spawn 6 random Fire, Water, Wood, Light, and Dark orbs
+	[4] ESDamageShield(74:29939) -> Benevolent Protection
+	Reduce damage from all sources by 50% for 2 turns
+
+#23: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#24: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 4, target rnd 29
+
+#25: ESBranchCombo(113:6528) -> ESBranchCombo
+Branch on combo >= 14, target rnd 34
+
+#26: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b111
+
+#27: SkillSet:
+	[0] ESBoardSizeChange(126:29929) -> I'll give you one more chance.
+	Change board size to 7x6 for 1 turn
+	[1] ESSkyfall(68:29930) -> Falling Blades
+	Water skyfall +40% for 1 turn
+	[2] ESAbsorbCombo(67:29931) -> It's over if you can't make 19 combos.
+	Absorb damage when combos <= 18 for 1 turn
+
+#28: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#29: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 8, target rnd 34
+
+#30: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1111
+
+#31: ESBranchCombo(113:6528) -> ESBranchCombo
+Branch on combo >= 19, target rnd 34
+
+#32: SkillSet:
+	[0] ESChangeAttribute(46:29933) -> Benevolent Wrath
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
+	[1] ESAttackMultihit(15:29934) -> Get out of my sight.
+	Deal 3,500% damage (7 hits, 500% each)
+
+#33: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#34: SkillSet:
+	[0] ESSkillDelay(89:29938) -> Slowing Blade
+	Delay active skills by 6 turns
+	[1] ESEndBattle(40:29935) -> I'll take my leave.
+	Reduce self HP to 0
+
+#35: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#36: ESSuperResolve(129:29936) -> Super Resolve
+Damage which would reduce HP from above 50% to below 50% is nullified

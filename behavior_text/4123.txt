@@ -8,17 +8,17 @@ approved: False
 
 level: 1
  type: PREEMPT
- | (8698:20) Hellish Flame
+ | (8698:20) Vile Crimson Flame
  | Voids status ailments for 99 turns
  group:
  | group:
-   | (8699:15) Burn
+   | (8699:15) Scathing Flame
    | Deal 90% damage (3 hits, 30% each)
  | group:
  | condition: hp <= 49
    | group:
    | condition: turn 1
-     | (8700:102) Incandescent Surge
+     | (8700:102) Wave of Incandescence
      | Spawn 6 random locked Bomb orbs
    | group:
    | condition: turn 2

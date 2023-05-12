@@ -1,0 +1,35 @@
+#8208 - Speed-o'-Sound Sonic
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+monster_id: 8208
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (32972:100) I can't let you simply walk away.
+ | Seal the 5th row for 5 turns
+ group:
+ | group:
+ | condition: always turn 1
+   | (32973:62) Can you even see me?
+   | Blind all orbs on the board, Deal 90% damage
+ | group:
+ | condition: always turn 2
+   | (32974:97) How can you possibly keep up with me?
+   | Blind random 5 orbs for 3 turns, Deal 90% damage
+ | group:
+   | condition: 33% chance
+   | (32975:77) Wind Blade Kick
+   | Change the 1st and 6th columns to Dark orbs, Deal 100% damage
+   | condition: 33% chance
+   | (32976:102) Exploding Shuriken!!
+   | Spawn 6 random Bomb orbs
+   | condition: 34% chance
+   | (32977:15) Hail of Carnage
+   | Deal 120% damage (4 hits, 30% each)
+ | group:
+ | condition: turn 3, hp <= 49
+   | (32978:83) You think you can run from me? + If you're not coming, I'll go to you!
+   | Absorb Light and Dark damage for 5 turns + Increase damage to 150% for the next 999 turns

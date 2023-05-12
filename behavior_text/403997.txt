@@ -1,0 +1,12 @@
+#403997 - Moonlight Ghost Dragon, Mummiron
+monster size: 3
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 403997
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (23939:68) I'm gonna prank you!
+ | Jammer skyfall +15% for 3 turns

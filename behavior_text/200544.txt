@@ -1,0 +1,15 @@
+#200544 - Dark Samurai Dragon, Nobunaga
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 200544
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (43300:83) Evil Wind + Dark Samurai Dragon's Howl + Evil Barrier
+ | No skyfall for 99 turns + Haste all cards' skills by 15 turns + Spawn 10 random Fire, Dark, and Jammer orbs
+ group:
+ | (43303:15) Dark Samurai Dragon's Surge
+ | Deal 102% damage (3 hits, 34% each)

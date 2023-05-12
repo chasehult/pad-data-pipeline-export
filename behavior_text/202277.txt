@@ -1,0 +1,15 @@
+#202277 - Barbed Frost Dragon Emperor, Ilsix
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 202277
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (43308:92) Ice Blast
+ | Spawn 15 random Water and Light orbs
+ group:
+ | (43309:15) Consecutive Rush
+ | Deal 102% damage (3 hits, 34% each)

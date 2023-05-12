@@ -1,0 +1,35 @@
+#303177 - True Yumitsukami-no-miko, Kagenue
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 303177
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (39857:104) Snake Cloud Roar
+ | A 2×2 square of clouds appears for 5 turns at a random location, Deal 100% damage
+ group:
+ | group:
+ | condition: turn 1
+   | (39860:83) Tiger Snake Bellow + Tiger Snake's Howl + Debilitating Double Menace
+   | Increase damage to 1,000% for the next 1 turn + Haste random sub's skills by 10 turns + No description set
+ | group:
+ | condition: turns 2-6
+   | condition: 50% chance
+   | (39859:151) Life Altering Decay
+   | No description set, Deal 100% damage
+   | condition: 50% chance
+   | (39858:139) Tiger Snake Roar
+   | Haste random sub's skills by 2 turns, Deal 100% damage
+ | group:
+   | (39741:15) Thousandfold Demise
+   | Deal 5,000% damage (5 hits, 1,000% each)
+ type: UNKNOWN_USE
+ | (39734:1) Tiger Snake Roar
+ | Bind 6 random cards for 5 turns
+ | (39864:6) Tiger Snake Roar
+ | Voids player buff effects, Deal 100% damage
+ | (39865:139) Tiger Snake Roar
+ | Haste both leaders' skills by 15 turns, Deal 100% damage

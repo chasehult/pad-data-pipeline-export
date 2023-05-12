@@ -42,32 +42,32 @@ level: 1
    | group:
    | condition: execute repeatedly, turn 2 of 2
      | condition: 20% chance
-     | (3603:83) Elemental Absorber + Flare Combat
+     | (3603:83) Elemental Absorber + Conversion to Flare
      | Absorb Fire damage for 2 turns + Change a random attribute to Fire orbs, Deal 130% damage
      | condition: 20% chance
-     | (3604:83) Elemental Absorber + Aqua Combat
+     | (3604:83) Elemental Absorber + Conversion to Aqua
      | Absorb Water damage for 2 turns + Change a random attribute to Water orbs, Deal 130% damage
      | condition: 20% chance
-     | (3605:83) Elemental Absorber + Earth Combat
+     | (3605:83) Elemental Absorber + Conversion to Earth
      | Absorb Wood damage for 2 turns + Change a random attribute to Wood orbs, Deal 130% damage
      | condition: 20% chance
-     | (3606:83) Elemental Absorber + Light Combat
+     | (3606:83) Elemental Absorber + Conversion to Light
      | Absorb Light damage for 2 turns + Change a random attribute to Light orbs, Deal 130% damage
      | condition: 20% chance
-     | (3607:83) Elemental Absorber + Dark Combat
+     | (3607:83) Elemental Absorber + Conversion to Dark
      | Absorb Dark damage for 2 turns + Change a random attribute to Dark orbs, Deal 130% damage
  | group:
  | condition: hp <= 49
    | group:
    | condition: execute repeatedly, turn 1 of 3
      | condition: 50% chance
-     | (3579:83) Limit Signal + Rust Generate
+     | (3579:83) Limit Signal + Rust Generation
      | Bind awoken skills for 2 turns + Spawn 12 random Jammer orbs
-     | (3578:83) Numb Signal + Power Steel
+     | (3578:83) Numbing Signal + Power of Steel
      | Bind 4 random cards for 3 turns + Increase damage to 200% for the next 1 turn
    | group:
    | condition: execute repeatedly, turn 2-3 of 3
-     | (3571:15) Myriad Swords Wings
+     | (3571:15) Myriad-Sword Wings
      | Deal 150~240% damage (5~8 hits, 30% each)
  | group:
  | condition: turn 1 while HP > 19, hp <= 29

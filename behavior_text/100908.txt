@@ -16,7 +16,7 @@ level: 1
  group:
  | group:
  | condition: always turn 1
-   | (10507:65) There's no escape
+   | (10507:65) I won't let you escape.
    | Bind 1 random sub for 5 turns
  | group:
    | (10508:15) Wind Slash
@@ -28,5 +28,5 @@ level: 1
      | (10509:14) Earth Cage
      | Bind active skills for 5 turns
    | group:
-     | (10510:15) Gigas Break
+     | (10510:15) Gigantic Break
      | Deal 360% damage (3 hits, 120% each)

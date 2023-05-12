@@ -1,0 +1,19 @@
+#8510 - Purple Painter
+monster size: 2
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 8510
+approved: False
+
+level: 5
+ type: PREEMPT
+ | (35003:104) Cloudy Ink
+ | A row of clouds appears for 3 turns at 1st row, 1st column
+ group:
+ | (35004:92) Black Ink
+ | Spawn 3 random Dark orbs, Deal 100% damage
+ type: REMAINING
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (35000:17) Painter Power
+ | Increase damage to 300% for the next 999 turns

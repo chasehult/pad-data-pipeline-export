@@ -1,0 +1,37 @@
+#8765 - Crimson Dracoblader of the Dark Twist, Akine
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 8765
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (31902:129) ＿Akine Super Resolve
+ | Damage which would reduce HP from above 50% to below 50% is nullified
+ type: PREEMPT
+ | (31903:83) Draconic Armor + Snake Princess' Spiritual Corridor + Flickering Light Gate
+ | Voids status ailments for 999 turns + Light and Dark skyfall +15% for 99 turns + Absorb Light and Dark damage for 2 turns
+ group:
+ | group:
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (31907:83) Lightless Soul + Furious Snake Spiral Strike
+     | Blind random 15 orbs for 3 turns + Deal 120% damage (6 hits, 20% each), Deal 120% damage (6 hits, 20% each)
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | (31910:83) Brave Soul's Grief + Furious Snake Spiral Strike
+     | Specific orbs change every 1.0s for 1 turn + Deal 120% damage (6 hits, 20% each), Deal 120% damage (6 hits, 20% each)
+   | group:
+   | condition: execute repeatedly, turn 3 of 3
+     | (31913:83) Raging Blade + Misty Heaven Dance + Furious Snake Spiral Strike
+     | ATK -75% for 1 turn + RCV 25% for 1 turn + Deal 120% damage (6 hits, 20% each), Deal 120% damage (6 hits, 20% each)
+ | group:
+ | condition: turn 1 while HP > 9, hp <= 49
+   | (31917:83) Snake Princess' Intimidation + Draconic Scaleblade
+   | Locked Light and Dark skyfall +100% for 99 turns + Void damage >= 1,000,000,000 for 10 turns, Deal 112% damage
+ | group:
+ | condition: hp <= 9
+   | (31986:83) Colorful Ripple Blade + Secret Sword: Superdraconic Slash
+   | Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Deal 6,000% damage (5 hits, 1,200% each), Deal 6,000% damage (5 hits, 1,200% each)

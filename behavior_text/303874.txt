@@ -1,0 +1,40 @@
+#303874 - Ice Crystal Monstrous Wolf, Fenrir Viz
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 303874
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (28775:73) Resolve
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (28539:83) Ice Crystal Aura + Monstrous Wolf's Fur
+ | Absorb Water damage for 3 turns + Void damage >= 100,000,000 for 999 turns
+ group:
+ | group:
+   | group:
+   | condition: turns 1-2
+     | (28538:15) Bite
+     | Deal 100% damage (2 hits, 50% each)
+   | group:
+   | condition: turn 3 while HP > 49
+     | (28542:83) Devastating Ice + Apocalyptic Discharge
+     | Unable to match Water orbs for 5 turns + Increase damage to 150% for the next 999 turns
+   | group:
+   | condition: turns 4-5
+     | (28538:15) Bite
+     | Deal 100% damage (2 hits, 50% each)
+   | group:
+     | (28952:83) Submerged Conqueror's Wave + Submerged Conqueror's Carnage
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turn 3, hp <= 49
+   | (28543:83) Apocalyptic Discharge + Bite
+   | Increase damage to 150% for the next 999 turns + Deal 100% damage (2 hits, 50% each), Deal 100% damage (2 hits, 50% each)
+ | group:
+ | condition: turns 1-5, hp <= 1
+   | (28778:15) Crunch
+   | Deal 660% damage (2 hits, 330% each)

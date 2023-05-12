@@ -1,4 +1,4 @@
-#7510 - 七海建人
+#7510 - Kento Nanami
 monster size: 5
 new AI: True
 start/max counter: 3

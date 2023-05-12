@@ -1,0 +1,33 @@
+#209018 - Ultraman Mebius
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 209018
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (38566:118) Devil Halved
+ | Reduce damage from Devil types by 50%
+ type: PREEMPT
+ | (38556:83) Mebius Defencircle + Mebium Pinger
+ | Absorb Fire and Light damage for 3 turns + Random 2 orbs change every 1.0s for 3 turns
+ group:
+ | group:
+ | condition: turn 1
+   | (38559:83) Lightning Counter + Mebius Punch
+   | Light skyfall +15% for 10 turns + Player -99% HP
+ | group:
+   | condition: 25% chance
+   | (38565:15) Mebium Blade
+   | Deal 102% damage (3 hits, 34% each)
+   | condition: 25% chance
+   | (38564:92) Mebius Kick
+   | Spawn 7 random Fire orbs, Deal 100% damage
+   | condition: 25% chance
+   | (38562:77) Mebium Shoot
+   | Change the 3rd and 4th columns to Fire and Light orbs, Deal 100% damage
+   | condition: 25% chance
+   | (38563:79) Lightning Slasher
+   | Change the 2nd and 4th rows to Fire and Light orbs, Deal 100% damage

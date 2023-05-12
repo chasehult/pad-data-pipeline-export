@@ -1,0 +1,15 @@
+#607692 - Mega Awoken Ruining Goddess, Morrigu's Gem
+monster size: 4
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 607692
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (24888:129) Super Resolve
+ | Damage which would reduce HP from above 75% to below 75% is nullified
+ type: PREEMPT
+ | (24894:92) Bright Magic
+ | Spawn 15 random Poison orbs

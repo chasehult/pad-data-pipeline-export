@@ -1,0 +1,19 @@
+#200228 - Mastering
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 200228
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (24081:94) It's bursting with confidence
+ | Lock 15 random orbs
+ group:
+ | condition: 50% chance
+ | (24083:94) Confidence Intensifies
+ | Lock 5 random orbs, Deal 80% damage
+ | condition: 50% chance
+ | (24082:15) It looks smug
+ | Deal 100% damage

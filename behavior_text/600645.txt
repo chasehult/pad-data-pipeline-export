@@ -1,0 +1,22 @@
+#600645 - Archdemon Beelzebub
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 600645
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (36633:83) It's useless... + ...to oppose our lord!
+ | Absorb Dark damage for 2 turns + Change 4 random orbs to Poison orbs, Deal 100% damage
+ group:
+ | group:
+   | (36575:108) Deadly Wheel
+   | Change all Jammer and Poison orbs to Dark orbs, Deal 120% damage
+   | (36574:92) Deadly Poison
+   | Spawn 3 random Dark and Poison orbs, Deal 100% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | (36636:83) It's completely useless... + ...no matter how much you struggle!
+   | Reduce damage from all sources by 90% for 3 turns + Change 5 random orbs to Poison orbs, Deal 100% damage

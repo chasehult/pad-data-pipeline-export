@@ -1,0 +1,16 @@
+#502067 - Extreme King Metal TAMADRA
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 502067
+approved: False
+
+level: 1
+ type: PREEMPT
+unknown ES
+ group:
+unknown ES
+ type: UNKNOWN_USE
+ | (24796:66) We're incredibly grateful TAMA!
+ | Do nothing

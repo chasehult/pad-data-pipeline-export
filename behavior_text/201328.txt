@@ -1,0 +1,15 @@
+#201328 - Jewel of Light
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 201328
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (37759:92) Brightness Element
+ | Spawn 6 random Light orbs, Deal 70% damage
+ group:
+ | (37765:94) Yellow Radiance
+ | Lock all Light orbs, Deal 100% damage

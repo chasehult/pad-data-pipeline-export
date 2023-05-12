@@ -1,0 +1,69 @@
+#202194 - Alt. Evil Eye CyberBeast, Kakkab
+monster size: 5
+new AI: True
+start/max counter: 63
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 32)
+	[0] ESAbsorbAttribute(53:31072) -> Black Energy Shield
+	Absorb Dark damage for 6 turns
+	[1] ESVoidShieldBig(137:31073) -> Mechanical Wolf's Wall
+	Void damage >= 600,000,000 for 6 turns
+	[2] ESBoardChange(84:31074) -> Mechanical Wolf's Howl
+	Change all orbs to Dark
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 6, target rnd 13
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 11
+
+#6: ESChangeAttribute(46:31075) -> Mechanical Wolf's Flash
+Condition: One-time use (ai:100 rnd:0) (cost: 16)
+Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 50% damage
+
+#7: ESChangeAttribute(46:31076) -> Mechanical Wolf's Flash
+Condition: One-time use (ai:100 rnd:0) (cost: 8)
+Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage
+
+#8: ESChangeAttribute(46:31077) -> Mechanical Wolf's Flash
+Condition: One-time use (ai:100 rnd:0) (cost: 4)
+Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 120% damage
+
+#9: ESChangeAttribute(46:31078) -> Mechanical Wolf's Flash
+Condition: One-time use (ai:100 rnd:0) (cost: 2)
+Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 150% damage
+
+#10: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:31309) -> Energy Shield
+	Voids status ailments for 999 turns
+	[1] ESBoardChange(84:31310) -> Mechanical Wolf's Howl
+	Change all orbs to Dark
+	[2] ESOrbLock(94:31311) -> Mechanical Wolf's Glare
+	Lock all orbs, Deal 200% damage
+
+#11: ESAttackMultihit(15:31079) -> Dark Wolf Flare
+Deal 1,000% damage (2 hits, 500% each)
+
+#12: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#13: SkillSet:
+	[0] ESBindAwoken(88:31377) -> Star Machine's Wave
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:31378) -> Star Machine's Annihilation
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#14: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#15: ESResolve(73:31387) -> Resolve
+Survive attacks with 1 HP when HP > 50%

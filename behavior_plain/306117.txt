@@ -1,0 +1,82 @@
+#306117 - Reincarnated Osiris
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESStatusShield(20:29747) -> Spirit of the God of Dark Riches
+	Voids status ailments for 999 turns
+	[1] ESMaxHPChange(111:29748) -> Curse of the God of Dark Riches
+	Change player HP to 100,000 for 1 turn
+	[2] ESLeaderSwap(75:29749) -> Medjellusion
+	Leader changes to random sub for 1 turn
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 6, target rnd 14
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 12
+
+#6: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 8
+
+#7: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESVoidShieldBig(137:29755) -> Cursed Wall of the God of Dark Riches
+	Void damage >= 2,000,000,000 for 999 turns
+	[1] ESMaxHPChange(111:29756) -> Curse of the God of Dark Riches
+	Change player HP to 50% for 1 turn
+	[2] ESOrbLock(94:29763) -> Medjelock
+	Lock all Dark orbs, Deal 20% damage
+
+#8: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESVoidShieldBig(137:29751) -> Cursed Wall of the God of Dark Riches
+	Void damage >= 1,000,000,000 for 999 turns
+	[1] ESMaxHPChange(111:29752) -> Curse of the God of Dark Riches
+	Change player HP to 100,000 for 1 turn
+	[2] ESOrbLock(94:29753) -> Medjelock
+	Lock all orbs, Deal 30% damage
+
+#9: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESMaxHPChange(111:29759) -> Curse of the God of Dark Riches
+	Change player HP to 50% for 1 turn
+	[1] ESOrbLock(94:29760) -> Medjelock
+	Lock all Wood orbs, Deal 30% damage
+
+#10: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESMaxHPChange(111:29762) -> Curse of the God of Dark Riches
+	Change player HP to 100,000 for 1 turn
+	[1] ESOrbLock(94:29763) -> Medjelock
+	Lock all Dark orbs, Deal 20% damage
+
+#11: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#12: ESAttackMultihit(15:29757) -> Med Jed End
+Deal 300% damage (3 hits, 100% each)
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: SkillSet:
+	[0] ESBindAwoken(88:29724) -> Dimension Wave
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:29725) -> Dimension Destruction
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: ESResolve(73:29722) -> Resolve
+Survive attacks with 1 HP when HP > 50%

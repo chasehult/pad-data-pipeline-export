@@ -1,0 +1,79 @@
+#303061 - Destruction Cannon Mechanical Star God, Castor
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:44554) -> Mechanical Destruction Star of Gemini
+	Voids status ailments for 999 turns
+	[1] ESSkyfall(68:44555) -> Meteor Shower of the Stars
+	Jammer skyfall +20% for 3 turns
+	[2] ESVoidShieldBig(137:44556) -> Twin Star Shadow
+	Void damage >= 1,000,000,000 for 6 turns, Deal 100% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 6, target rnd 16
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 14
+
+#6: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 10
+
+#7: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESNoSkyfall(127:44560) -> Mechanical Star God's Tactics
+	No skyfall for 1 turn
+	[1] ESOrbChangeAttackBits(108:44561) -> Astrocharge - Dark
+	Change all Heal, Jammer, and Poison orbs to Dark orbs, Deal 100% damage
+
+#8: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESUnknown(151:44563) -> Mechanical Star God's Tactics
+	No description set
+	[1] ESOrbChangeAttack(48:44564) -> Astrocharge - Darkness
+	Change a random attribute to Dark orbs, Deal 100% damage
+
+#9: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#10: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+
+#11: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#12: ESSpinnersRandom(109:44558) -> Dark Hole
+Random 2 orbs change every 0.5s for 3 turns, Deal 150% damage
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESAttackMultihit(15:44557) -> Astrocharge - Darkness
+Deal 1,050% damage (3 hits, 350% each)
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: SkillSet:
+	[0] ESBindAwoken(88:44525) -> Star Machine's Wave
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:44526) -> Apocalyptic Star Crushing
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESResolve(73:42619) -> Resolve
+Survive attacks with 1 HP when HP > 50%
+
+#19: ESAttributeResist(72:44517) -> Light Reduced
+Reduce damage from Light attrs by 50%

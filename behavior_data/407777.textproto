@@ -1,0 +1,252 @@
+  monster_id: 407777
+  levels {
+    level: 1
+    groups {
+      group_type: PASSIVE
+      children {
+        behavior {
+          enemy_skill_id: 34042
+        }
+      }
+    }
+    groups {
+      group_type: PREEMPT
+      children {
+        behavior {
+          enemy_skill_id: 34608
+        }
+      }
+    }
+    groups {
+      group_type: STANDARD
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 100
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 3
+                trigger_turn: 1
+                trigger_turn_end: 2
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34578
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34582
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34586
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34590
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34594
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 3
+                trigger_turn: 3
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 34565
+                }
+              }
+            }
+          }
+        }
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 49
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 1
+                always_trigger_above: 9
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 34574
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 3
+                trigger_turn: 1
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34523
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34526
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34529
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34532
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34535
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 3
+                trigger_turn: 2
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 34561
+                }
+              }
+            }
+          }
+          children {
+            group {
+              condition {
+                repeats_every: 3
+                trigger_turn: 3
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34523
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34526
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34529
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34532
+                }
+              }
+              children {
+                behavior {
+                  condition {
+                    use_chance: 20
+                  }
+                  enemy_skill_id: 34535
+                }
+              }
+            }
+          }
+        }
+      }
+      children {
+        group {
+          group_type: STANDARD
+          condition {
+            hp_threshold: 9
+          }
+          children {
+            group {
+              condition {
+                trigger_turn: 1
+              }
+              children {
+                behavior {
+                  enemy_skill_id: 34047
+                }
+              }
+            }
+          }
+          children {
+            group {
+              children {
+                behavior {
+                  enemy_skill_id: 34495
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

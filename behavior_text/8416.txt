@@ -1,0 +1,38 @@
+#8416 - Devoted Crimson Dracoblader, Akine
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 8416
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (44248:129) Super Resolve 50%
+ | Damage which would reduce HP from above 50% to below 50% is nullified
+ type: PREEMPT
+ | (44249:83) Change of plans! + How do you like this?
+ | Absorb Fire and Wood damage for 3 turns + Change all orbs to Fire, Wood, and Poison, Deal 100% damage
+ group:
+ | group:
+   | condition: 33% chance
+   | (44257:92) Loving Blade
+   | Spawn 4 random Fire and Wood orbs, Deal 100% damage
+   | condition: 50% chance
+   | (44258:94) Shackling Blade
+   | Lock all Fire and Wood orbs, Deal 101% damage
+   | (44259:63) Binding Blade
+   | Bind 2 random subs for 2 turns, Deal 100% damage
+ | group:
+ | condition: turn 1 while HP > 14, hp <= 49
+   | (44254:83) Bitter Chocolate + Crimson Dracoblader's Affection
+   | Delay both leaders' skills by 15 turns + No description set, Deal 102% damage
+ | group:
+ | condition: hp <= 14
+   | group:
+   | condition: turn 1
+     | (44252:74) Crimson Dracoblader's Protection
+     | Reduce damage from all sources by 50% for 1 turn
+   | group:
+     | (44253:15) Infatuating Whirlwind Sword
+     | Deal 300% damage (5 hits, 60% each)

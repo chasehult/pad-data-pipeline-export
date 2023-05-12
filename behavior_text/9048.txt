@@ -1,0 +1,18 @@
+#9048 - Mega Awoken Dusk Shadow God, Ra Dragon
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 9048
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (38755:72) Dark Halved
+ | Reduce damage from Dark attrs by 50%
+ type: PREEMPT
+ | (38747:83) True Spirit of the Dusk Shadow God Dragon + Dark Sun Pressure + Wind of Darkness + Dark Sun Thunderclap
+ | Voids status ailments for 999 turns + Movetime 25% for 7 turns + Delay random sub's skills by 10 turns + For 7 turns, 15% chance for skyfall orbs to be blinded for turn
+ group:
+ | (38752:83) Wave of the Dusk Shadow God Dragon + Dark Sun Wave
+ | Bind awoken skills for 1 turn + Deal 2,100% damage (7 hits, 300% each), Deal 2,100% damage (7 hits, 300% each)

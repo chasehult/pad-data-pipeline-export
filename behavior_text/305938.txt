@@ -1,0 +1,23 @@
+#305938 - Super Reincarnated Amaterasu Ohkami
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 305938
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (44002:129) Super Resolve 50%
+ | Damage which would reduce HP from above 50% to below 50% is nullified
+ type: PREEMPT
+ | (43995:83) Glimmering Intense Light + Protection of the Dancing Goddess
+ | Disable active skills for 3 turns + Absorb damage when combos <= 7 for 1 turn
+ group:
+ | group:
+   | (44001:92) Intense Light Attack
+   | Spawn 3 random Light orbs, Deal 100% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | (43998:83) Caprice of the Dancing Goddess + Gift of Intense Light
+   | Blind all orbs on the board + Spawn 15 random Fire and Light orbs

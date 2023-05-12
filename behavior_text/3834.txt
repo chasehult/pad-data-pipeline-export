@@ -41,7 +41,7 @@ level: 1
      | (7890:83) Whoa... + Tough guy, huh! + Now we're getting somewhere!
      | Do nothing + Player recover 100% HP + Increase damage to 150% for the next 999 turns
    | group:
-     | (7891:94) Left yourself wide open!
+     | (7891:94) You left yourself wide open!
      | Lock all Jammer orbs, Deal 250% damage
      | condition: 50% chance
      | (7892:92) Burn!
@@ -91,7 +91,7 @@ level: 1
  | condition: hp <= 39
    | group:
    | condition: always turn 1
-     | (7880:83) I'm no pushover, you know. Scared yet? + Well, let's continue!
+     | (7880:83) Scared yet? I'm no pushover, you know! + Well, let's continue!
      | Enemy recover 30% HP + Lock all orbs
    | group:
    | condition: turn 2 while HP > 4

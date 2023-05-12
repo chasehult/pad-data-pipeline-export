@@ -1,0 +1,27 @@
+#208394 - Alt. Super White Fighter
+monster size: 1
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 208394
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (37518:129) Super Resolve
+ | Damage which would reduce HP from above 50% to below 50% is nullified
+ | (37522:72) Dark Reduced Damage
+ | Reduce damage from Dark attrs by 50%
+ type: PREEMPT
+ | (37457:74) Yellow Shield
+ | Reduce damage from all sources by 99% for 6 turns
+ group:
+ | group:
+ | condition: turns 1-6
+   | (37459:143) Shield Break
+   | For 3 turns, 1% ATK for 1 random card, Deal 50% damage
+ | group:
+   | (37460:6) Shield Flash
+   | Voids player buff effects
+   | (37461:15) Shield Clash
+   | Deal 200% damage (2 hits, 100% each)

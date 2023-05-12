@@ -8,7 +8,7 @@ approved: False
 
 level: 1
  type: PREEMPT
- | (14383:83) Don't get closer... + Turning of the Waning Moon
+ | (14383:83) Don't come any closer... + Turning of the Waning Moon
  | Absorb damage when combos <= 9 for 5 turns + Bind awoken skills for 5 turns
  group:
  | group:
@@ -25,7 +25,7 @@ level: 1
    | Deal 150% damage (3 hits, 50% each)
  | group:
  | condition: turn 4
-   | (14389:98) Waxing Crescent
+   | (14389:98) Crescent Moon
    | Blind orbs in specific positions for 1 turn, Deal 200% damage
  | group:
    | (14390:15) Resounding Dusk Swoop

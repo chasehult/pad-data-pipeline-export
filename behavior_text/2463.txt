@@ -1,0 +1,36 @@
+#2463 - 鬼族の宇宙人・ラム
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 2463
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (34620:83) You're pretty full of yourself... + ...thinking you can go up against me!
+ | For 5 turns, 15% chance for skyfall orbs to be blinded for turn + Bind active skills for 5 turns
+ group:
+ | group:
+   | condition: 33% chance
+   | (34623:77) Don't look down on women!
+   | Change the 5th and 6th columns to Light and Jammer orbs, Deal 115% damage
+   | condition: 33% chance
+   | (34624:107) Here goes! Take this!!
+   | Unable to match Fire and Dark orbs for 1 turn
+   | condition: 34% chance
+   | (34625:88) Darling!
+   | Bind awoken skills for 1 turn
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | (34626:17) I am displeased!
+     | Increase damage to 200% for the next 999 turns
+   | group:
+   | condition: turn 2
+     | (34627:83) If you're not nice to me... + ...I'll zap you with an electric shock!
+     | RCV 25% for 3 turns + ATK -75% for 3 turns, Deal 45% damage
+   | group:
+     | (34630:15) This calls for all-out war!
+     | Deal 80% damage (5 hits, 16% each)

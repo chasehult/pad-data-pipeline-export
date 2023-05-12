@@ -1,0 +1,38 @@
+#305041 - True Reincarnated Sanada Yukimura
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESAttributeBlock(107:40002) -> Stratagem of the Warrior
+	Unable to match Fire and Water orbs for 3 turns
+	[1] ESAbsorbCombo(67:40003) -> Do you really think you can win against me?
+	Absorb damage when combos <= 10 for 3 turns
+	[2] ESUnknown(151:40004) -> Come at me with everything you've got.
+	No description set
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 7
+
+#5: ESAttackMultihit(15:40005) -> Cross-shaped Spear Combo Attack
+Deal 300% damage (10 hits, 30% each)
+
+#6: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#7: SkillSet:
+	[0] ESBindAwoken(88:39740) -> Azure Sky Surge
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:39741) -> Thousandfold Demise
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#8: ESEndPath(36:26) -> ESEndPath
+end_turn

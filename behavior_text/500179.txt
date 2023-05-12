@@ -1,0 +1,15 @@
+#500179 - Gold Dragon
+monster size: 1
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 500179
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (33103:84) Golden!
+ | Change all orbs to Light
+ group:
+ | (33108:92) Gold Light
+ | Spawn 6 random Light orbs, Deal 100% damage

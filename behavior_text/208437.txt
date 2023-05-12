@@ -1,0 +1,33 @@
+#208437 - Devoted Princess Ichi
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 208437
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (41230:118) ＿Ichi Devil Halved
+ | Reduce damage from Devil types by 50%
+ type: PREEMPT
+ | (41231:137) Symbol of Spite
+ | Void damage >= 1,000,000,000 for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (41235:98) Corpse's Hollowblade
+     | Blind orbs in specific positions for 1 turn, Deal 90% damage
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | (41236:104) Ninpo - Magic Clouds
+     | A row of clouds appears for 1 turn at 1st row, 1st column, Deal 95% damage
+   | group:
+   | condition: execute repeatedly, turn 3 of 3
+     | (41237:68) Bloody Drops
+     | Fire and Water skyfall +20% for 1 turn, Deal 100% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | (41232:83) Awe for Her Brother + Sixth Sense
+   | No skyfall for 10 turns + ATK -50% for 10 turns, Deal 105% damage

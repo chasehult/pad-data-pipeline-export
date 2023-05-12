@@ -1,0 +1,17 @@
+#501772 - Flame Bowl Demon, Galbowl
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 501772
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (36562:68) Short Rib Meat
+ | Fire and Dark skyfall +10% for 3 turns
+ group:
+ | (36563:108) Munching Meat
+ | Change all Fire orbs to Dark orbs, Deal 100% damage
+ | (36564:92) Meat Bone
+ | Spawn 3 random Fire and Dark orbs, Deal 80% damage

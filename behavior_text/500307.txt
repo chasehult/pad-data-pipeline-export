@@ -1,0 +1,15 @@
+#500307 - Wood Pengdra
+monster size: 1
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 500307
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (36309:5) Flap-Jump
+ | Blind all orbs on the board
+ group:
+ | (36310:92) Twin Peng-Slash
+ | Spawn 2 random Wood orbs, Deal 100% damage

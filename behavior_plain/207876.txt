@@ -1,0 +1,125 @@
+#207876 - Red Robin War Goddess, Valkyrie - Ciel
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+#3: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#4: SkillSet:
+	[0] ESStatusShield(20:27233) -> Heimskringla
+	Voids status ailments for 999 turns
+	[1] ESBlindStickySkyfall(128:27234) -> Fallen Goddesses' Wrath
+	For 15 turns, 15% chance for skyfall orbs to be blinded for turn
+	[2] ESDamageShield(74:27235) -> Reversal Feather
+	Reduce damage from all sources by 90% for 1 turn
+
+#5: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 10, target rnd 23
+
+#7: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#8: ESBranchHP(29:19) -> ESBranchHP
+Branch on hp > 99, target rnd 22
+
+#9: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 17
+
+#10: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 2, target rnd 14
+
+#11: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b11
+
+#12: SkillSet:
+	[0] ESDamageShield(74:27240) -> Reversal Feather
+	Reduce damage from all sources by 50% for 1 turn
+	[1] ESAttackMultihit(15:27241) -> True Divine Swan
+	Deal 105% damage (3 hits, 35% each)
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#15: SkillSet:
+	[0] ESDamageShield(74:27235) -> Reversal Feather
+	Reduce damage from all sources by 90% for 1 turn
+	[1] ESBindAttack(63:27243) -> Blessing Feather
+	Bind 3 random cards for 3 turns, Deal 100% damage
+
+#16: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#17: SkillSet:
+	Condition: When < 50% HP , one-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBoardChangeAttackBits(85:27246) -> Valhalla Femme
+	Change all orbs to Fire, Deal 30% damage
+	[1] ESDamageShield(74:27247) -> Reversal Division
+	Reduce damage from all sources by 75% for 99 turns
+	[2] ESDispel(6:27245) -> Consecration
+	Voids player buff effects
+
+#18: SkillSet:
+	Condition: 34% chance (ai:0 rnd:34)
+	[0] ESSpinnersFixed(110:27249) -> Guardian Deity's Epitaph
+	Specific orbs change every 1.0s for 1 turn
+	[1] ESRowSpawnMulti(79:27250) -> Burning Rune
+	Change the 1st and 5th rows to Fire orbs, Deal 100% damage
+
+#19: SkillSet:
+	Condition: 33% chance (ai:0 rnd:33)
+	[0] ESOrbLock(94:27252) -> Shining Blaze
+	Lock 15 random orbs
+	[1] ESDebuffMovetime(39:27253) -> Trembling Soul
+	Movetime 25% for 1 turn, Deal 95% damage
+
+#20: ESAttackMultihit(15:27241) -> True Divine Swan
+Condition: 33% chance (ai:0 rnd:33)
+Deal 105% damage (3 hits, 35% each)
+
+#21: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#22: SkillSet:
+	[0] ESSkyfall(68:27237) -> The Field of Fólkvangr
+	Fire, Wood, Light, and Dark skyfall +100% for 1 turn
+	[1] ESSkillDelay(89:27238) -> Sacred Truce
+	Delay active skills by 10 turns, Deal 135% damage
+
+#23: SkillSet:
+	Condition: When < 50% HP , one-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBoardChangeAttackBits(85:27246) -> Valhalla Femme
+	Change all orbs to Fire, Deal 30% damage
+	[1] ESDamageShield(74:27247) -> Reversal Division
+	Reduce damage from all sources by 75% for 99 turns
+	[2] ESDispel(6:27245) -> Consecration
+	Voids player buff effects
+
+#24: ESAttackUPRemainingEnemies(17:27295) -> Sanctuary of War
+Condition: when <= 1 enemies remain (ai:100 rnd:0)
+Increase damage to 200% for the next 999 turns
+
+#25: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+#26: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#27: ESSuperResolve(129:27230) -> ＿Fire Ciel Super Resolve
+Damage which would reduce HP from above 50% to below 50% is nullified
+
+#28: ESEndPath(36:26) -> ESEndPath
+end_turn

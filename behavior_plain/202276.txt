@@ -1,0 +1,38 @@
+#202276 - Frost Dragon Emperor, Ilsix
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+#3: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#4: ESVoidShieldBig(137:28269) -> Steel Ice Membrane
+Void damage >= 2,000,000,000 for 6 turns
+
+#5: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#6: ESSetCounterIf(38:177) -> ESSetCounterIf
+set counter = 4 if counter == 0
+
+#7: ESCountdown(37:178) -> ESCountdown
+countdown
+
+#8: SkillSet:
+	[0] ESBindAwoken(88:28271) -> Frozen World
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:28272) -> Icy Calamity of Inverno
+	Deal 3,000% damage (6 hits, 500% each)
+
+#9: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#10: ESAttributeResist(72:28273) -> ＿Light Halved
+Reduce damage from Light attrs by 50%

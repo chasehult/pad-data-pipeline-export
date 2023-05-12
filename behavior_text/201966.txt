@@ -1,0 +1,12 @@
+#201966 - Black DeviNyan
+monster size: 3
+new AI: True
+start/max counter: 0
+counter increment: 0
+monster_id: 201966
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (32790:83) !! + He got scared and ran off...
+ | Disable active skills for 5 turns + Reduce self HP to 0

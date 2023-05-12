@@ -1,0 +1,15 @@
+#406666 - Duplicitous Mystic, Mikage
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 406666
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (43316:83) Yomi's Domain + Yomi's Gift + Eternal Curse
+ | Change board size to 6x5 for 1 turn + Spawn 3 random Heal orbs + Specific orbs change every 1.0s for 1 turn
+ group:
+ | (43313:109) Eternal Curse
+ | Random 1 orbs change every 1.0s for 1 turn, Deal 100% damage

@@ -1,0 +1,80 @@
+#303872 - Blazing Monstrous Wolf, Fenrir
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESAbsorbAttribute(53:28532) -> Blazing Aura
+	Absorb Fire damage for 3 turns
+	[1] ESAbsorbCombo(67:28533) -> Monstrous Wolf's Fur
+	Absorb damage when combos <= 7 for 999 turns
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 6, target rnd 18
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 16
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 3, target rnd 9
+
+#7: ESAttackMultihit(15:28538) -> Bite
+Deal 100% damage (2 hits, 50% each)
+
+#8: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#9: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 13
+
+#10: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESAttributeBlock(107:28536) -> Devastating Blaze
+	Unable to match Fire orbs for 5 turns
+	[1] ESAttackUPRemainingEnemies(17:28537) -> Apocalyptic Discharge
+	Increase damage to 150% for the next 999 turns
+
+#11: ESAttackMultihit(15:28538) -> Bite
+Deal 100% damage (2 hits, 50% each)
+
+#12: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#13: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESAttackUPRemainingEnemies(17:28537) -> Apocalyptic Discharge
+	Increase damage to 150% for the next 999 turns
+	[1] ESAttackMultihit(15:28538) -> Bite
+	Deal 100% damage (2 hits, 50% each)
+
+#14: ESAttackMultihit(15:28538) -> Bite
+Deal 100% damage (2 hits, 50% each)
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: ESAttackMultihit(15:28778) -> Crunch
+Deal 660% damage (2 hits, 330% each)
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: SkillSet:
+	[0] ESBindAwoken(88:28953) -> Submerged Conqueror's Wave
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:28954) -> Submerged Conqueror's Carnage
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#19: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#20: ESResolve(73:28775) -> Resolve
+Survive attacks with 1 HP when HP > 50%

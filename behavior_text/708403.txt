@@ -1,0 +1,15 @@
+#708403 - Super Green Shieldra
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 708403
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (37612:53) Green Armor
+ | Absorb Wood damage for 5 turns
+ group:
+ | (37613:15) Shield Attack
+ | Deal 100% damage

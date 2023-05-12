@@ -9,9 +9,9 @@ approved: False
 level: 1
  type: PREEMPT
  | condition: when 3944, 3945 on team
- | (13868:83) You do not get along well with that child + You will not hurt my cute disciple
+ | (13868:83) You do not get along well with her. + Don't you dare hurt my precious apprentice.
  | Change all orbs to Fire + Lock all orbs, Deal 60% damage
- | (13867:83) What do you want with my disciple? + You will not hurt my cute disciple
+ | (13867:83) What do you want with my apprentice? + Don't you dare hurt my precious apprentice.
  | Change all orbs to Fire + Lock all orbs, Deal 60% damage
  group:
  | group:
@@ -26,7 +26,7 @@ level: 1
    | Deal 110% damage (2 hits, 55% each)
  | group:
  | condition: turn 1 while HP > 19, hp <= 50
-   | (13875:68) Crimson Lotus Shower
+   | (13875:68) Crimson Rain
    | Fire and Jammer skyfall +10% for 10 turns
  | group:
  | condition: hp <= 19

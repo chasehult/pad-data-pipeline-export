@@ -21,7 +21,7 @@ Branch on counter >= 5, target rnd 11
 counter + 1
 
 #5: ESBranchHP(28:18) -> ESBranchHP
-Branch on hp < 5, target rnd 9
+Branch on hp < 3, target rnd 9
 
 #6: ESOrbLock(94:24513) -> Beacon
 Condition: 50% chance (ai:0 rnd:50)
@@ -34,7 +34,7 @@ Deal 105% damage (3 hits, 35% each)
 #8: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-#9: ESAttackMultihit(15:24515) -> Heavenly Light Talisman
+#9: ESAttackMultihit(15:24515) -> Heavenly Fury of the Light Amulet
 Deal 500% damage (5 hits, 100% each)
 
 #10: ESEndPath(36:26) -> ESEndPath

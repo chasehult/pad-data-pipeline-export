@@ -1,4 +1,4 @@
-#207614 - 金晶の氷雪王・ミアーダ
+#207614 - Golden Snowflake Ice Queen, Miada
 monster size: 5
 new AI: True
 start/max counter: 1

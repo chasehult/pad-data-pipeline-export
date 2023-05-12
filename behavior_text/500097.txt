@@ -1,0 +1,15 @@
+#500097 - Lilith
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 500097
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (36213:5) Dark Out
+ | Blind all orbs on the board
+ group:
+ | (36214:77) Dark Scythe
+ | Change the 6th column to Dark orbs, Deal 100% damage

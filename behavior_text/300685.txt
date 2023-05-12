@@ -1,0 +1,15 @@
+#300685 - King Bubblie
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 300685
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (39015:102) Blub-blub Bomb
+ | Spawn 1 random Bomb orb
+ group:
+ | (39016:92) Blub-blub
+ | Spawn 1 random Jammer orb, Deal 100% damage

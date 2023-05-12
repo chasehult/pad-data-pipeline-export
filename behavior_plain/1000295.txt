@@ -1,0 +1,8 @@
+#1000295 - Toyceratops
+monster size: 3
+new AI: False
+start/max counter: 0
+counter increment: 0
+
+#1: ESAttributeResist(72:23647) -> Water Halved
+Reduce damage from Water attrs by 50%

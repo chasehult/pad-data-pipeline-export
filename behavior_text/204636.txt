@@ -28,7 +28,7 @@ level: 1
      | Change all orbs to Fire, Water, Wood, Light, Dark, and Heal, Deal 105% damage
    | group:
    | condition: turn 3
-     | (21793:83) Ignite Boost + Ignition Burst
+     | (21793:83) Igniting Boost + Ignition Burst
      | Increase damage to 150% for the next 999 turns + Delay active skills by 6 turns
    | group:
      | condition: 33% chance

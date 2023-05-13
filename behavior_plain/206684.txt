@@ -1,0 +1,89 @@
+#206684 - 裏滄海の影鰐・クナシ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:47567) -> 影鰐の結界
+	Voids status ailments for 999 turns
+	[1] ESSkyfall(68:47568) -> 幽海の毒照
+	Water and Poison skyfall +30% for 3 turns
+	[2] ESVoidShieldBig(137:47569) -> 水飛壁
+	Void damage >= 2,000,000,000 for 7 turns
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 16
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 14
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 3, target rnd 10
+
+#7: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESGravity(50:47575) -> 海中冷雨
+	Player -35% HP
+	[1] ESOrbChangeAttack(48:47576) -> 毒飛沫
+	Change a random attribute to Poison orbs, Deal 100% damage
+
+#8: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESGravity(50:47578) -> 海中冷雨
+	Player -40% HP
+	[1] ESOrbChangeAttack(48:47579) -> 水飛沫
+	Change a random attribute to Water orbs, Deal 90% damage
+
+#9: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#10: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+
+#11: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#12: SkillSet:
+	[0] ESSkyfall(68:47572) -> 幽海の毒照
+	Mortal Poison skyfall +25% for 4 turns
+	[1] ESSpinnersRandom(109:47573) -> 天雨豪飲
+	Random 3 orbs change every 2.0s for 4 turns, Deal 150% damage
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESAttackMultihit(15:47570) -> 尾鰭叩きつけ
+Deal 1,000% damage (2 hits, 500% each)
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: SkillSet:
+	Condition: On death (ai:0 rnd:0)
+	[0] ESUnknown(152:47581) -> 影鰐の妖術
+	No description set
+
+#19: ESResolve(73:47527) -> 根性
+Survive attacks with 1 HP when HP > 50%
+
+#20: SkillSet:
+	Condition: On death (ai:0 rnd:0)
+	[0] ESUnknown(152:47581) -> 影鰐の妖術
+	No description set

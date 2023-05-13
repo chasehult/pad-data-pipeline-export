@@ -1,0 +1,53 @@
+#205762 - 仮面ライダーファイズ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+#3: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#4: SkillSet:
+	[0] ESDebuffATKTarget(143:46921) -> 戦うことが罪なら
+	For 1 turn, 1% ATK for both leaders
+	[1] ESTargetedSkillHaste(139:46922) -> 俺が背負ってやる！
+	Haste both leaders' skills by 15 turns
+
+#5: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#6: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 10
+
+#7: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#8: SkillSet:
+	[0] ESColumnSpawnMulti(77:46924) -> クリムゾンスマッシュ
+	Change the 1st column to Fire orbs and the 6th column to Dark orbs, Deal 55% damage
+	[1] ESFixedStart(101:46925) -> フォンブラスター　シングルモード
+	Fix orb movement starting point to random position on the board, Deal 50% damage
+
+#9: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#10: ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+#11: SkillSet:
+	[0] ESSkillDelay(89:46927) -> スパークルカット
+	Delay active skills by 1 turn
+	[1] ESBoardChangeAttackBits(85:46928) -> フォンブラスター　バーストモード
+	Change all orbs to Fire, Dark, Heal, and Jammer, Deal 100% damage
+
+#12: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#13: ESResolve(73:46919) -> ＿ファイズ根性
+Survive attacks with 1 HP when HP > 50%

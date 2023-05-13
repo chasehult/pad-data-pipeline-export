@@ -1,0 +1,38 @@
+#206424 - 真暴食の大罪龍王・マジェ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206424
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ | (47523:72) 光軽減
+ | Reduce damage from Light attrs by 50%
+ type: PREEMPT
+ | (47747:83) 大罪の守り + ダーティグラトニー + インヘイルミール
+ | Voids status ailments for 999 turns + Change all Jammer and Poison orbs to Mortal Poison orbs + Player -99% HP, Deal 240% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1 while HP > 2
+     | (47752:83) インヘイルフォール + 暴食の氾濫
+     | Jammer and Poison skyfall +25% for 3 turns + Void damage >= 2,000,000,000 for 6 turns, Deal 50% damage
+   | group:
+   | condition: turns 2-6 while HP > 2
+     | condition: 50% chance
+     | (47755:83) インヘイルミール + 暴食
+     | Player -40% HP + Change all Light, Jammer, and Poison orbs to Heal orbs, Deal 90% damage
+     | condition: 50% chance
+     | (47758:83) インヘイルミール + ダーティオーバーブレス
+     | Player -35% HP + Change 2 random orb types to Jammer orbs, Deal 100% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turns 1-6, hp <= 2
+   | (47751:85) グラトニーリベレーション
+   | Change all orbs to Jammer, Deal 1,000% damage

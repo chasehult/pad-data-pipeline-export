@@ -26,7 +26,7 @@ level: 1
  | group:
  | condition: turn 1 while HP > 14, hp <= 49
    | (44254:83) Bitter Chocolate + Crimson Dracoblader's Affection
-   | Delay both leaders' skills by 15 turns + No description set, Deal 102% damage
+   | Delay both leaders' skills by 15 turns + Negate 3 comboss for 3 turns, Deal 102% damage
  | group:
  | condition: hp <= 14
    | group:

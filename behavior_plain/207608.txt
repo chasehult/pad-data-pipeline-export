@@ -1,0 +1,85 @@
+#207608 - 灯星の夜女神・ノクタリア
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:47832) -> 灯星の夜女神
+	Voids status ailments for 5 turns
+	[1] ESAbsorbThresholdBig(138:47833) -> 逢魔の夜火
+	Absorb damage when damage >= 2,000,000,000 for 10 turns, Deal 110% damage
+	[2] ESSpinnersFixed(110:47834) -> トワイライトスター
+	Specific orbs change every 1.0s for 1 turn, Deal 110% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 17
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 15
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 5, target rnd 15
+
+#7: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 4, target rnd 11
+
+#8: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESColumnSpawnMulti(77:47840) -> 灯星
+	Change the 1st and 6th columns to Jammer and Poison orbs, Deal 50% damage
+	[1] ESSpinnersFixed(110:47841) -> トワイライトスター
+	Specific orbs change every 2.0s for 1 turn, Deal 50% damage
+
+#9: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESRowSpawnMulti(79:47843) -> 灯星
+	Change the 1st and 5th rows to Jammer and Poison orbs, Deal 50% damage
+	[1] ESSpinnersRandom(109:47844) -> トワイライトスター
+	Random 3 orbs change every 0.5s for 1 turn, Deal 50% damage
+
+#10: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#11: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+#12: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#13: SkillSet:
+	[0] ESOrbSealRow(100:47837) -> 逢魔の到来
+	Seal the 1st row for 1 turn
+	[1] ESDebuffMovetime(39:47838) -> ミッドナイトタイム
+	Movetime 25% for 1 turn
+
+#14: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#15: ESAttackMultihit(15:47835) -> クレセントナイトセプター
+Deal 1,000% damage (4 hits, 250% each)
+
+#16: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#17: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#18: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#19: ESResolve(73:47527) -> 根性
+Survive attacks with 1 HP when HP > 50%
+
+#20: ESAttributeResist(72:47523) -> 光軽減
+Reduce damage from Light attrs by 50%

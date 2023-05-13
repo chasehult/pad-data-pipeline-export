@@ -1,0 +1,36 @@
+#206675 - 裏琉麗の金魚・ウスイ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206675
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (47635:83) 術式結界 + 命の逃道 + 生命の源
+ | Voids status ailments for 999 turns + Seal the 1st row for 3 turns + Change all orbs to Water and Heal, Deal 50% damage
+ group:
+ | group:
+   | group:
+   | condition: turns 1-6 while HP > 49
+     | condition: 50% chance
+     | (47643:83) 生命の源 + 清水の一滴
+     | Change all orbs to Fire, Water, and Heal + Unable to match Fire orbs for 1 turn, Deal 50% damage
+     | condition: 50% chance
+     | (47646:83) 生命の源 + 清水の一滴
+     | Change all orbs to Water, Dark, and Heal + Unable to match Dark orbs for 1 turn, Deal 50% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turn 1 while HP > 2, hp <= 49
+   | (47640:83) 金魚の水槽 + 回泳
+   | Heal skyfall +20% for 6 turns + No description set
+ | group:
+ | condition: turns 1-6, hp <= 2
+   | (47639:15) 魂の消失
+   | Deal 1,050% damage (3 hits, 350% each)

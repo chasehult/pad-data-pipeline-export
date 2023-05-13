@@ -1,0 +1,19 @@
+#206701 - 式神・トウタツ
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206701
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (20742:48) 赤龍の火の玉
+ | Change a random attribute to Fire orbs, Deal 100% damage
+ group:
+ | (20743:92) 提灯ファイア
+ | Spawn 3 random Fire orbs, Deal 100% damage
+ type: REMAINING
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (20737:17) 子龍の怒り
+ | Increase damage to 300% for the next 999 turns

@@ -1,0 +1,43 @@
+#206671 - 荒鬼の用心棒・オウキ
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 206671
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (20651:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+
+level: 4
+ type: PASSIVE
+ | (20651:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (20652:67) 術式展開
+ | Absorb damage when combos <= 5 for 5 turns
+ group:
+ | group:
+   | condition: 33% chance
+   | (20653:92) 業炎
+   | Spawn 5 random Fire orbs, Deal 100% damage
+   | condition: 33% chance
+   | (20654:97) 闇への誘い
+   | Blind random 6 orbs for 1 turn, Deal 95% damage
+   | condition: 34% chance
+   | (20655:15) 憎悪の一撃
+   | Deal 105% damage
+ | group:
+ | condition: turn 1 while HP > 9, hp <= 49
+   | (20656:83) 恨みの譲渡 + 憎しみの連鎖
+   | Movetime -2s for 5 turns + RCV 50% for 5 turns
+ | group:
+ | condition: hp <= 9
+   | (20659:15) 怨嗟の解放
+   | Deal 300% damage
+ | group:
+ | condition: turn 1, hp <= 1
+   | (20660:17) 憎しみの猛炎
+   | Increase damage to 200% for the next 999 turns

@@ -1,0 +1,28 @@
+#208788 - カーネーションの愛星霊・ディアナ
+monster size: 5
+new AI: False
+start/max counter: 0
+counter increment: 0
+monster_id: 208788
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (44928:72) ＿ディアナ火半減
+ | Reduce damage from Fire attrs by 50%
+ type: PREEMPT
+ | (44929:83) 今宵の月は… + 祝福をもたらすでしょう
+ | Absorb Fire and Water damage for 5 turns + ATK -75% for 5 turns, Deal 55% damage
+ group:
+ | group:
+ | condition: execute repeatedly, turn 1 of 3
+   | (44932:83) 月花の降霊 + ピックディアンサス
+   | No description set + Deal 104% damage (4 hits, 26% each), Deal 104% damage (4 hits, 26% each)
+ | group:
+ | condition: execute repeatedly, turn 2 of 3
+   | (44935:83) 織り成す花弁 + マリアソロゥ
+   | Negate 3 comboss for 1 turn + Movetime 50% for 1 turn
+ | group:
+ | condition: execute repeatedly, turn 3 of 3
+   | (44938:83) 星の親愛 + アンジャベルガスト
+   | Enemy recover 10% HP + Change all orbs to Fire and Heal, Deal 115% damage

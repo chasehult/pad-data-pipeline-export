@@ -1,0 +1,79 @@
+#203760 - 解放の零龍喚士・ネイ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:47888) -> 零龍喚士の結界
+	Voids status ailments for 999 turns
+	[1] ESAbsorbAttribute(53:47889) -> 解放龍装
+	Absorb Light and Dark damage for 7 turns, Deal 50% damage
+	[2] ESBlindStickyRandom(97:47890) -> 閃皇斬
+	Blind random 10~15 orbs for 4 turns, Deal 50% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 16
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 14
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 4, target rnd 10
+
+#7: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESGravity(50:47896) -> 角突
+	Player -35% HP
+	[1] ESBlindStickyRandom(97:47897) -> 閃皇斬
+	Blind random 10 orbs for 1 turn, Deal 100% damage
+
+#8: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESGravity(50:47899) -> 角突
+	Player -40% HP
+	[1] ESBlindStickyRandom(97:47900) -> 閃皇斬
+	Blind random 8~12 orbs for 1 turn, Deal 90% damage
+
+#9: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#10: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+
+#11: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#12: SkillSet:
+	[0] ESAbsorbCombo(67:47893) -> 継界龍装・ノルディス
+	Absorb damage when combos <= 9 for 3 turns, Deal 50% damage
+	[1] ESBlindStickySkyfall(128:47894) -> 閃皇斬
+	For 3 turns, 40% chance for skyfall orbs to be blinded for turn, Deal 100% damage
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESAttackMultihit(15:47891) -> 瞬光双烈剣
+Deal 1,000% damage (2 hits, 500% each)
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESResolve(73:47527) -> 根性
+Survive attacks with 1 HP when HP > 50%

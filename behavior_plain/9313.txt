@@ -11,8 +11,8 @@ Enable preempt if level 1
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESStatusShield(20:42124) -> Infusion
 	Voids status ailments for 999 turns
-	[1] ESUnknown(150:42125) -> Moss-Infused Arm Slam
-	No description set
+	[1] ESNegateCombo(150:42125) -> Moss-Infused Arm Slam
+	Negate 3 comboss for 5 turns
 
 #3: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 10, target rnd 12

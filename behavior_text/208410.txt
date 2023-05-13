@@ -1,0 +1,12 @@
+#208410 - 超メタルドラゴン
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 208410
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (45098:72) ＿光以外軽減
+ | Reduce damage from Fire, Water, Wood, and Dark attrs by 50%

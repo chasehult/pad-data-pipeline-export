@@ -1,0 +1,19 @@
+#206703 - 式神・コタツ
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206703
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (20746:89) 緑龍の青葉
+ | Delay active skills by 0~3 turns
+ group:
+ | (20747:92) でんでんウィンド
+ | Spawn 3 random Wood orbs, Deal 100% damage
+ type: REMAINING
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (20737:17) 子龍の怒り
+ | Increase damage to 300% for the next 999 turns

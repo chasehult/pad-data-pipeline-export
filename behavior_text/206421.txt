@@ -1,0 +1,50 @@
+#206421 - 真傲慢の大罪龍王・ファデル
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206421
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ | (47524:72) 闇軽減
+ | Reduce damage from Dark attrs by 50%
+ type: PREEMPT
+ | (47733:83) 大胆不敵の悲劇 + 愉悦の蔑み + ハブリスプライド
+ | No description set + Absorb damage when combos <= 9 for 7 turns + No description set, Deal 50% damage
+ group:
+ | group:
+   | group:
+   | condition: turn 1 while HP > 2
+     | (47744:83) 大胆不敵の黙劇 + ハブリスプライド
+     | For 1 turn, 25% chance for skyfall orbs to be blinded for turn + No description set, Deal 50% damage
+   | group:
+   | condition: turn 2 while HP > 2
+     | (47741:83) 大胆不敵の喜劇 + ハブリスプライド
+     | Locked random skyfall +100% for 1 turn + No description set, Deal 50% damage
+   | group:
+   | condition: turn 3 while HP > 2
+     | (47738:83) 大胆不敵の悲劇 + ハブリスプライド
+     | No description set + No description set, Deal 50% damage
+   | group:
+   | condition: turn 4 while HP > 2
+     | (47744:83) 大胆不敵の黙劇 + ハブリスプライド
+     | For 1 turn, 25% chance for skyfall orbs to be blinded for turn + No description set, Deal 50% damage
+   | group:
+   | condition: turn 5 while HP > 2
+     | (47741:83) 大胆不敵の喜劇 + ハブリスプライド
+     | Locked random skyfall +100% for 1 turn + No description set, Deal 50% damage
+   | group:
+   | condition: turn 6 while HP > 2
+     | (47738:83) 大胆不敵の悲劇 + ハブリスプライド
+     | No description set + No description set, Deal 50% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turns 1-6, hp <= 2
+   | (47737:15) プライドリベレーション
+   | Deal 1,000% damage (4 hits, 250% each)

@@ -1,0 +1,28 @@
+#204649 - 幽城の大魔女・ヴェロア
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 204649
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (48351:129) 超根性90％
+ | Damage which would reduce HP from above 90% to below 90% is nullified
+ type: PREEMPT
+ | (48344:83) 幽城の盾 + シャズの援護 + 古影霊の魔印
+ | Void damage >= 1,500,000,000 for 1 turn + No skyfall for 2 turns + Spawn 9 random Fire, Water, Wood, Light, and Dark orbs
+ group:
+ | group:
+   | group:
+   | condition: turns 1-3 while HP > 89
+     | (48350:92) ダンシングダーク
+     | Spawn 4 random Dark orbs, Deal 100% damage
+   | group:
+     | (48348:40) …さようなら
+     | Reduce self HP to 0
+ | group:
+ | condition: turn 1, hp <= 89
+   | (48349:92) 古影霊の魔印
+   | Spawn 9 random Fire, Water, Wood, Light, and Dark orbs

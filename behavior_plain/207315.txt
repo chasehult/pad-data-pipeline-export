@@ -1,4 +1,4 @@
-#207315 - 双蛇の青鱗ヴァルナ
+#207315 - Varuna, Blue Twin Dragon Scale
 monster size: 5
 new AI: True
 start/max counter: 3
@@ -9,11 +9,11 @@ Enable preempt if level 1
 
 #2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
-	[0] ESBlindStickySkyfall(128:45262) -> 双蛇の縄張り
+	[0] ESBlindStickySkyfall(128:45262) -> Twin Snake's Territory
 	For 5 turns, 15% chance for skyfall orbs to be blinded for turn
-	[1] ESBindAwoken(88:45263) -> 水の波紋
+	[1] ESBindAwoken(88:45263) -> Water Ripples
 	Bind awoken skills for 3 turns
-	[2] ESBoardChangeAttackBits(85:45264) -> 水天の法
+	[2] ESBoardChangeAttackBits(85:45264) -> Varuna's Law
 	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison, Deal 100% damage
 
 #3: ESBranchHP(28:18) -> ESBranchHP
@@ -24,22 +24,22 @@ Branch on hp < 50, target rnd 9
 
 #5: SkillSet:
 	Condition: 33% chance (ai:33 rnd:0)
-	[0] ESChangeAttribute(46:45275) -> 双蛇の脱皮
+	[0] ESChangeAttribute(46:45275) -> Twin Snake's Shedding
 	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
-	[1] ESAttackMultihit(15:45276) -> 双蛇の斧
+	[1] ESAttackMultihit(15:45276) -> The Twin Snake Ax
 	Deal 102% damage (3 hits, 34% each)
 
 #6: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
-	[0] ESDebuffATK(130:45278) -> 水天の輝き
+	[0] ESDebuffATK(130:45278) -> Varuna's Brilliance
 	ATK -75% for 1 turn
-	[1] ESAttackMultihit(15:45279) -> 双蛇の斧
+	[1] ESAttackMultihit(15:45279) -> The Twin Snake Ax
 	Deal 102% damage (3 hits, 34% each)
 
 #7: SkillSet:
-	[0] ESDebuffRCV(105:45281) -> 水天の煌めき
+	[0] ESDebuffRCV(105:45281) -> Varuna's Gleam
 	RCV 25% for 1 turn
-	[1] ESAttackMultihit(15:45282) -> 双蛇の斧
+	[1] ESAttackMultihit(15:45282) -> The Twin Snake Ax
 	Deal 102% damage (3 hits, 34% each)
 
 #8: ESEndPath(36:26) -> ESEndPath
@@ -47,29 +47,29 @@ end_turn
 
 #9: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESSkyfall(68:45272) -> 水天の目覚め
+	[0] ESSkyfall(68:45272) -> Varuna's Awakening
 	Water and Light skyfall +15% for 10 turns
-	[1] ESRowSpawnMulti(79:45273) -> 水光
+	[1] ESRowSpawnMulti(79:45273) -> Water Light
 	Change the 1st row to Water orbs and the 4th and 5th rows to Water and Light orbs, Deal 101% damage
 
 #10: SkillSet:
 	Condition: 33% chance (ai:33 rnd:0)
-	[0] ESChangeAttribute(46:45275) -> 双蛇の脱皮
+	[0] ESChangeAttribute(46:45275) -> Twin Snake's Shedding
 	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
-	[1] ESAttackMultihit(15:45276) -> 双蛇の斧
+	[1] ESAttackMultihit(15:45276) -> The Twin Snake Ax
 	Deal 102% damage (3 hits, 34% each)
 
 #11: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
-	[0] ESDebuffATK(130:45278) -> 水天の輝き
+	[0] ESDebuffATK(130:45278) -> Varuna's Brilliance
 	ATK -75% for 1 turn
-	[1] ESAttackMultihit(15:45279) -> 双蛇の斧
+	[1] ESAttackMultihit(15:45279) -> The Twin Snake Ax
 	Deal 102% damage (3 hits, 34% each)
 
 #12: SkillSet:
-	[0] ESDebuffRCV(105:45281) -> 水天の煌めき
+	[0] ESDebuffRCV(105:45281) -> Varuna's Gleam
 	RCV 25% for 1 turn
-	[1] ESAttackMultihit(15:45282) -> 双蛇の斧
+	[1] ESAttackMultihit(15:45282) -> The Twin Snake Ax
 	Deal 102% damage (3 hits, 34% each)
 
 #13: ESEndPath(36:26) -> ESEndPath
@@ -82,22 +82,22 @@ Branch on flag & 1, target rnd 18
 flag SET 0b1
 
 #16: SkillSet:
-	[0] ESDebuffMovetime(39:45266) -> 双蛇の眼光
+	[0] ESDebuffMovetime(39:45266) -> Twin Snake's Gaze
 	Movetime 25% for 1 turn
-	[1] ESBoardChangeAttackBits(85:45267) -> 水天の法
+	[1] ESBoardChangeAttackBits(85:45267) -> Varuna's Law
 	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, Poison, and Mortal Poison, Deal 100% damage
 
 #17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
 #18: SkillSet:
-	[0] ESChangeAttribute(46:45269) -> 双蛇の脱皮
+	[0] ESChangeAttribute(46:45269) -> Twin Snake's Shedding
 	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
-	[1] ESAttackMultihit(15:45270) -> 双蛇の逆鱗
+	[1] ESAttackMultihit(15:45270) -> Wrath of the Twin Snake
 	Deal 600% damage (5 hits, 120% each)
 
 #19: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-#20: ESTypeResist(118:45283) -> ドラゴン半減
+#20: ESTypeResist(118:45283) -> Dragon Halved
 Reduce damage from Dragon types by 50%

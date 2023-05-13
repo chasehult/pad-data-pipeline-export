@@ -40,5 +40,5 @@ level: 1
      | Change the 1st row to Light orbs, Deal 100% damage
  | group:
  | condition: turn 4, hp <= 99
-   | (7790:83) Hahaha! Now you're talking! + Let the games begin!
+   | (7790:83) Hahaha! Now we're talking! + Let the games begin!
    | Poison skyfall +10% for 10 turns + Increase damage to 300% for the next 99 turns

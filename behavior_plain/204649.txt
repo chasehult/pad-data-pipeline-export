@@ -1,0 +1,51 @@
+#204649 - 幽城の大魔女・ヴェロア
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESVoidShieldBig(137:48345) -> 幽城の盾
+	Void damage >= 1,500,000,000 for 1 turn
+	[1] ESNoSkyfall(127:48346) -> シャズの援護
+	No skyfall for 2 turns
+	[2] ESRandomSpawn(92:48347) -> 古影霊の魔印
+	Spawn 9 random Fire, Water, Wood, Light, and Dark orbs
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 4, target rnd 11
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 90, target rnd 8
+
+#6: ESRandomSpawn(92:48350) -> ダンシングダーク
+Spawn 4 random Dark orbs, Deal 100% damage
+
+#7: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#8: ESRandomSpawn(92:48349) -> 古影霊の魔印
+Condition: One-time use (ai:100 rnd:0) (cost: 1)
+Spawn 9 random Fire, Water, Wood, Light, and Dark orbs
+
+#9: ESRandomSpawn(92:48350) -> ダンシングダーク
+Spawn 4 random Dark orbs, Deal 100% damage
+
+#10: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#11: ESEndBattle(40:48348) -> …さようなら
+Reduce self HP to 0
+
+#12: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#13: ESSuperResolve(129:48351) -> 超根性90％
+Damage which would reduce HP from above 90% to below 90% is nullified

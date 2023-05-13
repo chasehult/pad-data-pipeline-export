@@ -1,0 +1,36 @@
+#203757 - 雷天の零龍喚士・ネイ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 203757
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (47845:83) 零龍喚士の結界 + 雷天龍装 + 光雷剣
+ | Voids status ailments for 999 turns + Absorb Fire and Light damage for 7 turns + Lock all orbs, Deal 50% damage
+ group:
+ | group:
+   | group:
+   | condition: turns 1-6 while HP > 49
+     | condition: 50% chance
+     | (47853:83) 継界龍壁 + 光雷剣
+     | Void damage >= 2,500,000,000 for 1 turn + Lock 15 random orbs, Deal 50% damage
+     | condition: 50% chance
+     | (47856:83) 継界龍鱗 + 光雷剣
+     | Absorb damage when combos <= 9 for 1 turn + Lock 15 random orbs, Deal 50% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turn 1 while HP > 2, hp <= 49
+   | (47850:83) 継界龍装・ガイノウト + 光雷剣
+   | Locked random skyfall +100% for 1 turn + Lock all orbs, Deal 50% damage
+ | group:
+ | condition: turns 1-6, hp <= 2
+   | (47849:15) 降雷天翔斬
+   | Deal 1,000% damage (2 hits, 500% each)

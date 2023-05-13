@@ -59,7 +59,7 @@ flag SET 0b11111
 Branch on hp > 100, target rnd 19
 
 #18: SkillSet:
-	[0] ESSkyfall(68:7791) -> Hahaha! Now you're talking!
+	[0] ESSkyfall(68:7791) -> Hahaha! Now we're talking!
 	Poison skyfall +10% for 10 turns
 	[1] ESAttackUPRemainingEnemies(17:7792) -> Let the games begin!
 	Increase damage to 300% for the next 99 turns

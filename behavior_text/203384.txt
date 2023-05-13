@@ -1,4 +1,4 @@
-#203384 - 転生バステト
+#203384 - Reincarnated Bastet
 monster size: 5
 new AI: True
 start/max counter: 1
@@ -8,8 +8,8 @@ approved: False
 
 level: 1
  type: PREEMPT
- | (39464:50) 愛猫神の戯れ
+ | (39464:50) Feline Goddess' Caprice
  | Player -99% HP
  group:
- | (39465:46) キャッツクロー
+ | (39465:46) Cats' Claws
  | Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage

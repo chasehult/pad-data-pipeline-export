@@ -14,7 +14,7 @@ level: 1
  | group:
  | condition: execute repeatedly, turn 1 of 3
    | (46116:150) アイアン・ネイル
-   | No description set, Deal 80% damage
+   | Negate 3 comboss for 1 turn, Deal 80% damage
  | group:
  | condition: execute repeatedly, turn 2 of 3
    | (46117:77) メガ粒子砲

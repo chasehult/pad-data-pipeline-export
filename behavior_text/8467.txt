@@ -11,7 +11,7 @@ level: 1
  | (38659:129) Super Resolve 50%
  | Damage which would reduce HP from above 50% to below 50% is nullified
  type: PREEMPT
- | (38633:83) Who is that? + Please go home... + Domain of the Virgo Goddess
+ | (38633:83) Who's there? + Please, turn back... + Domain of the Virgo Goddess
  | Voids status ailments for 999 turns + Absorb damage when combos <= 13 for 3 turns + Change board size to 7x6 for 3 turns
  group:
  | group:
@@ -36,7 +36,7 @@ level: 1
  | condition: hp <= 14
    | group:
    | condition: turn 1
-     | (38637:83) This is your last warning. + Go home now, please!
+     | (38637:83) This is your last warning. + Turn back now!
      | Delay active skills by 2 turns + Reduce damage from all sources by 75% for 1 turn
    | group:
      | (38640:83) Twinkling Star + Wrath of the Virgo Goddess

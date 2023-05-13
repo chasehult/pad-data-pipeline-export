@@ -1,0 +1,104 @@
+#205168 - 裏聖なる神魔・アギト＝ディオ
+monster size: 5
+new AI: True
+start/max counter: 15
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:20 rnd:0) (cost: 8)
+	[0] ESStatusShield(20:47439) -> 聖なる守護
+	Voids status ailments for 999 turns
+	[1] ESBoardSizeChange(126:47440) -> 神魔の誘い
+	Change board size to 5x4 for 4 turns
+	[2] ESAttributeBlock(107:47441) -> ディオブレッド
+	Unable to match Fire orbs for 3 turns
+
+#3: SkillSet:
+	Condition: One-time use (ai:25 rnd:0) (cost: 8)
+	[0] ESStatusShield(20:47439) -> 聖なる守護
+	Voids status ailments for 999 turns
+	[1] ESBoardSizeChange(126:47440) -> 神魔の誘い
+	Change board size to 5x4 for 4 turns
+	[2] ESAttributeBlock(107:47442) -> ディオブレッド
+	Unable to match Water orbs for 3 turns
+
+#4: SkillSet:
+	Condition: One-time use (ai:33 rnd:0) (cost: 8)
+	[0] ESStatusShield(20:47439) -> 聖なる守護
+	Voids status ailments for 999 turns
+	[1] ESBoardSizeChange(126:47440) -> 神魔の誘い
+	Change board size to 5x4 for 4 turns
+	[2] ESAttributeBlock(107:47443) -> ディオブレッド
+	Unable to match Wood orbs for 3 turns
+
+#5: SkillSet:
+	Condition: One-time use (ai:50 rnd:0) (cost: 8)
+	[0] ESStatusShield(20:47439) -> 聖なる守護
+	Voids status ailments for 999 turns
+	[1] ESBoardSizeChange(126:47440) -> 神魔の誘い
+	Change board size to 5x4 for 4 turns
+	[2] ESAttributeBlock(107:47444) -> ディオブレッド
+	Unable to match Light orbs for 3 turns
+
+#6: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 8)
+	[0] ESStatusShield(20:47439) -> 聖なる守護
+	Voids status ailments for 999 turns
+	[1] ESBoardSizeChange(126:47440) -> 神魔の誘い
+	Change board size to 5x4 for 4 turns
+	[2] ESAttributeBlock(107:47445) -> ディオブレッド
+	Unable to match Dark orbs for 3 turns
+
+#7: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#8: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 15
+
+#9: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 13
+
+#10: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 4)
+	[0] ESSkyfall(68:47451) -> 神魔の施し
+	Light and Jammer skyfall +30% for 1 turn, Deal 50% damage
+	[1] ESSpinnersRandom(109:47452) -> アギトウィング
+	Random 1 orbs change every 0.5s for 2 turns, Deal 50% damage
+
+#11: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESSkyfall(68:47454) -> 神魔の施し
+	Dark and Poison skyfall +30% for 1 turn, Deal 50% damage
+	[1] ESUnknown(153:47455) -> アギトウィング
+	No description set, Deal 50% damage
+
+#12: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESAbsorbAttribute(53:47448) -> 神魔の煌き
+	Absorb Light and Dark damage for 1 turn
+	[1] ESDebuffMovetime(39:47449) -> アギトフェザー
+	Movetime 25% for 1 turn
+
+#13: ESAttackMultihit(15:47446) -> トゥルーエンド・ディオ
+Deal 1,000% damage (2 hits, 500% each)
+
+#14: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#15: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#16: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#17: ESResolve(73:47527) -> 根性
+Survive attacks with 1 HP when HP > 50%
+
+#18: ESAttributeResist(72:47524) -> 闇軽減
+Reduce damage from Dark attrs by 50%

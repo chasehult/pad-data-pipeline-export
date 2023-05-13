@@ -12,11 +12,11 @@ level: 1
  | Damage which would reduce HP from above 50% to below 50% is nullified
  type: PREEMPT
  | (45315:83) マジックブースト・フラッシュ + リカバリーライト + マジックライトフィールド
- | No description set + Absorb damage when combos <= 10 for 99 turns + Change board size to 6x5 for 7 turns
+ | Negate 8 comboss for 99 turns + Absorb damage when combos <= 10 for 99 turns + Change board size to 6x5 for 7 turns
  type: DEATH
  condition: when defeated
  | (45330:95) マジックブースト・フラッシュ
- | No description set
+ | Negate 12 comboss for 99 turns
  group:
  | group:
  | condition: turn 1

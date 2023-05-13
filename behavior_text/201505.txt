@@ -16,7 +16,7 @@ level: 1
  type: DEATH
  condition: when defeated
  | (41720:95) Curse of the Knight
- | No description set
+ | Negate 3 comboss for 3 turns
  group:
  | group:
    | condition: 50% chance

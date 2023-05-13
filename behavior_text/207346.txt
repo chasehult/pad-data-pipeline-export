@@ -1,0 +1,37 @@
+#207346 - 裏アサガオの結星霊・メアリス
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 207346
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (44941:72) ＿メアリス水半減
+ | Reduce damage from Water attrs by 50%
+ type: PREEMPT
+ | (24301:83) イッツ・ショータイムだよ！ + 何が起こるかな～？
+ | Absorb Water and Dark damage for 5 turns + A 2×5 rectangle of clouds appears for 5 turns at a random location
+ group:
+ | group:
+   | (24308:94) アーリーロック
+   | Lock all Water and Dark orbs, Deal 110% damage
+   | condition: 50% chance
+   | (24307:85) オーシャンブルー
+   | Change all orbs to Water and Heal, Deal 90% damage
+   | condition: 50% chance
+   | (24306:92) パープルソーサー
+   | Spawn 10 random Dark orbs, Deal 100% damage
+ | group:
+ | condition: turn 1 while HP > 9, hp <= 49
+   | condition: 50% chance
+   | (24304:107) マジカルパラソル
+   | Unable to match Water orbs for 5 turns
+   | condition: 50% chance
+   | (24305:107) マジカルパラソル
+   | Unable to match Dark orbs for 5 turns
+ | group:
+ | condition: hp <= 9
+   | (24309:92) ヘブンリーマジック
+   | Spawn 5 random Water and Dark orbs, Deal 300% damage

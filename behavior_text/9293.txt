@@ -1,0 +1,48 @@
+#9293 - Super Reincarnated Osiris
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 9293
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (48227:129) 超根性
+ | Damage which would reduce HP from above 50% to below 50% is nullified
+ | (48228:106) 敵の行動ターンが変化した
+ | Enemy turn counter change to 5 when HP <= 50%
+ type: PREEMPT
+ | (48206:83) 冥穣神の呪縛 + メジェドラの眼光 + メジェウィンド + フォレストリフレッシュ
+ | Jammer and Poison skyfall +15% for 5 turns + Movetime 25% for 5 turns + Delay active skills by 99 turns + No description set
+ group:
+ | group:
+   | group:
+   | condition: turns 1-4 while HP > 49
+     | condition: 20% chance
+     | (48222:107) メジェトリック
+     | Unable to match Fire orbs for 1 turn, Deal 100% damage
+     | condition: 20% chance
+     | (48223:107) メジェトリック
+     | Unable to match Water orbs for 1 turn, Deal 100% damage
+     | condition: 20% chance
+     | (48224:107) メジェトリック
+     | Unable to match Wood orbs for 1 turn, Deal 100% damage
+     | condition: 20% chance
+     | (48225:107) メジェトリック
+     | Unable to match Light orbs for 1 turn, Deal 100% damage
+     | condition: 20% chance
+     | (48226:107) メジェトリック
+     | Unable to match Dark orbs for 1 turn, Deal 100% damage
+   | group:
+     | (48219:83) メジェドラの誘い + フォレストエンド
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | (48211:83) フォレストガード + 冥穣神の試練 + フォレストダウン + メジェフィールド
+     | Reduce damage from all sources by 75% for 5 turns + Disable active skills for 5 turns + No description set + No description set
+   | group:
+     | (48216:83) メジェドラの誘い + フォレストエンド
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)

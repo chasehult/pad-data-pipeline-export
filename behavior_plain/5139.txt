@@ -1,0 +1,64 @@
+#5139 - Mega Awoken Norn of the Future, Skuld
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESStatusShield(20:48242) -> 時女神の守り
+	Voids status ailments for 999 turns
+	[1] ESSkyfallLocked(96:48243) -> 予知の神時計
+	Locked random skyfall +25% for 10 turns
+	[2] ESGravity(50:48244) -> 時空断裂
+	Player -99% HP
+
+#3: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 11
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 1, target rnd 8
+
+#5: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#6: SkillSet:
+	[0] ESSpinnersRandom(109:48249) -> 時空超越の舞
+	Random 3 orbs change every 1.0s for 1 turn
+	[1] ESAttackMultihit(15:48250) -> アクアスラッシュ
+	Deal 123% damage (3 hits, 41% each)
+
+#7: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#8: ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+#9: SkillSet:
+	[0] ESDebuffMovetime(39:48252) -> 煌めく神時計
+	Movetime 50% for 1 turn
+	[1] ESAttackMultihit(15:48253) -> アクアスラッシュ
+	Deal 123% damage (3 hits, 41% each)
+
+#10: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#11: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBoardChange(84:48246) -> 時空創律陣・水木
+	Change all orbs to Water, Wood, and Heal
+	[1] ESGravity(50:48247) -> 時空断裂
+	Player -450% HP
+
+#12: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 4
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESDeathCry(69:48318) -> スクルド変身
+Condition: On death (ai:0 rnd:0)
+Show message: 時空が歪んでいく|時空の狭間から別の姿を現した！

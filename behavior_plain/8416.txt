@@ -38,8 +38,8 @@ end_turn
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESTargetedSkillDelay(140:44255) -> Bitter Chocolate
 	Delay both leaders' skills by 15 turns
-	[1] ESUnknown(150:44256) -> Crimson Dracoblader's Affection
-	No description set, Deal 102% damage
+	[1] ESNegateCombo(150:44256) -> Crimson Dracoblader's Affection
+	Negate 3 comboss for 3 turns, Deal 102% damage
 
 #10: ESRandomSpawn(92:44257) -> Loving Blade
 Condition: 33% chance (ai:33 rnd:0)

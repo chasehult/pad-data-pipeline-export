@@ -1,0 +1,54 @@
+#206681 - 裏永生の火鳥・マチガネ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206681
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (47550:83) 舞い散る炎 + 火鳥の妖術 + 天炎
+ | Fire and Jammer skyfall +30% for 1 turn + Absorb damage when combos <= 9 for 7 turns + No description set
+ type: DEATH
+ condition: when defeated
+ | (47564:95) 火鳥の妖術
+ | Specific orbs change every 1.0s for 5 turns
+ | (47564:95) 火鳥の妖術
+ | Specific orbs change every 1.0s for 5 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1 while HP > 2
+     | (47561:83) 舞い散る羽 + 天生炎
+     | Light and Poison skyfall +30% for 1 turn + No description set, Deal 100% damage
+   | group:
+   | condition: turn 2 while HP > 2
+     | (47558:83) 舞い散る羽 + 天生炎
+     | Dark and Jammer skyfall +30% for 1 turn + No description set, Deal 100% damage
+   | group:
+   | condition: turn 3 while HP > 2
+     | (47555:83) 舞い散る炎 + 天生炎
+     | Fire and Mortal Poison skyfall +30% for 1 turn + No description set, Deal 100% damage
+   | group:
+   | condition: turn 4 while HP > 2
+     | (47561:83) 舞い散る羽 + 天生炎
+     | Light and Poison skyfall +30% for 1 turn + No description set, Deal 100% damage
+   | group:
+   | condition: turn 5 while HP > 2
+     | (47558:83) 舞い散る羽 + 天生炎
+     | Dark and Jammer skyfall +30% for 1 turn + No description set, Deal 100% damage
+   | group:
+   | condition: turn 6 while HP > 2
+     | (47555:83) 舞い散る炎 + 天生炎
+     | Fire and Mortal Poison skyfall +30% for 1 turn + No description set, Deal 100% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turns 1-6, hp <= 2
+   | (47554:15) 飛天翔撃
+   | Deal 1,000% damage (5 hits, 200% each)

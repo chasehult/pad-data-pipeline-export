@@ -9,9 +9,9 @@ Enable preempt if level 1
 
 #2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
-	[0] ESStatusShield(20:38634) -> Who is that?
+	[0] ESStatusShield(20:38634) -> Who's there?
 	Voids status ailments for 999 turns
-	[1] ESAbsorbCombo(67:38635) -> Please go home...
+	[1] ESAbsorbCombo(67:38635) -> Please, turn back...
 	Absorb damage when combos <= 13 for 3 turns
 	[2] ESBoardSizeChange(126:38636) -> Domain of the Virgo Goddess
 	Change board size to 7x6 for 3 turns
@@ -75,7 +75,7 @@ end_turn
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESSkillDelay(89:38638) -> This is your last warning.
 	Delay active skills by 2 turns
-	[1] ESDamageShield(74:38639) -> Go home now, please!
+	[1] ESDamageShield(74:38639) -> Turn back now!
 	Reduce damage from all sources by 75% for 1 turn
 
 #16: SkillSet:

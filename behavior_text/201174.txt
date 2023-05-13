@@ -1,0 +1,15 @@
+#201174 - 真プチアンサス
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 201174
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (44925:94) アンサスグレース
+ | Lock 10 random orbs
+ group:
+ | (44927:15) フローラリング
+ | Deal 60% damage (2 hits, 30% each)

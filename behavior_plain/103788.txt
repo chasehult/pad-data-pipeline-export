@@ -17,7 +17,7 @@ counter + 1
 #4: ESBranchHP(29:19) -> ESBranchHP
 Branch on hp > 51, target rnd 6
 
-#5: ESAttackUPRemainingEnemies(17:15326) -> Ignite Boost
+#5: ESAttackUPRemainingEnemies(17:15326) -> Igniting Boost
 Condition: One-time use, when <= 1 enemies remain (ai:100 rnd:0) (cost: 1)
 Increase damage to 120% for the next 999 turns
 

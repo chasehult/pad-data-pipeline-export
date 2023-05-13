@@ -1,0 +1,50 @@
+#206684 - 裏滄海の影鰐・クナシ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206684
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (47566:83) 影鰐の結界 + 幽海の毒照 + 水飛壁
+ | Voids status ailments for 999 turns + Water and Poison skyfall +30% for 3 turns + Void damage >= 2,000,000,000 for 7 turns
+ type: DEATH
+ condition: when defeated
+ | (47580:95) 影鰐の妖術
+ | No description set
+ | (47580:95) 影鰐の妖術
+ | No description set
+ group:
+ | group:
+   | group:
+   | condition: turns 1-2 while HP > 2
+     | condition: 50% chance
+     | (47574:83) 海中冷雨 + 毒飛沫
+     | Player -35% HP + Change a random attribute to Poison orbs, Deal 100% damage
+     | condition: 50% chance
+     | (47577:83) 海中冷雨 + 水飛沫
+     | Player -40% HP + Change a random attribute to Water orbs, Deal 90% damage
+   | group:
+   | condition: turn 3 while HP > 2
+     | (47571:83) 幽海の毒照 + 天雨豪飲
+     | Mortal Poison skyfall +25% for 4 turns + Random 3 orbs change every 2.0s for 4 turns, Deal 150% damage
+   | group:
+   | condition: turns 4-6 while HP > 2
+     | condition: 50% chance
+     | (47574:83) 海中冷雨 + 毒飛沫
+     | Player -35% HP + Change a random attribute to Poison orbs, Deal 100% damage
+     | condition: 50% chance
+     | (47577:83) 海中冷雨 + 水飛沫
+     | Player -40% HP + Change a random attribute to Water orbs, Deal 90% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turns 1-6, hp <= 2
+   | (47570:15) 尾鰭叩きつけ
+   | Deal 1,000% damage (2 hits, 500% each)

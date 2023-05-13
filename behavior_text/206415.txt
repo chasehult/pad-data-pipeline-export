@@ -1,0 +1,46 @@
+#206415 - 真憤怒の大罪龍王・バルディターン
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+monster_id: 206415
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ | (47523:72) 光軽減
+ | Reduce damage from Light attrs by 50%
+ | (47503:106) 敵の行動ターンが変化した
+ | Enemy turn counter change to 1 when HP <= 50%
+ type: PREEMPT
+ | (47677:83) 憤然の焔 + 悲憤の黒煙 + フィアーオブラース
+ | Void damage >= 2,000,000,000 for 6 turns + For 4 turns, 40% chance for skyfall orbs to be blinded for turn + Change board size to 6x5 for 4 turns, Deal 100% damage
+ group:
+ | group:
+ | condition: always turns 3-6
+   | (47681:15) ラースリベレーション
+   | Deal 750% damage (6 hits, 125% each)
+ | group:
+   | group:
+   | condition: turn 1 while HP > 49
+     | (47682:83) ジェノサイドブレス + 逆上インフェルノ + フィアーオブラース
+     | Player -35% HP + Increase damage to 150% for the next 1 turn + Change board size to 5x4 for 4 turns, Deal 100% damage
+   | group:
+   | condition: turn 2 while HP > 49
+     | (47685:83) ジェノサイドブレス + 逆上インフェルノ + フィアーオブデス
+     | Player -99% HP + Increase damage to 300% for the next 999 turns + Leader changes to random sub for 2 turns, Deal 100% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1
+     | (47688:83) 憤怒の波動 + 黒煙の焔 + ジェノサイドブレス
+     | Bind awoken skills for 1 turn + Blind random 6 orbs for 1 turn + Player -99% HP
+   | group:
+   | condition: turn 2
+     | (47681:15) ラースリベレーション
+     | Deal 750% damage (6 hits, 125% each)

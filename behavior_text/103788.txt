@@ -31,7 +31,7 @@ level: 1
  | condition: hp <= 50
    | group:
    | condition: turn 1
-     | (15326:17) Ignite Boost
+     | (15326:17) Igniting Boost
      | Increase damage to 120% for the next 999 turns
    | group:
    | condition: execute repeatedly, turn 1 of 3

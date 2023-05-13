@@ -58,8 +58,8 @@ counter = 0
 #15: SkillSet:
 	[0] ESBoardChangeAttackBits(85:44145) -> Divine Dance with Dragons
 	Change all orbs to Fire and Light, Deal 100% damage
-	[1] ESUnknown(150:44146) -> Wishing and praying for all...
-	No description set
+	[1] ESNegateCombo(150:44146) -> Wishing and praying for all...
+	Negate 3 comboss for 1 turn
 
 #16: ESEndPath(36:26) -> ESEndPath
 end_turn

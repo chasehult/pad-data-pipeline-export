@@ -75,5 +75,5 @@ Reduce damage from Water attrs by 50%
 
 #17: SkillSet:
 	Condition: On death (ai:0 rnd:0)
-	[0] ESUnknown(150:41719) -> Curse of the Knight
-	No description set
+	[0] ESNegateCombo(150:41719) -> Curse of the Knight
+	Negate 3 comboss for 3 turns

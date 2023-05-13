@@ -1,0 +1,91 @@
+#206415 - 真憤怒の大罪龍王・バルディターン
+monster size: 5
+new AI: True
+start/max counter: 7
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 4)
+	[0] ESVoidShieldBig(137:47678) -> 憤然の焔
+	Void damage >= 2,000,000,000 for 6 turns
+	[1] ESBlindStickySkyfall(128:47679) -> 悲憤の黒煙
+	For 4 turns, 40% chance for skyfall orbs to be blinded for turn
+	[2] ESBoardSizeChange(126:47680) -> フィアーオブラース
+	Change board size to 6x5 for 4 turns, Deal 100% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 16
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 10
+
+#6: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESGravity(50:47683) -> ジェノサイドブレス
+	Player -35% HP
+	[1] ESAttackUPRemainingEnemies(17:47684) -> 逆上インフェルノ
+	Increase damage to 150% for the next 1 turn
+	[2] ESBoardSizeChange(126:47504) -> フィアーオブラース
+	Change board size to 5x4 for 4 turns, Deal 100% damage
+
+#7: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESGravity(50:47686) -> ジェノサイドブレス
+	Player -99% HP
+	[1] ESAttackUPRemainingEnemies(17:47687) -> 逆上インフェルノ
+	Increase damage to 300% for the next 999 turns
+	[2] ESLeaderSwap(75:47609) -> フィアーオブデス
+	Leader changes to random sub for 2 turns, Deal 100% damage
+
+#8: ESAttackMultihit(15:47681) -> ラースリベレーション
+Deal 750% damage (6 hits, 125% each)
+
+#9: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#10: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 14
+
+#11: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#12: SkillSet:
+	[0] ESBindAwoken(88:47689) -> 憤怒の波動
+	Bind awoken skills for 1 turn
+	[1] ESBlindStickyRandom(97:47690) -> 黒煙の焔
+	Blind random 6 orbs for 1 turn
+	[2] ESGravity(50:47430) -> ジェノサイドブレス
+	Player -99% HP
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESAttackMultihit(15:47681) -> ラースリベレーション
+Deal 750% damage (6 hits, 125% each)
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESResolve(73:47527) -> 根性
+Survive attacks with 1 HP when HP > 50%
+
+#19: ESAttributeResist(72:47523) -> 光軽減
+Reduce damage from Light attrs by 50%
+
+#20: ESTurnChangePassive(106:47503) -> 敵の行動ターンが変化した
+Enemy turn counter change to 1 when HP <= 50%

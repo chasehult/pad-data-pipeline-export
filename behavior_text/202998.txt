@@ -1,0 +1,28 @@
+#202998 - 魔神爵・グレモリー
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 202998
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (48343:129) 超根性90％
+ | Damage which would reduce HP from above 90% to below 90% is nullified
+ type: PREEMPT
+ | (48335:83) 宝探の魔呪 + ミステリーワールド + ミステリーウェーブ + ミステリーチェンジ
+ | Absorb damage when combos <= 13 for 1 turn + Change all orbs to Dark + Change the 1st and 2nd rows to Fire orbs and the 3rd row to Water orbs + Change the 2nd and 4th columns to Wood orbs and the 3rd and 5th columns to Light orbs
+ group:
+ | group:
+   | group:
+   | condition: turns 1-3 while HP > 89
+     | (48342:101) 悪魔の悪戯
+     | Fix orb movement starting point to random position on the board, Deal 100% damage
+   | group:
+     | (48340:40) ミステリージャンプ
+     | Reduce self HP to 0
+ | group:
+ | condition: turn 1, hp <= 89
+   | (48341:84) ミステリーリフレッシュ
+   | Change all orbs to Fire, Water, Wood, Light, and Dark

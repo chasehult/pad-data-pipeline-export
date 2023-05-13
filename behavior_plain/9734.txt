@@ -24,15 +24,15 @@ Branch on player_cards HAS [9758], target rnd 8
 
 #7: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESUnknown(150:46257) -> 憎しみを生むもの………
-	No description set
+	[0] ESNegateCombo(150:46257) -> 憎しみを生むもの………
+	Negate 2 comboss for 2 turns
 	[1] ESDebuffRCV(105:46258) -> 憎しみを育てる血を吐き出せ！
 	RCV 50% for 2 turns, Deal 80% damage
 
 #8: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESUnknown(150:46260) -> 待ってろ！ハマーン！
-	No description set
+	[0] ESNegateCombo(150:46260) -> 待ってろ！ハマーン！
+	Negate 2 comboss for 2 turns
 	[1] ESDebuffRCV(105:46261) -> アンタは俺が倒してやる！！
 	RCV 50% for 2 turns, Deal 80% damage
 

@@ -28,8 +28,8 @@ Branch on counter = 1, target rnd 11
 #8: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-#9: ESUnknown(150:46116) -> アイアン・ネイル
-No description set, Deal 80% damage
+#9: ESNegateCombo(150:46116) -> アイアン・ネイル
+Negate 3 comboss for 1 turn, Deal 80% damage
 
 #10: ESEndPath(36:26) -> ESEndPath
 end_turn

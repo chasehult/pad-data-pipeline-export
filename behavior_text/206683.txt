@@ -1,0 +1,39 @@
+#206683 - 影鰐の妖人・クナシ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206683
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (20676:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+
+level: 4
+ type: PASSIVE
+ | (20676:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (20677:50) 海中冷雨
+ | Player -99% HP
+ group:
+ | group:
+   | condition: 33% chance
+   | (20678:109) 海月回泳
+   | Random 3 orbs change every 2.0s for 1 turn, Deal 100% damage
+   | condition: 33% chance
+   | (20679:92) 水飛沫
+   | Spawn 5 random Water orbs, Deal 95% damage
+   | condition: 34% chance
+   | (20680:15) 尾鰭叩き
+   | Deal 105% damage (3 hits, 35% each)
+ | group:
+ | condition: turn 1 while HP > 9, hp <= 49
+   | (20681:83) 海中冷雨 + 雨上がりの空
+   | Player -99% HP + RCV 50% for 5 turns
+ | group:
+ | condition: hp <= 9
+   | (20683:15) 天雨豪飲
+   | Deal 300% damage

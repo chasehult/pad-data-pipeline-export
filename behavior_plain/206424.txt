@@ -1,0 +1,82 @@
+#206424 - 真暴食の大罪龍王・マジェ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:47748) -> 大罪の守り
+	Voids status ailments for 999 turns
+	[1] ESOrbChangeAttackBits(108:47749) -> ダーティグラトニー
+	Change all Jammer and Poison orbs to Mortal Poison orbs, Deal 240% damage
+	[2] ESGravity(50:47750) -> インヘイルミール
+	Player -99% HP
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 16
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 14
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 1, target rnd 10
+
+#7: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESGravity(50:47756) -> インヘイルミール
+	Player -40% HP
+	[1] ESOrbChangeAttackBits(108:47757) -> 暴食
+	Change all Light, Jammer, and Poison orbs to Heal orbs, Deal 90% damage
+
+#8: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESGravity(50:47759) -> インヘイルミール
+	Player -35% HP
+	[1] ESJammerChangeRandom(13:47760) -> ダーティオーバーブレス
+	Change 2 random orb types to Jammer orbs, Deal 100% damage
+
+#9: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#10: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+
+#11: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#12: SkillSet:
+	[0] ESSkyfall(68:47753) -> インヘイルフォール
+	Jammer and Poison skyfall +25% for 3 turns, Deal 50% damage
+	[1] ESVoidShieldBig(137:47754) -> 暴食の氾濫
+	Void damage >= 2,000,000,000 for 6 turns, Deal 50% damage
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESBoardChangeAttackBits(85:47751) -> グラトニーリベレーション
+Change all orbs to Jammer, Deal 1,000% damage
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESResolve(73:47527) -> 根性
+Survive attacks with 1 HP when HP > 50%
+
+#19: ESAttributeResist(72:47523) -> 光軽減
+Reduce damage from Light attrs by 50%

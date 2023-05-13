@@ -1,0 +1,19 @@
+#206702 - 式神・キュウタツ
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206702
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (20744:14) 青龍の氷水
+ | Bind active skills for 3 turns
+ group:
+ | (20745:92) 鞠スプラッシュ
+ | Spawn 3 random Water orbs, Deal 100% damage
+ type: REMAINING
+ condition: when 1 enemies remain, turn 1, hp <= 100
+ | (20737:17) 子龍の怒り
+ | Increase damage to 300% for the next 999 turns

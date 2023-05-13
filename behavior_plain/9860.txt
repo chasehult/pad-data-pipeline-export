@@ -1,4 +1,4 @@
-#9860 - 創造の神ラージャン
+#9860 - Rajan the Creator
 monster size: 5
 new AI: True
 start/max counter: 3
@@ -9,11 +9,11 @@ Enable preempt if level 1
 
 #2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
-	[0] ESStatusShield(20:45285) -> 絶対の盾
+	[0] ESStatusShield(20:45285) -> Impregnable Shield
 	Voids status ailments for 999 turns
-	[1] ESAbsorbAttribute(53:45286) -> 天地創造
+	[1] ESAbsorbAttribute(53:45286) -> Heaven and Earth Creation
 	Absorb Fire, Water, and Wood damage for 3 turns
-	[2] ESUnknown(153:45287) -> 神鳴
+	[2] ESUnknown(153:45287) -> Divine Cry
 	No description set
 
 #3: ESBranchHP(28:18) -> ESBranchHP
@@ -24,15 +24,15 @@ Branch on hp < 50, target rnd 8
 
 #5: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
-	[0] ESRandomSpawn(92:45306) -> 稲妻
+	[0] ESRandomSpawn(92:45306) -> Lightning Bolt
 	Spawn 3 random Light, Dark, and Heal orbs
-	[1] ESAttackMultihit(15:45307) -> 激震
+	[1] ESAttackMultihit(15:45307) -> Quake
 	Deal 102% damage (3 hits, 34% each)
 
 #6: SkillSet:
-	[0] ESUnknown(151:45309) -> 雷鳴
+	[0] ESUnknown(151:45309) -> Thunder
 	No description set
-	[1] ESAttackMultihit(15:45310) -> 激震
+	[1] ESAttackMultihit(15:45310) -> Quake
 	Deal 102% damage (3 hits, 34% each)
 
 #7: ESEndPath(36:26) -> ESEndPath
@@ -40,26 +40,26 @@ end_turn
 
 #8: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESRowSpawnMulti(79:45295) -> 闇の波動
+	[0] ESRowSpawnMulti(79:45295) -> Wave of Darkness
 	Change the 1st and 5th rows to Dark orbs, Deal 50% damage
-	[1] ESColumnSpawnMulti(77:45296) -> 光の波動
+	[1] ESColumnSpawnMulti(77:45296) -> Wave of Light
 	Change the 1st and 6th columns to Light orbs, Deal 50% damage
-	[2] ESOrbLock(94:45297) -> 創造の力
+	[2] ESOrbLock(94:45297) -> Power of Creation
 	Lock all Light and Dark orbs
-	[3] ESAttributeBlock(107:45298) -> 絶対的な神
+	[3] ESAttributeBlock(107:45298) -> Omnipotent Deity
 	Unable to match Light and Dark orbs for 2 turns
 
 #9: SkillSet:
 	Condition: 50% chance (ai:50 rnd:0)
-	[0] ESUnknown(153:45300) -> 神鳴
+	[0] ESUnknown(153:45300) -> Divine Cry
 	No description set
-	[1] ESAttackMultihit(15:45301) -> 激震
+	[1] ESAttackMultihit(15:45301) -> Quake
 	Deal 102% damage (3 hits, 34% each)
 
 #10: SkillSet:
-	[0] ESAbsorbCombo(67:45303) -> 絶対の壁
+	[0] ESAbsorbCombo(67:45303) -> Impregnable Wall
 	Absorb damage when combos <= 8 for 1 turn
-	[1] ESOrbChangeAttackBits(108:45304) -> 雷光
+	[1] ESOrbChangeAttackBits(108:45304) -> Lightning
 	Change all Dark orbs to Light and Heal orbs, Deal 101% damage
 
 #11: ESEndPath(36:26) -> ESEndPath
@@ -72,22 +72,22 @@ Branch on flag & 1, target rnd 16
 flag SET 0b1
 
 #14: SkillSet:
-	[0] ESDamageShield(74:45289) -> 絶対の守護
+	[0] ESDamageShield(74:45289) -> Impregnable Protection
 	Reduce damage from all sources by 50% for 1 turn
-	[1] ESDebuffATKTarget(143:45290) -> 創造神の威光
+	[1] ESDebuffATKTarget(143:45290) -> Creator God's Majesty
 	For 1 turn, 5% ATK for 2 random subs, Deal 100% damage
 
 #15: ESEndPath(36:26) -> ESEndPath
 end_turn
 
 #16: SkillSet:
-	[0] ESBindAwoken(88:45292) -> 終焉の光
+	[0] ESBindAwoken(88:45292) -> Light of the End Times
 	Bind awoken skills for 1 turn
-	[1] ESAttackMultihit(15:45293) -> 超激震
+	[1] ESAttackMultihit(15:45293) -> Violent Quake
 	Deal 600% damage (5 hits, 120% each)
 
 #17: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-#18: ESSuperResolve(129:45311) -> 超根性50％
+#18: ESSuperResolve(129:45311) -> Super Resolve 50％
 Damage which would reduce HP from above 50% to below 50% is nullified

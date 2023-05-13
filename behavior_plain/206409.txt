@@ -1,0 +1,74 @@
+#206409 - 真怠惰の大罪龍王・フェゴラン
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESAbsorbAttribute(53:47720) -> 怠惰の氾濫
+	Absorb Wood and Dark damage for 4 turns
+	[1] ESGravity(50:47721) -> 遊惰
+	Player -400% HP
+	[2] ESSkillDelay(89:47722) -> クレイジーレイジー
+	Delay active skills by 3~4 turns, Deal 12% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 13
+
+#5: ESBranchEraseAttr(117:47731) -> ESBranchEraseAttr
+Branch on color erased == 0, target rnd 10
+
+#6: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 9
+
+#7: ESAttackMultihit(15:47723) -> スロウスリベレーション
+Deal 1,000% damage (2 hits, 500% each)
+
+#8: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#9: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESDamageShield(74:47725) -> 偸安
+	Reduce damage from all sources by 99% for 1 turn
+	[1] ESDebuffATKTarget(143:47726) -> 怠慢
+	For 1 turn, 1% ATK for both leaders
+	[2] ESLeaderSwap(75:47727) -> 懶惰
+	Leader changes to random sub for 1 turn
+
+#10: SkillSet:
+	Condition: One-time use & Fire are erased (ai:100 rnd:0) (cost: 1)
+	[0] ESDamageShield(74:47725) -> 偸安
+	Reduce damage from all sources by 99% for 1 turn
+	[1] ESDebuffATK(130:47729) -> 堕落
+	ATK -99% for 1 turn
+	[2] ESNegateCombo(150:47730) -> 懶惰
+	Negate 5 comboss for 1 turn
+
+#11: ESAttackMultihit(15:47723) -> スロウスリベレーション
+Deal 1,000% damage (2 hits, 500% each)
+
+#12: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#13: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#14: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#15: ESSuperResolve(129:47528) -> 超根性
+Damage which would reduce HP from above 1% to below 1% is nullified
+
+#16: ESTurnChangePassive(106:47526) -> 敵の行動ターンが変化した
+Enemy turn counter change to 1 when HP <= 1%

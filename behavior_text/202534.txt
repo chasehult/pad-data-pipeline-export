@@ -25,4 +25,4 @@ level: 1
  | group:
  | condition: execute repeatedly, turn 3 of 3
    | (44144:83) Divine Dance with Dragons + Wishing and praying for all...
-   | Change all orbs to Fire and Light + No description set, Deal 100% damage
+   | Change all orbs to Fire and Light + Negate 3 comboss for 1 turn, Deal 100% damage

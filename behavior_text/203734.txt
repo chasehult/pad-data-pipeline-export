@@ -11,7 +11,7 @@ level: 1
  | (7598:73) Resolve
  | Survive attacks with 1 HP when HP > 50%
  type: PREEMPT
- | (15326:17) Ignite Boost
+ | (15326:17) Igniting Boost
  | Increase damage to 120% for the next 999 turns
  group:
  | group:

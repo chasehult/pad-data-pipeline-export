@@ -18,7 +18,7 @@ level: 1
  | (43282:83) Let's go, the stage is waiting for us! + This is fun, isn't it? + It's time to rock!
  | Voids status ailments for 999 turns + Change all orbs to Light, Dark, and Heal + No skyfall for 3 turns
  | (43286:83) Let's go, the stage is waiting for us! + This is fun, isn't it? + I'll show you my passion!
- | Voids status ailments for 999 turns + Change all orbs to Light, Dark, and Heal + No description set
+ | Voids status ailments for 999 turns + Change all orbs to Light, Dark, and Heal + Negate 3 comboss for 3 turns
  group:
  | group:
    | condition: 33% chance

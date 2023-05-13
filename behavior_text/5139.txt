@@ -1,0 +1,26 @@
+#5139 - Mega Awoken Norn of the Future, Skuld
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 5139
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (48241:83) 時女神の守り + 予知の神時計 + 時空断裂
+ | Voids status ailments for 999 turns + Locked random skyfall +25% for 10 turns + Player -99% HP
+ group:
+ | group:
+   | group:
+   | condition: execute repeatedly, turn 1 of 2
+     | (48248:83) 時空超越の舞 + アクアスラッシュ
+     | Random 3 orbs change every 1.0s for 1 turn + Deal 123% damage (3 hits, 41% each), Deal 123% damage (3 hits, 41% each)
+   | group:
+   | condition: execute repeatedly, turn 2 of 2
+     | (48251:83) 煌めく神時計 + アクアスラッシュ
+     | Movetime 50% for 1 turn + Deal 123% damage (3 hits, 41% each), Deal 123% damage (3 hits, 41% each)
+ | group:
+ | condition: turn 1, hp <= 49
+   | (48245:83) 時空創律陣・水木 + 時空断裂
+   | Change all orbs to Water, Wood, and Heal + Player -450% HP

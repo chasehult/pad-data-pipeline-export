@@ -1,0 +1,36 @@
+#206672 - 裏豪胆の荒鬼・オウキ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206672
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (47621:83) 術式結界 + 憎しみの憎悪 + 不落の領域
+ | Voids status ailments for 999 turns + Bind 4 random subs for 3 turns + No skyfall for 7 turns, Deal 50% damage
+ group:
+ | group:
+   | group:
+   | condition: turns 1-6 while HP > 49
+     | condition: 50% chance
+     | (47629:83) 憎悪の一打 + 暗炎
+     | Player -40% HP + Blind all orbs on the board, Deal 90% damage
+     | condition: 50% chance
+     | (47632:83) 憎悪の一打 + 暗炎
+     | Player -35% HP + Blind random 6~8 orbs for 1 turn, Deal 100% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turn 1 while HP > 2, hp <= 49
+   | (47626:83) 恨みの譲渡 + 憎しみの連鎖
+   | Movetime 25% for 3 turns + RCV 50% for 3 turns, Deal 50% damage
+ | group:
+ | condition: turns 1-6, hp <= 2
+   | (47625:15) 怨嗟の解放
+   | Deal 1,000% damage (2 hits, 500% each)

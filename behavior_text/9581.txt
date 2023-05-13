@@ -9,7 +9,7 @@ approved: False
 level: 1
  type: PREEMPT
  | (43604:150) Time to play!
- | No description set
+ | Negate 2 comboss for 3 turns
  group:
  | group:
    | condition: 20% chance

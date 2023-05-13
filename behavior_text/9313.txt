@@ -9,7 +9,7 @@ approved: False
 level: 1
  type: PREEMPT
  | (42123:83) Infusion + Moss-Infused Arm Slam
- | Voids status ailments for 999 turns + No description set
+ | Voids status ailments for 999 turns + Negate 3 comboss for 5 turns
  group:
  | group:
    | condition: 33% chance

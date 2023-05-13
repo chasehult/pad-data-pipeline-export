@@ -1,0 +1,24 @@
+#205762 - 仮面ライダーファイズ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 205762
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (46919:73) ＿ファイズ根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (46920:83) 戦うことが罪なら + 俺が背負ってやる！
+ | For 1 turn, 1% ATK for both leaders + Haste both leaders' skills by 15 turns
+ group:
+ | group:
+ | condition: execute repeatedly, turn 1 of 2
+   | (46923:83) クリムゾンスマッシュ + フォンブラスター　シングルモード
+   | Change the 1st column to Fire orbs and the 6th column to Dark orbs + Fix orb movement starting point to random position on the board, Deal 55% damage
+ | group:
+ | condition: execute repeatedly, turn 2 of 2
+   | (46926:83) スパークルカット + フォンブラスター　バーストモード
+   | Delay active skills by 1 turn + Change all orbs to Fire, Dark, Heal, and Jammer, Deal 100% damage

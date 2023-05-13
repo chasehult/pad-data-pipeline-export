@@ -1,0 +1,85 @@
+#206678 - 裏嬌艶の鬼蜘蛛・シラナキ
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESStatusShield(20:47599) -> 鬼蜘蛛の守り
+	Voids status ailments for 999 turns
+	[1] ESAbsorbAttribute(53:47600) -> 魅惑の眼
+	Absorb Light and Dark damage for 1 turn
+	[2] ESDisableAssists(141:47601) -> 鬼蜘蛛の妖術
+	Disable active skills for 5 turns, Deal 17% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 15
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 12
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 4, target rnd 12
+
+#7: SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESAbsorbAttribute(53:47607) -> 魅惑の眼
+	Absorb Light and Dark damage for 1 turn, Deal 50% damage
+	[1] ESOrbLock(94:47608) -> 鬼蜘蛛の糸
+	Lock 10 random orbs, Deal 50% damage
+
+#8: SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESAbsorbAttribute(53:47986) -> 魅惑の眼
+	Absorb Fire and Water damage for 1 turn, Deal 50% damage
+	[1] ESOrbLock(94:47608) -> 鬼蜘蛛の糸
+	Lock 10 random orbs, Deal 50% damage
+
+#9: SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESAbsorbAttribute(53:47987) -> 魅惑の眼
+	Absorb Fire and Wood damage for 1 turn, Deal 50% damage
+	[1] ESOrbLock(94:47608) -> 鬼蜘蛛の糸
+	Lock 10 random orbs, Deal 50% damage
+
+#10: SkillSet:
+	Condition: 25% chance (ai:0 rnd:25)
+	[0] ESAbsorbAttribute(53:47988) -> 魅惑の眼
+	Absorb Water and Wood damage for 1 turn, Deal 50% damage
+	[1] ESOrbLock(94:47608) -> 鬼蜘蛛の糸
+	Lock 10 random orbs, Deal 50% damage
+
+#11: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#12: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESAbsorbAttribute(53:47604) -> 魅惑の眼
+	Absorb Fire, Water, and Wood damage for 1 turn
+	[1] ESBindAwoken(88:47605) -> 鬼蜘蛛の妖術
+	Bind awoken skills for 1 turn
+
+#13: ESAttackMultihit(15:47602) -> 超滅多蹴り
+Deal 1,000% damage (5 hits, 200% each)
+
+#14: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#15: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#16: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#17: ESResolve(73:47527) -> 根性
+Survive attacks with 1 HP when HP > 50%

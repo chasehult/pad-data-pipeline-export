@@ -20,9 +20,9 @@ Branch on hp < 15, target rnd 14
 #4: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 9
 
-#5: ESUnknown(150:43432) -> Tatoba Kick
+#5: ESNegateCombo(150:43432) -> Tatoba Kick
 Condition: 33% chance (ai:33 rnd:0)
-No description set, Deal 100% damage
+Negate 3 comboss for 1 turn, Deal 100% damage
 
 #6: ESColumnSpawnMulti(77:43433) -> OOO Bash
 Condition: 50% chance (ai:50 rnd:0)
@@ -41,9 +41,9 @@ end_turn
 	[1] ESUnknown(151:43431) -> It's better than doing nothing...!
 	No description set, Deal 101% damage
 
-#10: ESUnknown(150:43432) -> Tatoba Kick
+#10: ESNegateCombo(150:43432) -> Tatoba Kick
 Condition: 33% chance (ai:33 rnd:0)
-No description set, Deal 100% damage
+Negate 3 comboss for 1 turn, Deal 100% damage
 
 #11: ESColumnSpawnMulti(77:43433) -> OOO Bash
 Condition: 50% chance (ai:50 rnd:0)

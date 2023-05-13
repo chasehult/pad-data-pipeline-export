@@ -1,0 +1,15 @@
+#201172 - 真プチローズ
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 201172
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (44923:153) ローズグレース
+ | No description set
+ group:
+ | (44927:15) フローラリング
+ | Deal 60% damage (2 hits, 30% each)

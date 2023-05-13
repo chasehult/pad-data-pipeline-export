@@ -1,0 +1,39 @@
+#207343 - ベニテングタケの禄邪霊・シュリィ
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 207343
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (24259:129) 超根性
+ | Damage which would reduce HP from above 50% to below 50% is nullified
+ type: PREEMPT
+ | (24260:83) あら、よく来ましたわね + あなたの相手をしてあげますわ
+ | Voids status ailments for 999 turns + Absorb damage when combos <= 5 for 10 turns
+ group:
+ | group:
+   | condition: 33% chance
+   | (24264:130) 妖艶な芳香
+   | ATK -50% for 1 turn, Deal 90% damage
+   | condition: 33% chance
+   | (24265:109) 錯乱トリップ
+   | Random 3 orbs change every 1.0s for 1 turn, Deal 80% damage
+   | condition: 34% chance
+   | (24263:85) 誘因の胞子
+   | Change all orbs to Fire, Light, Heal, and Poison, Deal 100% damage
+ | group:
+ | condition: turn 1 while HP > 9, hp <= 49
+   | (24266:83) まだまだこれからです + あなたは逃げ切れるかしら？
+   | Reduce damage from all sources by 75% for 999 turns + Increase damage to 200% for the next 999 turns
+ | group:
+ | condition: hp <= 9
+   | group:
+   | condition: turn 1
+     | (24269:83) うふふふ… + 素敵な香りでしょう？
+     | Void damage >= 10,000,000 for 999 turns + Bind awoken skills for 5 turns
+   | group:
+     | (24272:109) ムッシモールコロン
+     | Random 4 orbs change every 0.5s for 1 turn, Deal 250% damage

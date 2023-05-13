@@ -16,8 +16,8 @@ flag SET 0b1
 #4: SkillSet:
 	[0] ESVoidShieldBig(137:45075) -> ...I shall...
 	Void damage >= 2,000,000,000 for 3 turns
-	[1] ESUnknown(150:45076) -> ...erase you here!!
-	No description set
+	[1] ESNegateCombo(150:45076) -> ...erase you here!!
+	Negate 3 comboss for 3 turns
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn

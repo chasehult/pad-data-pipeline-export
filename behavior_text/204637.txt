@@ -1,0 +1,36 @@
+#204637 - 裏火の伴神龍・ハーニス
+monster size: 4
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 204637
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (42619:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ | condition: when 2 enemies remain
+ | (47525:122) 敵の行動ターンが変化した
+ | Enemy turn counter change to 1
+ type: PREEMPT
+ | (47517:20) 伴神龍の紅羽
+ | Voids status ailments for 3 turns
+ group:
+ | group:
+ | condition: turns 1-6
+   | (47510:15) ヘイズインパクト
+   | Deal 600% damage (5 hits, 120% each)
+ | group:
+   | (47532:15) 終焉の億兆滅
+   | Deal 5,000% damage (5 hits, 1,000% each)
+ type: REMAINING
+ condition: when 2 enemies remain, hp <= 100
+ | group:
+ | condition: turn 1
+   | (47534:19) 混沌の解放
+   | Increase damage to 1,000% for the next 999 turns
+ | group:
+ | condition: turns 2-6
+   | (47510:15) ヘイズインパクト
+   | Deal 600% damage (5 hits, 120% each)

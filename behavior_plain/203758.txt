@@ -1,0 +1,77 @@
+#203758 - 大弯の零龍喚士・ネイ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESAbsorbAttribute(53:47860) -> 大弯龍装
+	Absorb Water and Dark damage for 7 turns
+	[1] ESSkyfall(68:47861) -> 降龍水
+	Water, Dark, and Heal skyfall +35% for 1 turn, Deal 50% damage
+	[2] ESUnknown(155:47862) -> 流細剣
+	No description set, Deal 50% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 16
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 14
+
+#6: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 6, target rnd 12
+
+#7: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 5, target rnd 11
+
+#8: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 12
+
+#9: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 11
+
+#10: SkillSet:
+	[0] ESSkyfall(68:47865) -> 降龍水
+	Water, Wood, and Heal skyfall +35% for 1 turn, Deal 50% damage
+	[1] ESUnknown(155:47866) -> 流細剣
+	No description set, Deal 50% damage
+
+#11: SkillSet:
+	[0] ESSkyfall(68:47868) -> 降龍水
+	Fire, Water, and Heal skyfall +35% for 1 turn, Deal 50% damage
+	[1] ESUnknown(155:47869) -> 流細剣
+	No description set, Deal 50% damage
+
+#12: SkillSet:
+	[0] ESSkyfall(68:47871) -> 降龍水
+	Water, Dark, and Heal skyfall +35% for 1 turn, Deal 50% damage
+	[1] ESUnknown(155:47872) -> 流細剣
+	No description set, Deal 100% damage
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESAttackMultihit(15:47863) -> 三星海龍衝
+Deal 1,050% damage (3 hits, 350% each)
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESResolve(73:47527) -> 根性
+Survive attacks with 1 HP when HP > 50%

@@ -1,0 +1,35 @@
+#207609 - 伝魔獣・ラタトスク
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESDebuffATK(130:48353) -> インサイトムーブ
+	ATK -75% for 2 turns
+	[1] ESAbsorbThresholdBig(138:48354) -> 世界樹の揺らぎ
+	Absorb damage when damage >= 500,000,000 for 2 turns
+	[2] ESUnknown(151:48355) -> 伝魔獣の企み
+	No description set
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 4, target rnd 7
+
+#5: ESOrbLock(94:48357) -> ドロップキャッチ
+Lock 5 random orbs, Deal 100% damage
+
+#6: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#7: ESEndBattle(40:48356) -> どこかへ逃げ去った…
+Reduce self HP to 0
+
+#8: ESEndPath(36:26) -> ESEndPath
+end_turn

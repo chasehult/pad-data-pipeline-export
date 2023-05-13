@@ -1,0 +1,46 @@
+#203910 - 裏瞬刻の白龍喚士・ソニア＝エル
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 203910
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ | (47524:72) 闇軽減
+ | Reduce damage from Dark attrs by 50%
+ type: PREEMPT
+ | (47472:83) 耀龍族の神髄 + 継界宿龍陣・火光 + 白龍閃爪
+ | Void damage >= 2,500,000,000 for 3 turns + Change all orbs to Fire and Light + Player -99% HP, Deal 100% damage
+ group:
+ | group:
+   | group:
+   | condition: turns 1-2 while HP > 2
+     | condition: 50% chance
+     | (47480:83) 白龍閃爪 + 継界宿龍陣・火光
+     | Player -35% HP + Change all orbs to Fire and Light, Deal 100% damage
+     | condition: 50% chance
+     | (47483:83) 白龍閃爪 + 継界宿龍陣・火光
+     | Player -40% HP + Change all orbs to Fire and Light, Deal 90% damage
+   | group:
+   | condition: turn 3 while HP > 2
+     | (47477:83) 白龍の輝鱗 + 白龍閃爪
+     | Absorb Fire and Light damage for 4 turns + Player -100% HP
+   | group:
+   | condition: turns 4-6 while HP > 2
+     | condition: 50% chance
+     | (47480:83) 白龍閃爪 + 継界宿龍陣・火光
+     | Player -35% HP + Change all orbs to Fire and Light, Deal 100% damage
+     | condition: 50% chance
+     | (47483:83) 白龍閃爪 + 継界宿龍陣・火光
+     | Player -40% HP + Change all orbs to Fire and Light, Deal 90% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turns 1-6, hp <= 2
+   | (47476:15) 白龍継界突
+   | Deal 1,000% damage (2 hits, 500% each)

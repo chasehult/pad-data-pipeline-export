@@ -14,7 +14,7 @@ level: 1
  | group:
    | condition: 33% chance
    | (43432:150) Tatoba Kick
-   | No description set, Deal 100% damage
+   | Negate 3 comboss for 1 turn, Deal 100% damage
    | condition: 50% chance
    | (43433:77) OOO Bash
    | Change the 1st and 6th columns to Wood orbs, Deal 100% damage

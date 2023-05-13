@@ -1,0 +1,53 @@
+#202998 - 魔神爵・グレモリー
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESAbsorbCombo(67:48336) -> 宝探の魔呪
+	Absorb damage when combos <= 13 for 1 turn
+	[1] ESBoardChange(84:48337) -> ミステリーワールド
+	Change all orbs to Dark
+	[2] ESRowSpawnMulti(78:48338) -> ミステリーウェーブ
+	Change the 1st and 2nd rows to Fire orbs and the 3rd row to Water orbs
+	[3] ESColumnSpawnMulti(76:48339) -> ミステリーチェンジ
+	Change the 2nd and 4th columns to Wood orbs and the 3rd and 5th columns to Light orbs
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 4, target rnd 11
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 90, target rnd 8
+
+#6: ESFixedStart(101:48342) -> 悪魔の悪戯
+Fix orb movement starting point to random position on the board, Deal 100% damage
+
+#7: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#8: ESBoardChange(84:48341) -> ミステリーリフレッシュ
+Condition: One-time use (ai:100 rnd:0) (cost: 1)
+Change all orbs to Fire, Water, Wood, Light, and Dark
+
+#9: ESFixedStart(101:48342) -> 悪魔の悪戯
+Fix orb movement starting point to random position on the board, Deal 100% damage
+
+#10: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#11: ESEndBattle(40:48340) -> ミステリージャンプ
+Reduce self HP to 0
+
+#12: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#13: ESSuperResolve(129:48343) -> 超根性90％
+Damage which would reduce HP from above 90% to below 90% is nullified

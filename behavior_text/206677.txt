@@ -1,0 +1,40 @@
+#206677 - 鬼蜘蛛の妖人・シラナキ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206677
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (20668:88) 魅惑の罠
+ | Bind awoken skills for 3 turns
+ | condition: 33% chance
+ | (20669:63) 呪縛減殺
+ | Bind 1 random card for 2 turns, Deal 95% damage
+ | condition: 33% chance
+ | (20670:94) 拘束緊糸
+ | Lock 15 random orbs, Deal 100% damage
+ | condition: 34% chance
+ | (20671:15) 束連脚
+ | Deal 105% damage (3 hits, 35% each)
+ group:
+ | group:
+   | condition: 33% chance
+   | (20669:63) 呪縛減殺
+   | Bind 1 random card for 2 turns, Deal 95% damage
+   | condition: 33% chance
+   | (20670:94) 拘束緊糸
+   | Lock 15 random orbs, Deal 100% damage
+   | condition: 34% chance
+   | (20671:15) 束連脚
+   | Deal 105% damage (3 hits, 35% each)
+ | group:
+ | condition: turn 1 while HP > 9, hp <= 49
+   | (20672:83) 狂気怒号 + 捕殺巣
+   | Increase damage to 200% for the next 999 turns + Poison skyfall +15% for 5 turns
+ | group:
+ | condition: hp <= 9
+   | (20675:15) 滅多蹴り
+   | Deal 300% damage (6 hits, 50% each)

@@ -1,0 +1,52 @@
+#206678 - 裏嬌艶の鬼蜘蛛・シラナキ
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 206678
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (47598:83) 鬼蜘蛛の守り + 魅惑の眼 + 鬼蜘蛛の妖術
+ | Voids status ailments for 999 turns + Absorb Light and Dark damage for 1 turn + Disable active skills for 5 turns, Deal 17% damage
+ group:
+ | group:
+ | condition: always turns 5-6
+   | (47602:15) 超滅多蹴り
+   | Deal 1,000% damage (5 hits, 200% each)
+ | group:
+   | group:
+   | condition: turns 1-3 while HP > 2
+     | condition: 25% chance
+     | (47606:83) 魅惑の眼 + 鬼蜘蛛の糸
+     | Absorb Light and Dark damage for 1 turn + Lock 10 random orbs, Deal 50% damage
+     | condition: 25% chance
+     | (47983:83) 魅惑の眼 + 鬼蜘蛛の糸
+     | Absorb Fire and Water damage for 1 turn + Lock 10 random orbs, Deal 50% damage
+     | condition: 25% chance
+     | (47984:83) 魅惑の眼 + 鬼蜘蛛の糸
+     | Absorb Fire and Wood damage for 1 turn + Lock 10 random orbs, Deal 50% damage
+     | condition: 25% chance
+     | (47985:83) 魅惑の眼 + 鬼蜘蛛の糸
+     | Absorb Water and Wood damage for 1 turn + Lock 10 random orbs, Deal 50% damage
+   | group:
+   | condition: turn 4 while HP > 2
+     | (47603:83) 魅惑の眼 + 鬼蜘蛛の妖術
+     | Absorb Fire, Water, and Wood damage for 1 turn + Bind awoken skills for 1 turn
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: hp <= 2
+   | group:
+   | condition: turn 1
+     | (47603:83) 魅惑の眼 + 鬼蜘蛛の妖術
+     | Absorb Fire, Water, and Wood damage for 1 turn + Bind awoken skills for 1 turn
+   | group:
+   | condition: turns 2-4
+     | (47602:15) 超滅多蹴り
+     | Deal 1,000% damage (5 hits, 200% each)

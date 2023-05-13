@@ -48,7 +48,7 @@ counter + 1
 
 #12: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESAttackUPRemainingEnemies(17:21794) -> Ignite Boost
+	[0] ESAttackUPRemainingEnemies(17:21794) -> Igniting Boost
 	Increase damage to 150% for the next 999 turns
 	[1] ESSkillDelay(89:21795) -> Ignition Burst
 	Delay active skills by 6 turns

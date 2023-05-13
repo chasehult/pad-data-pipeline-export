@@ -9,7 +9,7 @@ approved: False
 level: 1
  type: PREEMPT
  | (45074:83) ...I shall... + ...erase you here!!
- | Void damage >= 2,000,000,000 for 3 turns + No description set
+ | Void damage >= 2,000,000,000 for 3 turns + Negate 3 comboss for 3 turns
  group:
  | group:
  | condition: execute repeatedly, turn 1 of 4

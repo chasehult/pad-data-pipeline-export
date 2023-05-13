@@ -1,0 +1,44 @@
+#203760 - 解放の零龍喚士・ネイ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 203760
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (47887:83) 零龍喚士の結界 + 解放龍装 + 閃皇斬
+ | Voids status ailments for 999 turns + Absorb Light and Dark damage for 7 turns + Blind random 10~15 orbs for 4 turns, Deal 50% damage
+ group:
+ | group:
+   | group:
+   | condition: turns 1-3 while HP > 2
+     | condition: 50% chance
+     | (47895:83) 角突 + 閃皇斬
+     | Player -35% HP + Blind random 10 orbs for 1 turn, Deal 100% damage
+     | condition: 50% chance
+     | (47898:83) 角突 + 閃皇斬
+     | Player -40% HP + Blind random 8~12 orbs for 1 turn, Deal 90% damage
+   | group:
+   | condition: turn 4 while HP > 2
+     | (47892:83) 継界龍装・ノルディス + 閃皇斬
+     | Absorb damage when combos <= 9 for 3 turns + For 3 turns, 40% chance for skyfall orbs to be blinded for turn, Deal 50% damage
+   | group:
+   | condition: turns 5-6 while HP > 2
+     | condition: 50% chance
+     | (47895:83) 角突 + 閃皇斬
+     | Player -35% HP + Blind random 10 orbs for 1 turn, Deal 100% damage
+     | condition: 50% chance
+     | (47898:83) 角突 + 閃皇斬
+     | Player -40% HP + Blind random 8~12 orbs for 1 turn, Deal 90% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turns 1-6, hp <= 2
+   | (47891:15) 瞬光双烈剣
+   | Deal 1,000% damage (2 hits, 500% each)

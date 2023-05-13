@@ -1,0 +1,18 @@
+#206689 - 古狸の妖・フラク
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 206689
+approved: False
+
+level: 4
+ type: PREEMPT
+ | (20698:84) 5色消してね
+ | Change all orbs to Fire, Water, Wood, Light, and Dark
+ group:
+ | condition: when all Fire, Water, Wood, Light, and Dark orbs are matched last turn
+ | (20790:83) 祝福の太鼓 + トコトコと去っていた
+ | Specific orbs change every 1.0s for 99 turns + Reduce self HP to 0
+ | (20791:83) 揶揄の太鼓 + トコトコと去っていた
+ | Bind awoken skills for 1 turn + Reduce self HP to 0

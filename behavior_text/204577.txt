@@ -1,0 +1,38 @@
+#204577 - 裏暗路守の玄武・メイメイ
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 204577
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ | (47523:72) 光軽減
+ | Reduce damage from Light attrs by 50%
+ type: PREEMPT
+ | (47456:83) 暗路守護 + 霊亀の甲羅 + 五方・玄武の舞
+ | Voids status ailments for 999 turns + Reduce damage from all sources by 75% for 1 turn + Change board size to 7x6 for 1 turn, Deal 50% damage
+ group:
+ | group:
+ | condition: always turns 2-3
+   | (47469:83) 甲突 + 黒翡翠の闇光
+   | Player -35% HP + Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, and Poison, Deal 100% damage
+ | group:
+ | condition: always turns 4-6
+   | (47460:15) 北方七星陣・玄武
+   | Deal 980% damage (7 hits, 140% each)
+ | group:
+   | group:
+   | condition: turn 1 while HP > 49
+     | (47465:83) 霊亀の甲羅 + 五方・玄武の舞 + 黒翡翠の怪甲
+     | Reduce damage from all sources by 50% for 3 turns + Change board size to 5x4 for 3 turns + Void damage >= 1,000,000,000 for 3 turns, Deal 50% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turn 1, hp <= 49
+   | (47461:83) 霊亀の甲羅 + 五方・霊亀の舞 + 黒翡翠の怪光
+   | Reduce damage from all sources by 75% for 3 turns + Absorb damage when combos <= 9 for 3 turns + ATK -75% for 3 turns, Deal 50% damage

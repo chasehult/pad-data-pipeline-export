@@ -1,0 +1,38 @@
+#203330 - 裏異刻の黒龍喚士・ソニア
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 203330
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ | (47523:72) 光軽減
+ | Reduce damage from Light attrs by 50%
+ type: PREEMPT
+ | (47486:83) 黒龍の守護 + 昏龍族の神髄 + 黒龍の咆哮
+ | Bind awoken skills for 1 turn + Haste both leaders' skills by 10~15 turns + ATK -50% for 7 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1 while HP > 2
+     | (47491:83) 継界宿龍陣・回復 + 黒龍突撃
+     | Change all orbs to Heal + Player -99% HP, Deal 150% damage
+   | group:
+   | condition: turns 2-6 while HP > 2
+     | condition: 50% chance
+     | (47494:83) 黒龍突撃 + 黒龍の鉤爪
+     | Player -35% HP + Lock all orbs, Deal 100% damage
+     | condition: 50% chance
+     | (47497:83) 黒龍突撃 + 黒龍の鉤爪
+     | Player -40% HP + Lock all orbs, Deal 90% damage
+   | group:
+     | (47530:83) 混沌の波動 + 終焉の億兆滅
+     | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)
+ | group:
+ | condition: turns 1-6, hp <= 2
+   | (47490:15) 黒龍継界鎚
+   | Deal 1,000% damage (2 hits, 500% each)

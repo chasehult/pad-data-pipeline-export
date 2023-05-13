@@ -1,0 +1,63 @@
+#206690 - 裏喜楽の古狸・フラク
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESStatusShield(20:47611) -> 太鼓
+	Voids status ailments for 999 turns
+	[1] ESBoardSizeChange(126:47612) -> 天変太鼓の轟音
+	Change board size to 5x4 for 4 turns
+	[2] ESDisableAssists(141:47613) -> 古狸の妖術
+	Disable active skills for 4 turns, Deal 17% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 12
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 1, target rnd 9
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 3, target rnd 9
+
+#7: SkillSet:
+	[0] ESSpinnersRandom(109:47619) -> 狸の幻惑
+	Random 1 orbs change every 0.5s for 1 turn, Deal 50% damage
+	[1] ESUnknown(153:47620) -> ドンドン
+	No description set, Deal 50% damage
+
+#8: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#9: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESAbsorbCombo(67:47616) -> ぽんぽこ踊り
+	Absorb damage when combos <= 6 for 1 turn
+	[1] ESDebuffMovetime(39:47617) -> ドンカンドン
+	Movetime 25% for 1 turn
+
+#10: ESAttackMultihit(15:47614) -> ドンドコドンドンドン
+Deal 1,000% damage (5 hits, 200% each)
+
+#11: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#12: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESSuperResolve(129:47528) -> 超根性
+Damage which would reduce HP from above 1% to below 1% is nullified

@@ -18,9 +18,9 @@ level: 1
  | condition: turn 1
    | condition: when 9758 on team
    | (46259:83) 待ってろ！ハマーン！ + アンタは俺が倒してやる！！
-   | No description set + RCV 50% for 2 turns, Deal 80% damage
+   | Negate 2 comboss for 2 turns + RCV 50% for 2 turns, Deal 80% damage
    | (46256:83) 憎しみを生むもの……… + 憎しみを育てる血を吐き出せ！
-   | No description set + RCV 50% for 2 turns, Deal 80% damage
+   | Negate 2 comboss for 2 turns + RCV 50% for 2 turns, Deal 80% damage
  | group:
  | condition: execute repeatedly, turn 1 of 3
    | (46262:77) ダブル・ビーム・ライフル

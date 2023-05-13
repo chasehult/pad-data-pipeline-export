@@ -1,0 +1,48 @@
+#9815 - Sunlit Goddess of Day, Meredith
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESAbsorbAttribute(53:48230) -> ソーラークリーブ
+	Absorb Light damage for 5 turns
+	[1] ESGravity(50:48231) -> サンシャインブラスト
+	Player -99% HP
+
+#3: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 7
+
+#4: ESAttackMultihit(15:48235) -> ソーラーウェーブ
+Condition: 50% chance (ai:50 rnd:0)
+Deal 102% damage (3 hits, 34% each)
+
+#5: ESDebuffATKTarget(143:48239) -> 白日の晴天
+For 1 turn, 5% ATK for both leaders, Deal 100% damage
+
+#6: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#7: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESVoidShieldBig(137:48233) -> 昼女神の盾
+	Void damage >= 2,000,000,000 for 10 turns
+	[1] ESGravity(50:48234) -> サンシャインブラスト
+	Player -440% HP
+
+#8: ESAttackMultihit(15:48235) -> ソーラーウェーブ
+Condition: 50% chance (ai:50 rnd:0)
+Deal 102% damage (3 hits, 34% each)
+
+#9: ESDebuffATKTarget(143:48239) -> 白日の晴天
+For 1 turn, 5% ATK for both leaders, Deal 100% damage
+
+#10: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#11: ESSuperResolve(129:48240) -> 超根性
+Damage which would reduce HP from above 50% to below 50% is nullified

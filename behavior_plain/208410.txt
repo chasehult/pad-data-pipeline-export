@@ -1,0 +1,8 @@
+#208410 - 超メタルドラゴン
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESAttributeResist(72:45098) -> ＿光以外軽減
+Reduce damage from Fire, Water, Wood, and Dark attrs by 50%

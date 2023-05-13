@@ -1,0 +1,87 @@
+#8997 - Mega Awoken Norn of the Hereafter, Skuld
+monster size: 5
+new AI: True
+start/max counter: 15
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 8)
+	[0] ESBindAwoken(88:48256) -> 後刻神の波動
+	Bind awoken skills for 1 turn
+	[1] ESBindSkill(14:48257) -> 闇の神時計
+	Bind active skills for 4 turns
+	[2] ESMaxHPChange(111:48258) -> 後刻の神時計
+	Change player HP to 3,000,000 for 5 turns
+	[3] ESGravity(50:48259) -> 時空断裂
+	Player -99% HP
+
+#3: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 4, target rnd 13
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 3, target rnd 10
+
+#5: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#6: ESRandomSpawn(92:48264) -> 破滅の時まで
+Condition: One-time use (ai:100 rnd:0) (cost: 4)
+Spawn 4 random Heal orbs
+
+#7: ESRandomSpawn(92:48265) -> 破滅の時まで
+Condition: One-time use (ai:100 rnd:0) (cost: 2)
+Spawn 4 random Heal orbs
+
+#8: ESRandomSpawn(92:48266) -> 破滅の時まで
+Condition: One-time use (ai:100 rnd:0) (cost: 1)
+Spawn 4 random Heal orbs
+
+#9: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#10: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#11: SkillSet:
+	[0] ESStatusShield(20:48261) -> 破滅の歯車が動き出した
+	Voids status ailments for 999 turns
+	[1] ESChangeAttribute(46:48262) -> 時空変化
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
+	[2] ESAttackMultihit(15:48263) -> 破滅の神時計
+	Deal 189% damage (3 hits, 63% each)
+
+#12: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#13: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 17
+
+#14: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#15: SkillSet:
+	[0] ESRandomSpawn(92:48268) -> 時空調律
+	Spawn 4 random Heal orbs
+	[1] ESAttackMultihit(15:48269) -> ダークラッシュ
+	Deal 123% damage (3 hits, 41% each)
+
+#16: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#17: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b0
+
+#18: SkillSet:
+	[0] ESRandomSpawn(92:48271) -> 時空調律
+	Spawn 4 random Heal orbs
+	[1] ESUnknown(153:48272) -> 時空針
+	No description set, Deal 122% damage
+
+#19: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#20: ESTypeResist(118:48273) -> マシン半減
+Reduce damage from Machine types by 50%

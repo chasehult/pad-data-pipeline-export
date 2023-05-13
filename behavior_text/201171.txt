@@ -1,0 +1,15 @@
+#201171 - 真プチリップ
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 201171
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (44922:92) リップグレース
+ | Spawn 5 random Fire and Heal orbs
+ group:
+ | (44927:15) フローラリング
+ | Deal 60% damage (2 hits, 30% each)

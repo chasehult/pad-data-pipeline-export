@@ -1,0 +1,120 @@
+#303576 - 裏変転の七龍喚士・ウォレス
+monster size: 5
+new AI: True
+start/max counter: 1023
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 512)
+	[0] ESVoidShieldBig(137:48282) -> 峨道潜
+	Void damage >= 2,000,000,000 for 10 turns
+	[1] ESStatusShield(20:48283) -> 護龍陣
+	Voids status ailments for 999 turns
+	[2] ESDamageShield(74:48284) -> ミューカススキン
+	Reduce damage from all sources by 75% for 7 turns
+
+#3: SkillSet:
+	Condition: When < 15% HP (ai:100 rnd:0)
+	[0] ESChangeAttribute(46:6911) -> 虹布
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
+	[1] ESAttackMultihit(15:6920) -> 無限羽嵐虹刃
+	Deal 12,000% damage (10 hits, 1,200% each)
+
+#4: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 256)
+	[0] ESChangeAttribute(46:6890) -> 虹布
+	Change own attribute to Fire
+	[1] ESPoisonChangeRandomAttack(64:6891) -> ヘルポイズンクロウ
+	Change 7 random orbs to Poison orbs, Deal 310% damage
+
+#5: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 128)
+	[0] ESChangeAttribute(46:6893) -> 虹布
+	Change own attribute to Water
+	[1] ESPoisonChangeRandomAttack(64:6894) -> ヘルヴェノムクロウ
+	Change 5 random orbs to Poison orbs, Deal 320% damage
+
+#6: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 64)
+	[0] ESChangeAttribute(46:6896) -> 虹布
+	Change own attribute to Wood
+	[1] ESBindAttack(63:6897) -> パラライズバイン
+	Bind 1 random sub for 7 turns, Deal 330% damage
+
+#7: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 32)
+	[0] ESChangeAttribute(46:6899) -> 虹布
+	Change own attribute to Light
+	[1] ESPoisonChangeRandomAttack(64:6900) -> ポイズンレイヴ
+	Change 10 random orbs to Poison orbs, Deal 350% damage
+
+#8: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 16)
+	[0] ESChangeAttribute(46:6902) -> 虹布
+	Change own attribute to Dark
+	[1] ESPoisonChangeRandomAttack(64:6903) -> ヘルポイズンレイヴ
+	Change 7 random orbs to Poison orbs, Deal 370% damage
+
+#9: ESOrbChangeAttack(48:6905) -> ヘルブルーム
+Condition: One-time use (ai:100 rnd:0) (cost: 8)
+Change all Poison orbs to Jammer orbs, Deal 6,000% damage
+
+#10: ESOrbLock(94:6906) -> 千刃皆中
+Condition: One-time use (ai:100 rnd:0) (cost: 8)
+Lock all orbs, Deal 300% damage
+
+#11: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 4)
+	[0] ESSkyfall(68:6907) -> 死然導疾
+	Mortal Poison skyfall +20% for 7 turns
+	[1] ESAttributeBlock(107:6908) -> 不浄集積の術
+	Unable to match Poison and Mortal Poison orbs for 2 turns
+	[2] ESAttackMultihit(15:6909) -> ストームレイヴ
+	Deal 420% damage (7 hits, 60% each)
+
+#12: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESChangeAttribute(46:6911) -> 虹布
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
+	[1] ESBindAttack(63:6912) -> パラライズバイン
+	Bind 1 random sub for 7 turns, Deal 330% damage
+
+#13: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESSkyfallLocked(96:6914) -> 刺骸牙
+	Locked Poison and Mortal Poison skyfall +100% for 5 turns
+	[1] ESAttackMultihit(15:6915) -> サイクロンレイヴ
+	Deal 490% damage (7 hits, 70% each)
+
+#14: SkillSet:
+	Condition: 45% chance (ai:0 rnd:45)
+	[0] ESChangeAttribute(46:6911) -> 虹布
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
+	[1] ESBoardChangeAttackBits(85:6925) -> セブンガーデン
+	Change all orbs to Fire, Water, Wood, Light, Dark, Heal, and Poison, Deal 400% damage
+
+#15: SkillSet:
+	Condition: 40% chance (ai:0 rnd:40)
+	[0] ESChangeAttribute(46:6911) -> 虹布
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
+	[1] ESAttackMultihit(15:6915) -> サイクロンレイヴ
+	Deal 490% damage (7 hits, 70% each)
+
+#16: SkillSet:
+	Condition: 15% chance (ai:0 rnd:15)
+	[0] ESChangeAttribute(46:6911) -> 虹布
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
+	[1] ESPoisonChangeRandomAttack(64:6926) -> デッドポイズンレイヴ
+	Change 14 random orbs to Poison orbs, Deal 400% damage
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESAttributeResist(72:6922) -> 木半減
+Reduce damage from Wood attrs by 50%
+
+#19: ESResolve(73:12175) -> 龍契精霊根性
+Survive attacks with 1 HP when HP > 99%

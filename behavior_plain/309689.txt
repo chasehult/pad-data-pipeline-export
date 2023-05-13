@@ -1,4 +1,4 @@
-#309689 - 超転生オルファリオン
+#309689 - Super Reincarnated Orpharion
 monster size: 5
 new AI: True
 start/max counter: 1

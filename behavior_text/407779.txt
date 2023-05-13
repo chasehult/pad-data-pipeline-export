@@ -1,0 +1,32 @@
+#407779 - 背理の陰陽師・トウカ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 407779
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (26017:73) ＿トウカ根性
+ | Survive attacks with 1 HP when HP > 50%
+ | (44996:118) ＿体力半減
+ | Reduce damage from Physical types by 50%
+ type: PREEMPT
+ | (44960:83) ぬえのまぼろし + 浮世の毒灰
+ | Void damage >= 3,000,000,000 for 3 turns + Heal and Poison skyfall +30% for 3 turns
+ group:
+ | group:
+   | condition: 33% chance
+   | (26021:83) 屍紙折り + 呪われ細工
+   | Change the 1st and 6th columns to Heal orbs + Unable to match Heal orbs for 1 turn, Deal 75% damage
+   | condition: 33% chance
+   | (26024:83) 屍紙折り + 奈落折境
+   | Change the 1st row to Heal orbs and the 2nd row to Heal orbs + Player -99% HP
+   | condition: 34% chance
+   | (26027:83) 屍紙折り + 乱れ千代染
+   | Change the 4th row to Heal orbs and the 5th row to Heal orbs + Specific orbs change every 1.0s for 1 turn, Deal 85% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | (44963:83) 織淵 + 妖紙群 + 無辺彩宴
+   | Delay active skills by 2 turns + Blind all orbs for 1 turn + Increase damage to 300% for the next 999 turns

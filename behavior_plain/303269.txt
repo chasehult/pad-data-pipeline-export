@@ -1,4 +1,4 @@
-#303269 - 転生ヴィーナス
+#303269 - Reincarnated Venus
 monster size: 5
 new AI: True
 start/max counter: 1
@@ -7,11 +7,11 @@ counter increment: 0
 #1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-#2: ESAbsorbCombo(67:39460) -> 慈愛の祈り
+#2: ESAbsorbCombo(67:39460) -> Prayer of Affection
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Absorb damage when combos <= 5 for 2 turns
 
-#3: ESUnknown(151:39461) -> ビューティフルフライ
+#3: ESUnknown(151:39461) -> Beautiful Flight
 No description set, Deal 100% damage
 
 #4: ESEndPath(36:26) -> ESEndPath

@@ -12,7 +12,7 @@ level: 1
  | Enemy turn counter change to 4 when HP <= 50%
  type: PREEMPT
  | (40134:83) Protection Crystal + Blue Sheen + Crystal Wave
- | Voids status ailments for 4 turns + No description set + For 4 turns, 50% ATK for 4 random subs
+ | Voids status ailments for 4 turns + Negate 6 comboss for 4 turns + For 4 turns, 50% ATK for 4 random subs
  group:
  | group:
    | group:

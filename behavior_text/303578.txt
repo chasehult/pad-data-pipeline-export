@@ -1,0 +1,58 @@
+#303578 - 裏滅火の九龍喚士・エナ
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 1
+monster_id: 303578
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (7087:72) 闇半減
+ | Reduce damage from Dark attrs by 50%
+ | (12175:73) 龍契精霊根性
+ | Survive attacks with 1 HP when HP > 99%
+ type: PREEMPT
+ | (48293:83) 戦闘準備 + 護龍陣 + ディフェンスアーマー
+ | Unable to match Fire, Water, Wood, Light, and Dark orbs for 1 turn + Voids status ailments for 999 turns + Void damage >= 2,000,000,000 for 10 turns
+ group:
+ | group:
+ | condition: always turn 1
+   | (7069:83) シンプルナインシーク + エネルギーを溜めている
+   | Absorb damage when combos <= 8 for 1 turn + Increase damage to 900% for the next 1 turn
+ | group:
+   | group:
+   | condition: turn 2 while HP > 98
+     | (7072:83) パシーブウィーク + デトンラーディエム
+     | Voids player buff effects + Deal 4,500% damage (9 hits, 500% each), Deal 4,500% damage (9 hits, 500% each)
+   | group:
+   | condition: execute repeatedly, turn 1 of 4
+     | (7076:97) ドロップハイド
+     | Blind random 3~5 orbs for 2 turns, Deal 400% damage
+   | group:
+   | condition: execute repeatedly, turn 2-4 of 4
+     | condition: 33% chance
+     | (7077:103) ゼルヴァルン・プルス
+     | Spawn locked Bomb orbs in the specified positions, Deal 380% damage
+     | condition: 33% chance
+     | (7078:102) ゼルヴァルン
+     | Spawn 3 random Bomb orbs, Deal 390% damage
+     | condition: 34% chance
+     | (7079:94) リトルフラッシュ
+     | Lock 9 random orbs
+ | group:
+ | condition: always turn 2, hp <= 98
+   | (7075:83) エレメントパージ + ドロップフラッシュ
+   | Change a random attribute to Jammer orbs + Lock all orbs, Deal 50% damage
+ | group:
+ | condition: turn 3 while HP > 8, hp <= 49
+   | (7082:83) ドロップフラッシュ + ルヴィルシェント
+   | Lock all orbs + Player -115% HP
+ | group:
+ | condition: turn 4 while HP > 8, hp <= 14
+   | (7085:83) ナインシーク + メタルアーマー
+   | Absorb damage when combos <= 8 for 9 turns + Reduce damage from all sources by 50% for 9 turns
+ | group:
+ | condition: hp <= 8
+   | (7086:103) ボイドバーン
+   | Spawn Bomb orbs in the specified positions, Deal 5,000% damage

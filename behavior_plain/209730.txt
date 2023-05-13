@@ -23,8 +23,8 @@ end_turn
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESDebuffRCV(105:46500) -> 貴様のような者がいるから
 	RCV 50% for 3 turns
-	[1] ESUnknown(150:46501) -> 戦いは終わらないんだ！！
-	No description set, Deal 80% damage
+	[1] ESNegateCombo(150:46501) -> 戦いは終わらないんだ！！
+	Negate 2 comboss for 3 turns, Deal 80% damage
 
 #7: ESBoardChangeAttackBits(85:46502) -> 俺の身体をみんなに貸すぞ！！
 Condition: One-time use (ai:100 rnd:0) (cost: 1)

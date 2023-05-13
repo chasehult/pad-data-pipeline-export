@@ -17,7 +17,7 @@ level: 1
  | group:
  | condition: turn 1
    | (46499:83) 貴様のような者がいるから + 戦いは終わらないんだ！！
-   | RCV 50% for 3 turns + No description set, Deal 80% damage
+   | RCV 50% for 3 turns + Negate 2 comboss for 3 turns, Deal 80% damage
  | group:
  | condition: turn 2
    | (46502:85) 俺の身体をみんなに貸すぞ！！

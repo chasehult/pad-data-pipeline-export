@@ -14,7 +14,7 @@ level: 1
  | group:
  | condition: execute repeatedly, turn 1 of 3
    | (47374:143) まだまだいきます！
-   | For 1 turn, 50% ATK for ???, Deal 85% damage
+   | For 1 turn, 50% ATK for 2 random cards of player leader and subs, Deal 85% damage
  | group:
  | condition: execute repeatedly, turn 2 of 3
    | (47375:46) テンションあげていきますよっ！

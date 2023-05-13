@@ -1,0 +1,84 @@
+#209365 - 清濁の双銃姫・カミラ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:47804) -> 双銃姫の守り
+	Voids status ailments for 999 turns
+	[1] ESSkyfall(68:47805) -> 昏濁と輝清の銃気
+	Jammer and Poison skyfall +25% for 4 turns
+	[2] ESBoardChangeAttackBits(85:47806) -> 不浄の魔弾
+	Change all orbs to Jammer and Poison, Deal 100% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 16
+
+#5: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 3, target rnd 14
+
+#6: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 10
+
+#7: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESGravity(50:47812) -> 魔銃
+	Player -40% HP
+	[1] ESBoardChangeAttackBits(85:47813) -> 不浄の魔弾
+	Change all orbs to Heal and Jammer, Deal 90% damage
+
+#8: SkillSet:
+	Condition: 50% chance (ai:0 rnd:50)
+	[0] ESGravity(50:47815) -> 魔銃
+	Player -35% HP
+	[1] ESBoardChangeAttackBits(85:47816) -> 不浄の魔弾
+	Change all orbs to Heal and Poison, Deal 100% damage
+
+#9: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#10: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 7
+
+#11: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#12: SkillSet:
+	[0] ESBlindStickySkyfall(128:47809) -> 昏濁銃
+	For 3 turns, 30% chance for skyfall orbs to be blinded for turn
+	[1] ESBoardChangeAttackBits(85:47810) -> 輝清銃
+	Change all orbs to Heal, Deal 150% damage
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESAttackMultihit(15:47807) -> ダークライトバラージ
+Deal 1,000% damage (5 hits, 200% each)
+
+#15: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#16: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESResolve(73:47527) -> 根性
+Survive attacks with 1 HP when HP > 50%
+
+#19: SkillSet:
+	Condition: On death (ai:0 rnd:0)
+	[0] ESBoardChange(84:47996) -> 双銃陣
+	Change all orbs to Dark and Heal

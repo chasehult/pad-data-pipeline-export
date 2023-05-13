@@ -19,7 +19,7 @@ level: 1
  | group:
    | group:
    | condition: turns 1-5 while HP > 98
-     | (44893:85) Time on the Sundial
+     | (44893:85) Time of the Sundial
      | Change all orbs to Water and Heal, Deal 1,000% damage
    | group:
      | (44524:83) Star Machine's Wave + Apocalyptic Star Crushing
@@ -27,4 +27,4 @@ level: 1
  | group:
  | condition: turn 1, hp <= 98
    | (44894:83) I won't wait for you anymore. + This is your last chance.
-   | No description set + Movetime 25% for 1 turn
+   | Negate 5 comboss for 1 turn + Movetime 25% for 1 turn

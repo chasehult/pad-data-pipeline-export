@@ -24,7 +24,7 @@ level: 1
  | condition: turns 2-6
    | condition: 50% chance
    | (42873:143) Miasma Wind
-   | For 1 turn, 25% ATK for both leaders, Deal 100% damage
+   | For 1 turn, 25% ATK for 1 random leader, Deal 100% damage
    | condition: 50% chance
    | (42874:143) Miasma Wind
    | For 1 turn, 25% ATK for 1 random sub, Deal 100% damage

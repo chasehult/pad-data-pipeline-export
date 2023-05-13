@@ -27,9 +27,9 @@ Branch on hp < 50, target rnd 8
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 Voids player buff effects, Deal 300% damage
 
-#8: ESUnknown(150:42494) -> Tentacles Whip
+#8: ESNegateCombo(150:42494) -> Tentacles Whip
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
-No description set, Deal 300% damage
+Negate 4 comboss for 1 turn, Deal 300% damage
 
 #9: ESChangeAttribute(46:42487) -> Tentacles Arrow
 Condition: 50% chance (ai:0 rnd:50)

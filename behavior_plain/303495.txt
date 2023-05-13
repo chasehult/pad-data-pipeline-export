@@ -27,8 +27,8 @@ Branch on hp < 50, target rnd 9
 
 #6: SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
-	[0] ESUnknown(150:44706) -> Shining Rain
-	No description set
+	[0] ESNegateCombo(150:44706) -> Shining Rain
+	Negate 3 comboss for 1 turn
 	[1] ESOrbChangeAttackBits(108:44707) -> Sunlight Shine
 	Change all Dark orbs to Light orbs, Deal 100% damage
 

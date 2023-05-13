@@ -69,7 +69,7 @@ Change all Jammer and Poison orbs to Fire orbs, Deal 120% damage
 #14: SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
 	[0] ESDebuffATKTarget(143:37357) -> Inferno Aura
-	For 1 turn, 25% ATK for both leaders
+	For 1 turn, 25% ATK for 1 random leader
 	[1] ESBlindStickyRandom(97:37358) -> Dark Blaze
 	Blind random 10~12 orbs for 1 turn, Deal 90% damage
 

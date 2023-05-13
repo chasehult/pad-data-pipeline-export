@@ -25,7 +25,7 @@ level: 1
  | group:
  | condition: turn 3
    | (46688:83) だから私は君を倒す！ + 世界などどうでもいい………！ + 己の意志でッ！！
-   | For 1 turn, 1% ATK for ??? + Blind all orbs on the board + Player -99% HP
+   | For 1 turn, 1% ATK for player leader + Blind all orbs on the board + Player -99% HP
  | group:
    | (46692:92) GNビームサーベル
    | Spawn 10 random Dark orbs, Deal 90% damage

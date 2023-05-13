@@ -50,7 +50,7 @@ end_turn
 #10: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESDebuffATKTarget(143:46689) -> だから私は君を倒す！
-	For 1 turn, 1% ATK for ???
+	For 1 turn, 1% ATK for player leader
 	[1] ESBlind5(5:46690) -> 世界などどうでもいい………！
 	Blind all orbs on the board
 	[2] ESGravity(50:46691) -> 己の意志でッ！！

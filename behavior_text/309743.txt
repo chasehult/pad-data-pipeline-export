@@ -22,7 +22,7 @@ level: 1
    | group:
    | condition: execute repeatedly, turn 2 of 3
      | (46295:83) 何故こんなことを平然と出来る！ + ラケルタビームサーベル
-     | Absorb damage when combos <= 13 for 1 turn + For 1 turn, 1% ATK for ???, Deal 100% damage
+     | Absorb damage when combos <= 13 for 1 turn + For 1 turn, 1% ATK for friend leader, Deal 100% damage
    | group:
    | condition: execute repeatedly, turn 3 of 3
      | (46298:83) ルプスビームライフル + バラエーナプラズマ収束ビーム砲

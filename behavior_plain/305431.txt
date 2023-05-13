@@ -11,8 +11,8 @@ Enable preempt if level 1
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESAbsorbCombo(67:40007) -> Can you really defeat me?
 	Absorb damage when combos <= 6 for 999 turns
-	[1] ESUnknown(150:40008) -> Try to live up to my expectations!
-	No description set
+	[1] ESNegateCombo(150:40008) -> Try to live up to my expectations!
+	Negate 9 comboss for 1 turn
 
 #3: ESSetCounter(26:16) -> ESSetCounter
 counter + 1

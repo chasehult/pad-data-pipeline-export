@@ -28,4 +28,4 @@ level: 1
  | group:
  | condition: turn 1, hp <= 1
    | (42758:83) Took you long enough!! + Now let this be the end of it...
-   | Reduce damage from all sources by 99% for 1 turn + No description set
+   | Reduce damage from all sources by 99% for 1 turn + Negate 5 comboss for 1 turn

@@ -1,0 +1,71 @@
+#303576 - 裏変転の七龍喚士・ウォレス
+monster size: 5
+new AI: True
+start/max counter: 1023
+counter increment: 0
+monster_id: 303576
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (6922:72) 木半減
+ | Reduce damage from Wood attrs by 50%
+ | (12175:73) 龍契精霊根性
+ | Survive attacks with 1 HP when HP > 99%
+ type: PREEMPT
+ | (48285:83) 峨道潜 + 護龍陣 + ミューカススキン
+ | Void damage >= 2,000,000,000 for 10 turns + Voids status ailments for 999 turns + Reduce damage from all sources by 75% for 7 turns
+ group:
+ | group:
+   | group:
+   | condition: turn 1 while HP > 14
+     | (6892:83) 虹布 + ヘルポイズンクロウ
+     | Change own attribute to Fire + Change 7 random orbs to Poison orbs, Deal 310% damage
+   | group:
+   | condition: turn 2 while HP > 14
+     | (6895:83) 虹布 + ヘルヴェノムクロウ
+     | Change own attribute to Water + Change 5 random orbs to Poison orbs, Deal 320% damage
+   | group:
+   | condition: turn 3 while HP > 14
+     | (6898:83) 虹布 + パラライズバイン
+     | Change own attribute to Wood + Bind 1 random sub for 7 turns, Deal 330% damage
+   | group:
+   | condition: turn 4 while HP > 14
+     | (6901:83) 虹布 + ポイズンレイヴ
+     | Change own attribute to Light + Change 10 random orbs to Poison orbs, Deal 350% damage
+   | group:
+   | condition: turn 5 while HP > 14
+     | (6904:83) 虹布 + ヘルポイズンレイヴ
+     | Change own attribute to Dark + Change 7 random orbs to Poison orbs, Deal 370% damage
+   | group:
+   | condition: turn 6 while HP > 14
+     | (6905:48) ヘルブルーム
+     | Change all Poison orbs to Jammer orbs, Deal 6,000% damage
+     | (6906:94) 千刃皆中
+     | Lock all orbs, Deal 300% damage
+   | group:
+   | condition: turn 7 while HP > 14
+     | (6910:83) 死然導疾 + 不浄集積の術 + ストームレイヴ
+     | Mortal Poison skyfall +20% for 7 turns + Unable to match Poison and Mortal Poison orbs for 2 turns + Deal 420% damage (7 hits, 60% each), Deal 420% damage (7 hits, 60% each)
+   | group:
+   | condition: turn 8 while HP > 14
+     | (6913:83) 虹布 + パラライズバイン
+     | Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Bind 1 random sub for 7 turns, Deal 330% damage
+   | group:
+   | condition: turn 9 while HP > 14
+     | (6916:83) 刺骸牙 + サイクロンレイヴ
+     | Locked Poison and Mortal Poison skyfall +100% for 5 turns + Deal 490% damage (7 hits, 70% each), Deal 490% damage (7 hits, 70% each)
+   | group:
+     | condition: 45% chance
+     | (6917:83) 虹布 + セブンガーデン
+     | Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Change all orbs to Fire, Water, Wood, Light, Dark, Heal, and Poison, Deal 400% damage
+     | condition: 40% chance
+     | (6918:83) 虹布 + サイクロンレイヴ
+     | Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Deal 490% damage (7 hits, 70% each), Deal 490% damage (7 hits, 70% each)
+     | condition: 15% chance
+     | (6919:83) 虹布 + デッドポイズンレイヴ
+     | Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Change 14 random orbs to Poison orbs, Deal 400% damage
+ | group:
+ | condition: hp <= 14
+   | (6921:83) 虹布 + 無限羽嵐虹刃
+   | Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Deal 12,000% damage (10 hits, 1,200% each), Deal 12,000% damage (10 hits, 1,200% each)

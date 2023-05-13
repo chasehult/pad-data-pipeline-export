@@ -1,0 +1,70 @@
+#304915 - 仮面ライダー電王
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+#3: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#4: ESNoSkyfall(127:46947) -> 俺の必殺技　パート１
+No skyfall for 10 turns
+
+#5: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#6: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 18
+
+#7: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 15
+
+#8: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 12
+
+#9: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#10: ESAttackMultihit(15:46948) -> 俺の必殺技　パート２
+Deal 90% damage (5 hits, 18% each)
+
+#11: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#12: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#13: ESRowSpawnMulti(79:46949) -> 俺の必殺技　パート２'
+Change the 1st row to Fire orbs and the 5th row to Light orbs, Deal 95% damage
+
+#14: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#15: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#16: ESBlindStickyFixed(98:46950) -> 俺の必殺技　パート３！
+Blind orbs in specific positions for 3 turns, Deal 100% damage
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+#19: SkillSet:
+	[0] ESBlind5(5:46952) -> 俺の必殺技　パート３！
+	Blind all orbs on the board
+	[1] ESDebuffATKTarget(143:46953) -> と見せかけて
+	For 1 turn, 50% ATK for 1 random sub
+	[2] ESGravity(50:46954) -> ストレートど真ん中！！！
+	Player -99% HP
+
+#20: ESEndPath(36:26) -> ESEndPath
+end_turn

@@ -1,4 +1,4 @@
-#308052 - 天空の全能神・ゼウス -GIGA-
+#308052 - Vast Sky Almighty God, Zeus - Giga
 monster size: 5
 new AI: True
 start/max counter: 3
@@ -8,16 +8,16 @@ approved: False
 
 level: 1
  type: PASSIVE
- | (39482:129) ＿超根性
+ | (39482:129) ＿Super Resolve
  | Damage which would reduce HP from above 70% to below 70% is nullified
  type: PREEMPT
- | (39472:83) 全知全能の盾 + リゾルブ・オブ・ゼウス + アトモスフィア
+ | (39472:83) Almighty Shield + Resolve of Zeus + Atmosphere
  | Reduce damage from all sources by 99% for 2 turns + Void damage >= 20,000,000 for 2 turns + No description set
  group:
  | group:
-   | (39479:83) アトモスフィア + 神王の雷
+   | (39479:83) Atmosphere + Divine King's Lightning
    | No description set + Deal 102% damage (3 hits, 34% each), Deal 102% damage (3 hits, 34% each)
  | group:
  | condition: turn 1, hp <= 69
-   | (39476:83) ケラウノスの導き + アトモスロック
+   | (39476:83) Guidance of Keraunós + Atmoslock
    | Absorb damage when combos <= 7 for 1 turn + Lock all orbs

@@ -7,9 +7,9 @@ counter increment: 0
 #1: ESPreemptive(49:318) -> ESPreemptive
 Enable preempt if level 1
 
-#2: ESUnknown(150:39713) -> Water Ninja Art
+#2: ESNegateCombo(150:39713) -> Water Ninja Art
 Condition: One-time use (ai:100 rnd:0) (cost: 2)
-No description set
+Negate 5 comboss for 3 turns
 
 #3: ESSetCounter(26:16) -> ESSetCounter
 counter + 1

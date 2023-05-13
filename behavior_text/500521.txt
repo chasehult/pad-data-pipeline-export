@@ -9,7 +9,7 @@ approved: False
 level: 1
  type: PREEMPT
  | (42983:83) Ice Gift + Fortune Ice Crystal
- | No description set + Haste all cards' skills by 1 turn
+ | Negate 3 comboss for 1 turn + Haste all cards' skills by 1 turn
  group:
  | (42986:85) Gift Purification
  | Change all orbs to Water, Heal, and Jammer, Deal 100% damage

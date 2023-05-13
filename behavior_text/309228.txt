@@ -29,7 +29,7 @@ level: 1
    | group:
    | condition: turn 1 while HP > 9
      | (40149:83) Sahasrabhuja Vanishment + Loss Embrace + One Thousand Washers
-     | Unable to match Wood orbs for 10 turns + No description set + No description set, Deal 180% damage
+     | Unable to match Wood orbs for 10 turns + Negate 3 comboss for 1 turn + No description set, Deal 180% damage
    | group:
      | condition: 33% chance
      | (40167:83) Sahasrabhuja Aura + Aqua Embrace
@@ -45,7 +45,7 @@ level: 1
    | group:
    | condition: turn 1
      | (40153:83) One Thousand Enhancements + Sahasrabhuja Stream + Loss Embrace
-     | Increase damage to 1,000% for the next 999 turns + Haste both leaders' skills by 99 turns + No description set
+     | Increase damage to 1,000% for the next 999 turns + Haste both leaders' skills by 99 turns + Negate 3 comboss for 1 turn
    | group:
      | (40157:15) One Thousand Novas
      | Deal 1,000% damage (10 hits, 100% each)

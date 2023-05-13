@@ -1,4 +1,4 @@
-#308052 - 天空の全能神・ゼウス -GIGA-
+#308052 - Vast Sky Almighty God, Zeus - Giga
 monster size: 5
 new AI: True
 start/max counter: 3
@@ -9,28 +9,28 @@ Enable preempt if level 1
 
 #2: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
-	[0] ESDamageShield(74:39473) -> 全知全能の盾
+	[0] ESDamageShield(74:39473) -> Almighty Shield
 	Reduce damage from all sources by 99% for 2 turns
-	[1] ESVoidShield(71:39474) -> リゾルブ・オブ・ゼウス
+	[1] ESVoidShield(71:39474) -> Resolve of Zeus
 	Void damage >= 20,000,000 for 2 turns
-	[2] ESUnknown(151:39475) -> アトモスフィア
+	[2] ESUnknown(151:39475) -> Atmosphere
 	No description set
 
 #3: SkillSet:
 	Condition: When < 70% HP , one-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESAbsorbCombo(67:39477) -> ケラウノスの導き
+	[0] ESAbsorbCombo(67:39477) -> Guidance of Keraunós
 	Absorb damage when combos <= 7 for 1 turn
-	[1] ESOrbLock(94:39478) -> アトモスロック
+	[1] ESOrbLock(94:39478) -> Atmoslock
 	Lock all orbs
 
 #4: SkillSet:
-	[0] ESUnknown(151:39480) -> アトモスフィア
+	[0] ESUnknown(151:39480) -> Atmosphere
 	No description set
-	[1] ESAttackMultihit(15:39481) -> 神王の雷
+	[1] ESAttackMultihit(15:39481) -> Divine King's Lightning
 	Deal 102% damage (3 hits, 34% each)
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn
 
-#6: ESSuperResolve(129:39482) -> ＿超根性
+#6: ESSuperResolve(129:39482) -> ＿Super Resolve
 Damage which would reduce HP from above 70% to below 70% is nullified

@@ -9,7 +9,7 @@ approved: False
 level: 1
  type: PREEMPT
  | (39713:150) Water Ninja Art
- | No description set
+ | Negate 5 comboss for 3 turns
  group:
  | group:
  | condition: turn 2

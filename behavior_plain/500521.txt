@@ -14,8 +14,8 @@ Branch on flag & 1, target rnd 6
 flag SET 0b1
 
 #4: SkillSet:
-	[0] ESUnknown(150:42984) -> Ice Gift
-	No description set
+	[0] ESNegateCombo(150:42984) -> Ice Gift
+	Negate 3 comboss for 1 turn
 	[1] ESTargetedSkillHaste(139:42985) -> Fortune Ice Crystal
 	Haste all cards' skills by 1 turn
 

@@ -8,12 +8,7 @@ approved: False
 
 level: 1
  type: PREEMPT
- | (19597:66) Wish upon a star TAMA!
- | Do nothing
+unknown ES
  group:
- | condition: 50% chance
- | (19598:66) What did you wish for TAMA?
- | Do nothing
- | condition: 50% chance
- | (19599:66) Your wish will be granted by mail TAMA!
- | Do nothing
+unknown ES
+unknown ES

@@ -1,4 +1,4 @@
-#503483 - 転生イズン＆イズーナ
+#503483 - Reincarnated Idunn & Idunna
 monster size: 5
 new AI: True
 start/max counter: 1
@@ -8,8 +8,8 @@ approved: False
 
 level: 1
  type: PREEMPT
- | (39468:53) ラブリールーン
+ | (39468:53) Lovely Rune
  | Absorb Water, Light, and Dark damage for 2 turns
  group:
- | (39469:46) ラブリーチェンジ
+ | (39469:46) Lovely Change
  | Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage

@@ -34,4 +34,4 @@ level: 1
  | group:
  | condition: turn 1, hp <= 69
    | (41482:83) I will not let it end like this... + Lake of Benedictions
-   | No description set + For 15 turns, None% chance for combo orb skyfall., Deal 105% damage
+   | Negate 3 comboss for 3 turns + For 15 turns, None% chance for combo orb skyfall., Deal 105% damage

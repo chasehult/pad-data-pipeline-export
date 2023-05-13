@@ -26,8 +26,8 @@ end_turn
 
 #6: SkillSet:
 	Condition: When < 70% HP , one-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESUnknown(150:41483) -> I will not let it end like this...
-	No description set
+	[0] ESNegateCombo(150:41483) -> I will not let it end like this...
+	Negate 3 comboss for 3 turns
 	[1] ESComboSkyfall(131:41484) -> Lake of Benedictions
 	For 15 turns, None% chance for combo orb skyfall., Deal 105% damage
 

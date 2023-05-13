@@ -34,7 +34,7 @@ level: 1
  | condition: hp <= 19
    | group:
    | condition: turn 1
-     | (15520:88) Delete Power
+     | (15520:88) Power Deletion
      | Bind awoken skills for 1 turn
    | group:
      | (15521:15) Catastrophe Burst

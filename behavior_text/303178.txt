@@ -14,7 +14,7 @@ level: 1
  | group:
  | condition: turn 1
    | (39869:83) Tiger Snake Bellow + Decaying Life + Tiger Snake's Howl
-   | Increase damage to 1,000% for the next 1 turn + No description set + Haste both leaders' skills by 10 turns
+   | Increase damage to 1,000% for the next 1 turn + Negate 6 comboss for 1 turn + Haste both leaders' skills by 10 turns
  | group:
  | condition: turns 2-6
    | condition: 50% chance
@@ -22,7 +22,7 @@ level: 1
    | Haste both leaders' skills by 2 turns, Deal 100% damage
    | condition: 50% chance
    | (39868:150) Chain Breaking Fangs
-   | No description set, Deal 100% damage
+   | Negate 5 comboss for 1 turn, Deal 100% damage
  | group:
    | (39741:15) Thousandfold Demise
    | Deal 5,000% damage (5 hits, 1,000% each)

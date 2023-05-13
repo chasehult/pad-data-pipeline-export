@@ -1,0 +1,144 @@
+#409872 - 億兆龍・アグリゲート
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 2)
+	[0] ESStatusShield(20:47949) -> イノーマスオーラ
+	Voids status ailments for 999 turns
+	[1] ESVoidShieldBig(137:47950) -> ビリオンズスケイル
+	Void damage >= 2,500,000,000 for 999 turns
+	[2] ESDebuffATK(130:47951) -> ドラゴニックロアー
+	ATK -75% for 10 turns, Deal 50% damage
+	[3] ESUnknown(152:47952) -> ユニゾンディザスター
+	No description set, Deal 50% damage
+
+#3: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 5, target rnd 24
+
+#4: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#5: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 15, target rnd 21
+
+#6: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 10, target rnd 18
+
+#7: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 14
+
+#8: SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESBlind62(62:47963) -> ダークディザスター
+	Blind all orbs on the board, Deal 50% damage
+	[1] ESUnknown(153:47964) -> ビリオンズブレス
+	No description set, Deal 40% damage
+
+#9: SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESJammerChangeRandom(13:47966) -> ダストディザスター
+	Change 1 random orb type to Jammer orbs, Deal 50% damage
+	[1] ESOrbLock(94:47967) -> ビリオンズブレス
+	Lock 10 random orbs, Deal 50% damage
+
+#10: SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESPoisonChangeRandom(57:47969) -> ベノムディザスター
+	Change a random attribute to Poison orbs, Deal 50% damage
+	[1] ESUnknown(151:47970) -> ビリオンズブレス
+	No description set, Deal 40% damage
+
+#11: SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESDebuffATKTarget(143:47972) -> ダウンディザスター
+	For 3 turns, 1% ATK for 1 random card, Deal 50% damage
+	[1] ESUnknown(155:47973) -> ビリオンズブレス
+	No description set, Deal 50% damage
+
+#12: SkillSet:
+	Condition: 20% chance (ai:0 rnd:20)
+	[0] ESGravity(50:47975) -> ディザスタークロー
+	Player -35% HP
+	[1] ESAttackMultihit(15:47976) -> ビリオンズメテオ
+	Deal 99% damage (3 hits, 33% each)
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 8
+
+#15: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#16: SkillSet:
+	[0] ESGravity(50:47959) -> ディザスタークロー
+	Player -400% HP
+	[1] ESBlindStickySkyfall(128:47960) -> ダークアグリゲイション
+	For 5 turns, 15% chance for skyfall orbs to be blinded for turn
+	[2] ESUnknown(155:47961) -> ビリオンズカラミティ
+	No description set, Deal 20% damage
+
+#17: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#18: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 11, target rnd 7
+
+#19: SkillSet:
+	[0] ESAttackUPCooldown(19:47978) -> ディザスターパワー
+	Increase damage to 150% for the next 4 turns
+	[1] ESGravity(50:47975) -> ディザスタークロー
+	Player -35% HP
+	[2] ESAttackMultihit(15:47979) -> ビリオンズノヴァ
+	Deal 100% damage (4 hits, 25% each)
+
+#20: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#21: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 16, target rnd 27
+
+#22: SkillSet:
+	[0] ESAttackUPRemainingEnemies(17:47981) -> ディザスターパワー
+	Increase damage to 250% for the next 999 turns
+	[1] ESChangeAttribute(46:47997) -> カラーアグリゲイション
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
+	[2] ESAttackMultihit(15:47982) -> ビリオンズノヴァ
+	Deal 100% damage (4 hits, 25% each)
+
+#23: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#24: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESBindAwoken(88:47954) -> ビリオンズフィアー
+	Bind awoken skills for 1 turn
+	[1] ESGravity(50:47955) -> ディザスタークロー
+	Player -99% HP
+	[2] ESBoardChange(84:47956) -> デスアグリゲイション
+	Change all orbs to Light, Heal, Jammer, and Poison
+
+#25: ESAttackMultihit(15:47957) -> ビリオンズカタストロフィ
+Deal 1,000% damage (10 hits, 100% each)
+
+#26: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#27: SkillSet:
+	[0] ESChangeAttribute(46:47997) -> カラーアグリゲイション
+	Change own attribute to random one of Fire, Water, Wood, Light, or Dark
+	[1] ESAttackMultihit(15:47982) -> ビリオンズノヴァ
+	Deal 100% damage (4 hits, 25% each)
+
+#28: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#29: ESSuperResolve(129:47529) -> 超根性
+Damage which would reduce HP from above 50% to below 50% is nullified

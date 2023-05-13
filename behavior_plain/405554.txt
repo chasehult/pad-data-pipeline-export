@@ -35,8 +35,8 @@ end_turn
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESDamageShield(74:42759) -> Took you long enough!!
 	Reduce damage from all sources by 99% for 1 turn
-	[1] ESUnknown(150:42760) -> Now let this be the end of it...
-	No description set
+	[1] ESNegateCombo(150:42760) -> Now let this be the end of it...
+	Negate 5 comboss for 1 turn
 
 #9: ESAttackMultihit(15:42757) -> Charge of Sedition
 Deal 1,000% damage (2 hits, 500% each)

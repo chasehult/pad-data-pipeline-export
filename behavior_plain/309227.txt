@@ -11,8 +11,8 @@ Enable preempt if level 1
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESStatusShield(20:40135) -> Protection Crystal
 	Voids status ailments for 4 turns
-	[1] ESUnknown(150:40136) -> Blue Sheen
-	No description set
+	[1] ESNegateCombo(150:40136) -> Blue Sheen
+	Negate 6 comboss for 4 turns
 	[2] ESDebuffATKTarget(143:40137) -> Crystal Wave
 	For 4 turns, 50% ATK for 4 random subs
 

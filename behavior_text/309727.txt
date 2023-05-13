@@ -37,7 +37,7 @@ level: 4
  | Damage which would reduce HP from above 50% to below 50% is nullified
  type: PREEMPT
  | (46077:83) ＿サザビー演出開幕 + ならば今すぐ愚民ども全てに + 英知を授けてみせろ！
- | No description set + Voids status ailments for 999 turns + No description set
+ | No description set + Voids status ailments for 999 turns + Negate 3 comboss for 3 turns
  type: DEATH
  condition: when defeated
  | (46096:95) ＿サザビー演出死亡

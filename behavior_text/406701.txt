@@ -1,0 +1,15 @@
+#406701 - 真式神・トウタツ
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 406701
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (44949:153) 提灯フレイム
+ | No description set
+ group:
+ | (44954:15) タツブレス
+ | Deal 60% damage (2 hits, 30% each)

@@ -1,0 +1,15 @@
+#406705 - 真式神・ヒョウタツ
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 406705
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (44953:92) ひょうたんシャドウ
+ | Spawn 4 random Jammer orbs
+ group:
+ | (44954:15) タツブレス
+ | Deal 60% damage (2 hits, 30% each)

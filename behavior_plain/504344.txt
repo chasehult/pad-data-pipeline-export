@@ -61,8 +61,8 @@ counter + 1
 #16: SkillSet:
 	[0] ESDebuffRCV(105:47387) -> まだいけますか～？
 	RCV 50% for 1 turn
-	[1] ESUnknown(150:47388) -> いけますよね？
-	No description set
+	[1] ESNegateCombo(150:47388) -> いけますよね？
+	Negate 2 comboss for 1 turn
 	[2] ESSkyfall(68:47389) -> とっても素敵ですよ～
 	Heal skyfall +15% for 1 turn
 

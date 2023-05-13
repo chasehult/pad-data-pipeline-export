@@ -51,14 +51,14 @@ Branch on hp < 50, target rnd 8
 	[0] ESSpinnersFixed(110:39891) -> Encirclement
 	Specific orbs change every 1.0s for 1 turn
 	[1] ESDebuffATKTarget(143:39892) -> Victory Song
-	For 1 turn, 1% ATK for both leaders, Deal 100% damage
+	For 1 turn, 1% ATK for 1 random leader, Deal 100% damage
 
 #10: SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
 	[0] ESOrbLock(94:39894) -> Besiegement
 	Lock 15 random orbs
 	[1] ESDebuffATKTarget(143:39895) -> Victory Song
-	For 1 turn, 1% ATK for both leaders, Deal 100% damage
+	For 1 turn, 1% ATK for 1 random leader, Deal 100% damage
 
 #11: ESEndPath(36:26) -> ESEndPath
 end_turn

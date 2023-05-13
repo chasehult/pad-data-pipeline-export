@@ -20,8 +20,8 @@ end_turn
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESStatusShield(20:46080) -> ならば今すぐ愚民ども全てに
 	Voids status ailments for 999 turns
-	[1] ESUnknown(150:46081) -> 英知を授けてみせろ！
-	No description set
+	[1] ESNegateCombo(150:46081) -> 英知を授けてみせろ！
+	Negate 3 comboss for 3 turns
 
 #6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 22

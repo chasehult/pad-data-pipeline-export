@@ -41,8 +41,8 @@ end_turn
 
 #11: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESUnknown(150:43566) -> But I can't...
-	No description set
+	[0] ESNegateCombo(150:43566) -> But I can't...
+	Negate 2 comboss for 2 turns
 	[1] ESDamageShield(74:43567) -> ...just let things go!
 	Reduce damage from all sources by 50% for 3 turns, Deal 101% damage
 

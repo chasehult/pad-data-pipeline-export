@@ -1,0 +1,54 @@
+#300584 - 森の賢人・トレント
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESSkillDelay(89:24394) -> 邪木の実揺らし
+	Delay active skills by 4~6 turns
+	[1] ESGravity(50:24061) -> 蔓叩き
+	Player -99% HP
+
+#3: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 10, target rnd 12
+
+#4: ESBranchHP(28:18) -> ESBranchHP
+Branch on hp < 50, target rnd 8
+
+#5: ESBlindStickyRandom(97:24396) -> 邪木の実飛ばし
+Condition: 50% chance (ai:0 rnd:50)
+Blind random 5~7 orbs for 1 turn, Deal 100% damage
+
+#6: ESAttackMultihit(15:24397) -> ふるい落とし
+Condition: 50% chance (ai:0 rnd:50)
+Deal 105% damage (3 hits, 35% each)
+
+#7: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#8: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 5
+
+#9: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#10: ESBlindStickySkyfall(128:24395) -> 暗森への誘い
+For 5 turns, 15% chance for skyfall orbs to be blinded for turn
+
+#11: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#12: ESAttackMultihit(15:24398) -> 不思議な動き
+Deal 320% damage (4 hits, 80% each)
+
+#13: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#14: ESDeathCry(69:24399) -> 変身
+Condition: On death (ai:0 rnd:0)
+Show message: 不思議な動きで踊りだした|森の奥からなにかが現れた！

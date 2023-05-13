@@ -38,8 +38,8 @@ Branch on counter = 1, target rnd 12
 #9: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-#10: ESUnknown(150:46760) -> 遊びでやってるんじゃないんだよぉッ！
-No description set, Deal 80% damage
+#10: ESNegateCombo(150:46760) -> 遊びでやってるんじゃないんだよぉッ！
+Negate 3 comboss for 1 turn, Deal 80% damage
 
 #11: ESEndPath(36:26) -> ESEndPath
 end_turn

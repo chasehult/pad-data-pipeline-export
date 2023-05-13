@@ -12,7 +12,7 @@ level: 1
  | Damage which would reduce HP from above 50% to below 50% is nullified
  type: PREEMPT
  | (46789:83) ならば今すぐ愚民ども全てに + 英知を授けてみせろ！
- | Delay active skills by 3 turns + No description set
+ | Delay active skills by 3 turns + Negate 5 comboss for 3 turns
  group:
  | group:
    | group:

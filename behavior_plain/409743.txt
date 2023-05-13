@@ -51,7 +51,7 @@ counter = 0
 	[0] ESFixedStart(101:46672) -> 何故こんなことを平然と出来る！
 	Fix orb movement starting point to random position on the board
 	[1] ESDebuffATKTarget(143:46673) -> ラケルタビームサーベル
-	For 1 turn, 1% ATK for ???, Deal 100% damage
+	For 1 turn, 1% ATK for friend leader, Deal 100% damage
 
 #13: ESEndPath(36:26) -> ESEndPath
 end_turn

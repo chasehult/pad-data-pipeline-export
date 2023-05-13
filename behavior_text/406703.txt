@@ -1,0 +1,15 @@
+#406703 - 真式神・コタツ
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 406703
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (44951:89) でんでんゲイル
+ | Delay active skills by 0~2 turns
+ group:
+ | (44954:15) タツブレス
+ | Deal 60% damage (2 hits, 30% each)

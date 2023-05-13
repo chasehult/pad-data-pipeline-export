@@ -26,7 +26,7 @@ level: 1
  | group:
  | condition: execute repeatedly, turn 3 of 4
    | (47386:83) まだいけますか～？ + いけますよね？ + とっても素敵ですよ～
-   | RCV 50% for 1 turn + No description set + Heal skyfall +15% for 1 turn
+   | RCV 50% for 1 turn + Negate 2 comboss for 1 turn + Heal skyfall +15% for 1 turn
  | group:
  | condition: execute repeatedly, turn 4 of 4
    | (47390:83) あら～？お顔が… + 下を向いてますよぉ

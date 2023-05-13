@@ -15,7 +15,7 @@ Enable preempt if level 1
 	Void damage >= 500,000,000 for 4 turns
 	[2] ESSkillDelay(89:44880) -> Ignition Burst
 	Delay active skills by 5~8 turns
-	[3] ESSkyfallLocked(96:44881) -> Axle Chain
+	[3] ESSkyfallLocked(96:44881) -> Accelerating Chain
 	Locked random skyfall +25% for 10 turns
 
 #3: ESSetCounterIf(38:177) -> ESSetCounterIf

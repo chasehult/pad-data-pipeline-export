@@ -37,7 +37,7 @@ For 3 turns, 25% ATK for both leaders, Deal 100% damage
 
 #10: ESDebuffATKTarget(143:42873) -> Miasma Wind
 Condition: 50% chance (ai:0 rnd:50)
-For 1 turn, 25% ATK for both leaders, Deal 100% damage
+For 1 turn, 25% ATK for 1 random leader, Deal 100% damage
 
 #11: ESDebuffATKTarget(143:42874) -> Miasma Wind
 Condition: 50% chance (ai:0 rnd:50)

@@ -18,7 +18,7 @@ level: 1
    | group:
    | condition: execute repeatedly, turn 1 of 3
      | (46760:150) 遊びでやってるんじゃないんだよぉッ！
-     | No description set, Deal 80% damage
+     | Negate 3 comboss for 1 turn, Deal 80% damage
    | group:
    | condition: execute repeatedly, turn 2 of 3
      | (46761:105) まだ抵抗するのならッ！！

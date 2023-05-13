@@ -22,7 +22,7 @@ level: 1
  | condition: turns 2-6
    | condition: 50% chance
    | (42864:150) Rippling Water
-   | No description set, Deal 100% damage
+   | Negate 2 comboss for 1 turn, Deal 100% damage
    | condition: 50% chance
    | (42865:151) Roiling Dragon Claws
    | No description set, Deal 100% damage
@@ -33,4 +33,4 @@ level: 1
  | (42870:151) Flowing Cannon
  | No description set
  | (42871:150) Rippling Water
- | No description set, Deal 100% damage
+ | Negate 3 comboss for 1 turn, Deal 100% damage

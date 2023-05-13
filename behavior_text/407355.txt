@@ -1,0 +1,12 @@
+#407355 - ラフレシアの夢邪霊・ジェラ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 407355
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (24247:73) 根性
+ | Survive attacks with 1 HP when HP > 50%

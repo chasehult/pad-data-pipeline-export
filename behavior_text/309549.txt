@@ -12,7 +12,7 @@ level: 1
  | Damage which would reduce HP from above 50% to below 50% is nullified
  type: PREEMPT
  | (43893:83) Star Platinum + Bring it! + Star Finger
- | Voids status ailments for 999 turns + No description set + Absorb Light and Dark damage for 5 turns
+ | Voids status ailments for 999 turns + Negate 2 comboss for 2 turns + Absorb Light and Dark damage for 5 turns
  group:
  | group:
    | condition: 50% chance

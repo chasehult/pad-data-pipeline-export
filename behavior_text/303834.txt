@@ -18,7 +18,7 @@ level: 1
    | group:
    | condition: turn 1 while HP > 49
      | (39924:83) Struggling Military Position + Helios' Chains + The Will of the Great Sun
-     | No description set + Lock all orbs + Void damage >= 500,000,000 for 6 turns, Deal 125% damage
+     | Negate 8 comboss for 1 turn + Lock all orbs + Void damage >= 500,000,000 for 6 turns, Deal 125% damage
    | group:
    | condition: turns 2-6 while HP > 2
      | condition: 50% chance

@@ -1,0 +1,124 @@
+#404353 - 裏水の精霊王・ザパン
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 1
+monster_id: 404353
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (9710:72) 水属性半減
+ | Reduce damage from Water attrs by 50%
+ | (12175:73) 龍契精霊根性
+ | Survive attacks with 1 HP when HP > 99%
+
+level: 4
+ type: PASSIVE
+ | (9710:72) 水属性半減
+ | Reduce damage from Water attrs by 50%
+ | (12175:73) 龍契精霊根性
+ | Survive attacks with 1 HP when HP > 99%
+ type: PREEMPT
+ | (48302:83) 豪流の外套 + 暴渦 + 吹き出る濁水 + 逆巻く高波
+ | Voids status ailments for 999 turns + Player -99% HP + Change the 1st column to Water, Jammer, and Poison orbs and the 3rd and 4th columns to Water, Jammer, and Poison orbs + Void damage >= 3,000,000,000 for 10 turns
+ group:
+ | group:
+   | group:
+   | condition: turns 1-4 while HP > 49
+     | condition: 25% chance
+     | (9716:92) ウォーターハザード
+     | Spawn 8 random Water orbs, Deal 100% damage
+     | condition: 25% chance
+     | (9717:94) ブリザードウェーブ
+     | Lock 14 random orbs, Deal 110% damage
+     | condition: 25% chance
+     | (9718:1) フローズンテンタクル
+     | Bind 2 random cards for 1 turn, Deal 105% damage
+     | condition: 25% chance
+     | (9719:15) フロストハリケーン
+     | Deal 120% damage (4 hits, 30% each)
+   | group:
+   | condition: turn 5 while HP > 49
+     | (9722:83) 荒ぶる海域 + 地盤沈下
+     | Bind active skills for 3 turns + Seal the 5th row for 3 turns
+   | group:
+   | condition: execute repeatedly, turn 1-4 of 5
+     | condition: 25% chance
+     | (9716:92) ウォーターハザード
+     | Spawn 8 random Water orbs, Deal 100% damage
+     | condition: 25% chance
+     | (9717:94) ブリザードウェーブ
+     | Lock 14 random orbs, Deal 110% damage
+     | condition: 25% chance
+     | (9718:1) フローズンテンタクル
+     | Bind 2 random cards for 1 turn, Deal 105% damage
+     | condition: 25% chance
+     | (9719:15) フロストハリケーン
+     | Deal 120% damage (4 hits, 30% each)
+   | group:
+   | condition: execute repeatedly, turn 5 of 5
+     | (9737:8) 大いなる海の解放
+     | Increase damage to 230% for the next attack
+ | group:
+ | condition: hp <= 49
+   | group:
+   | condition: turn 1 while HP > 9
+     | (9726:83) 猛り狂う荒波 + 海流の乱れ + 大寒波
+     | Change all orbs to Heal and Poison + RCV 50% for 99 turns + Bind 6 random cards for 10 turns
+   | group:
+   | condition: turn 2 while HP > 9
+     | condition: 50% chance
+     | (9731:83) ヘビーレイン + タイダルウェーブ
+     | Water skyfall +25% for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+     | (9732:83) グリーフウォーター + タイダルウェーブ
+     | Absorb Water damage for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+   | group:
+   | condition: turn 3 while HP > 9
+     | (9733:83) センドディザスター + タイダルウェーブ
+     | Movetime 50% for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+   | group:
+   | condition: turn 4 while HP > 9
+     | condition: 50% chance
+     | (9731:83) ヘビーレイン + タイダルウェーブ
+     | Water skyfall +25% for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+     | (9732:83) グリーフウォーター + タイダルウェーブ
+     | Absorb Water damage for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+   | group:
+   | condition: turn 5 while HP > 9
+     | (9733:83) センドディザスター + タイダルウェーブ
+     | Movetime 50% for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+   | group:
+   | condition: turn 6 while HP > 9
+     | (9736:83) 海域の裂け目 + 深海の闇
+     | Bind awoken skills for 3 turns + Blind all orbs for 3 turns
+   | group:
+   | condition: execute repeatedly, turn 1 of 5
+     | condition: 50% chance
+     | (9731:83) ヘビーレイン + タイダルウェーブ
+     | Water skyfall +25% for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+     | (9732:83) グリーフウォーター + タイダルウェーブ
+     | Absorb Water damage for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+   | group:
+   | condition: execute repeatedly, turn 2 of 5
+     | (9733:83) センドディザスター + タイダルウェーブ
+     | Movetime 50% for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+   | group:
+   | condition: execute repeatedly, turn 3 of 5
+     | condition: 50% chance
+     | (9731:83) ヘビーレイン + タイダルウェーブ
+     | Water skyfall +25% for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+     | (9732:83) グリーフウォーター + タイダルウェーブ
+     | Absorb Water damage for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+   | group:
+   | condition: execute repeatedly, turn 4 of 5
+     | (9733:83) センドディザスター + タイダルウェーブ
+     | Movetime 50% for 1 turn + Deal 125% damage (5 hits, 25% each), Deal 125% damage (5 hits, 25% each)
+   | group:
+   | condition: execute repeatedly, turn 5 of 5
+     | (9737:8) 大いなる海の解放
+     | Increase damage to 230% for the next attack
+ | group:
+ | condition: hp <= 9
+   | (9738:15) ネオタイダルウェーブ
+   | Deal 2,400% damage (6 hits, 400% each)

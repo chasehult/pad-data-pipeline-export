@@ -9,7 +9,7 @@ approved: False
 level: 1
  type: PREEMPT
  | (40374:150) Burning Up
- | No description set
+ | Negate 3 comboss for 5 turns
  group:
  | group:
  | condition: turns 1-5

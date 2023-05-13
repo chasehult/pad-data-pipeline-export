@@ -61,8 +61,8 @@ counter = 0
 #14: SkillSet:
 	[0] ESColumnSpawnMulti(77:46280) -> ツインバスターライフル
 	Change the 1st and 3rd columns to Light orbs, Deal 100% damage
-	[1] ESUnknown(150:46281) -> 命なんて安い物だ。特に俺のは！
-	No description set
+	[1] ESNegateCombo(150:46281) -> 命なんて安い物だ。特に俺のは！
+	Negate 5 comboss for 1 turn
 
 #15: ESEndPath(36:26) -> ESEndPath
 end_turn

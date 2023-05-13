@@ -27,13 +27,13 @@ Branch on hp < 50, target rnd 8
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
 No description set
 
-#8: ESUnknown(150:42871) -> Rippling Water
+#8: ESNegateCombo(150:42871) -> Rippling Water
 Condition: One-time use (ai:100 rnd:0) (cost: 1)
-No description set, Deal 100% damage
+Negate 3 comboss for 1 turn, Deal 100% damage
 
-#9: ESUnknown(150:42864) -> Rippling Water
+#9: ESNegateCombo(150:42864) -> Rippling Water
 Condition: 50% chance (ai:0 rnd:50)
-No description set, Deal 100% damage
+Negate 2 comboss for 1 turn, Deal 100% damage
 
 #10: ESUnknown(151:42865) -> Roiling Dragon Claws
 Condition: 50% chance (ai:0 rnd:50)

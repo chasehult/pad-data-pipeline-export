@@ -1,0 +1,29 @@
+#304915 - 仮面ライダー電王
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 304915
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (46947:127) 俺の必殺技　パート１
+ | No skyfall for 10 turns
+ group:
+ | group:
+ | condition: execute repeatedly, turn 1 of 4
+   | (46948:15) 俺の必殺技　パート２
+   | Deal 90% damage (5 hits, 18% each)
+ | group:
+ | condition: execute repeatedly, turn 2 of 4
+   | (46949:79) 俺の必殺技　パート２'
+   | Change the 1st row to Fire orbs and the 5th row to Light orbs, Deal 95% damage
+ | group:
+ | condition: execute repeatedly, turn 3 of 4
+   | (46950:98) 俺の必殺技　パート３！
+   | Blind orbs in specific positions for 3 turns, Deal 100% damage
+ | group:
+ | condition: execute repeatedly, turn 4 of 4
+   | (46951:83) 俺の必殺技　パート３！ + と見せかけて + ストレートど真ん中！！！
+   | Blind all orbs on the board + For 1 turn, 50% ATK for 1 random sub + Player -99% HP

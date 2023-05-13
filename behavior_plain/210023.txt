@@ -1,0 +1,8 @@
+#210023 - 極キングサファイアドラゴン
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESAttributeResist(72:45097) -> ＿木以外軽減
+Reduce damage from Fire, Water, Light, and Dark attrs by 50%

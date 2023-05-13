@@ -1,0 +1,60 @@
+#303575 - 裏干潮の八龍喚士・グラト
+monster size: 5
+new AI: True
+start/max counter: 10
+counter increment: 0
+monster_id: 303575
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (6786:72) 水半減
+ | Reduce damage from Water attrs by 50%
+ | (12175:73) 龍契精霊根性
+ | Survive attacks with 1 HP when HP > 99%
+ type: PREEMPT
+ | (48281:83) 龍水障壁 + 護龍陣 + ハイバブルウォール
+ | Void damage >= 2,000,000,000 for 10 turns + Voids status ailments for 999 turns + Absorb damage when combos <= 7 for 999 turns
+ group:
+ | group:
+   | condition: 40% chance
+   | (6780:94) シャープトゥース
+   | Lock 8 random orbs, Deal 300% damage
+   | condition: 20% chance
+   | (6781:14) 聖転浄水
+   | Bind active skills for 5 turns, Deal 350% damage
+   | condition: 40% chance
+   | (6782:97) アイスメタルニードル
+   | Blind random 5 orbs for 1 turn, Deal 300% damage
+ | group:
+ | condition: turn 1 while HP > 19, hp <= 79
+   | condition: 34% chance
+   | (6771:83) ディープアクア + エーテルスクリュー
+   | Absorb Wood damage for 3 turns + Deal 400% damage (4 hits, 100% each), Deal 400% damage (4 hits, 100% each)
+   | condition: 33% chance
+   | (6772:83) ポイズンスワール + エーテルスクリュー
+   | Mortal Poison skyfall +15% for 3 turns + Deal 400% damage (4 hits, 100% each), Deal 400% damage (4 hits, 100% each)
+   | condition: 33% chance
+   | (6773:83) シェルスケール + エーテルスクリュー
+   | Reduce damage from all sources by 75% for 3 turns + Deal 400% damage (4 hits, 100% each), Deal 400% damage (4 hits, 100% each)
+ | group:
+ | condition: turn 2 while HP > 19, hp <= 49
+   | (6775:83) ポイズンスワール + エーテルスクリュー
+   | Mortal Poison skyfall +15% for 3 turns + Deal 400% damage (4 hits, 100% each), Deal 400% damage (4 hits, 100% each)
+ | group:
+ | condition: turn 3 while HP > 19, hp <= 29
+   | (6778:83) ポイズンスワール + エーテルスクリュー
+   | Mortal Poison skyfall +15% for 3 turns + Deal 400% damage (4 hits, 100% each), Deal 400% damage (4 hits, 100% each)
+ | group:
+ | condition: hp <= 19
+   | (6785:83) コールドブレイク + ブルーカラミティ・アビス
+   | Voids player buff effects + Change all orbs to Mortal Poison, Deal 10,000% damage
+ type: UNKNOWN_USE
+ | (6776:83) シェルスケール + エーテルスクリュー
+ | Reduce damage from all sources by 75% for 3 turns + Deal 400% damage (4 hits, 100% each), Deal 400% damage (4 hits, 100% each)
+ | (6774:83) ディープアクア + エーテルスクリュー
+ | Absorb Wood damage for 3 turns + Deal 400% damage (4 hits, 100% each), Deal 400% damage (4 hits, 100% each)
+ | (6779:83) シェルスケール + エーテルスクリュー
+ | Reduce damage from all sources by 75% for 3 turns + Deal 400% damage (4 hits, 100% each), Deal 400% damage (4 hits, 100% each)
+ | (6777:83) ディープアクア + エーテルスクリュー
+ | Absorb Wood damage for 3 turns + Deal 400% damage (4 hits, 100% each), Deal 400% damage (4 hits, 100% each)

@@ -23,10 +23,10 @@ level: 1
    | condition: turns 2-6 while HP > 2
      | condition: 50% chance
      | (39890:83) Encirclement + Victory Song
-     | Specific orbs change every 1.0s for 1 turn + For 1 turn, 1% ATK for both leaders, Deal 100% damage
+     | Specific orbs change every 1.0s for 1 turn + For 1 turn, 1% ATK for 1 random leader, Deal 100% damage
      | condition: 50% chance
      | (39893:83) Besiegement + Victory Song
-     | Lock 15 random orbs + For 1 turn, 1% ATK for both leaders, Deal 100% damage
+     | Lock 15 random orbs + For 1 turn, 1% ATK for 1 random leader, Deal 100% damage
    | group:
      | (39739:83) Azure Sky Surge + Thousandfold Demise
      | Bind awoken skills for 1 turn + Deal 5,000% damage (5 hits, 1,000% each), Deal 5,000% damage (5 hits, 1,000% each)

@@ -1,0 +1,12 @@
+#708407 - 超サファイアドラゴン
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 708407
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (45097:72) ＿木以外軽減
+ | Reduce damage from Fire, Water, Light, and Dark attrs by 50%

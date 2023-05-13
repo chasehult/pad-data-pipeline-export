@@ -1,0 +1,23 @@
+#209870 - 龍現門
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 209870
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (47915:83) 源流結界 + 龍現振動 + 閃門
+ | Voids status ailments for 999 turns + Change player HP to -200% for 3 turns + Absorb damage when combos <= 8 for 3 turns
+ group:
+ | group:
+ | condition: turns 1-2
+   | (47920:83) 閃門 + 厄災陣
+   | Player -35% HP + Change all orbs to Fire, Water, Wood, Light, Dark, Heal, Jammer, and Poison, Deal 100% damage
+ | group:
+   | (47923:83) 変源龍 + 龍源解放
+   | Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Deal 1,000% damage (4 hits, 250% each), Deal 1,000% damage (4 hits, 250% each)

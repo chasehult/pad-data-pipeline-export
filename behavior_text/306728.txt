@@ -1,0 +1,30 @@
+#306728 - 仮面ライダーオーズ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 306728
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (46929:83) タカ！トラ！バッタ！ + タ・ト・バ！タトバ！タ・ト・バ！
+ | Absorb Fire, Wood, and Light damage for 3 turns + RCV 50% for 3 turns
+ group:
+ | group:
+   | group:
+   | condition: execute repeatedly, turn 1 of 3
+     | (46935:50) グランド・オブ・レイジ
+     | Player -99% HP
+   | group:
+   | condition: execute repeatedly, turn 2 of 3
+     | (46936:92) タトバキック
+     | Spawn 5 random Fire, Wood, and Light orbs, Deal 90% damage
+   | group:
+   | condition: execute repeatedly, turn 3 of 3
+     | (46937:110) オーズバッシュ
+     | Specific orbs change every 1.0s for 1 turn, Deal 105% damage
+ | group:
+ | condition: turn 1, hp <= 49
+   | (46932:83) それでも、 + 何もできないよりは…！
+   | Increase damage to 150% for the next 999 turns + No description set

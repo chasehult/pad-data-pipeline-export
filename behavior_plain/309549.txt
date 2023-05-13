@@ -11,8 +11,8 @@ Enable preempt if level 1
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESStatusShield(20:43894) -> Star Platinum
 	Voids status ailments for 999 turns
-	[1] ESUnknown(150:43895) -> Bring it!
-	No description set
+	[1] ESNegateCombo(150:43895) -> Bring it!
+	Negate 2 comboss for 2 turns
 	[2] ESAbsorbAttribute(53:43896) -> Star Finger
 	Absorb Light and Dark damage for 5 turns
 

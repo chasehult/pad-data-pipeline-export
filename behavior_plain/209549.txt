@@ -11,8 +11,8 @@ Enable preempt if level 1
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
 	[0] ESStatusShield(20:43800) -> Star Platinum
 	Voids status ailments for 999 turns
-	[1] ESUnknown(150:43801) -> Bring it!
-	No description set
+	[1] ESNegateCombo(150:43801) -> Bring it!
+	Negate 3 comboss for 3 turns
 	[2] ESRowSpawnMulti(79:43802) -> Star Finger
 	Change the 1st, 3rd, and 5th rows to Light orbs and the 2nd and 4th rows to Dark orbs, Deal 100% damage
 

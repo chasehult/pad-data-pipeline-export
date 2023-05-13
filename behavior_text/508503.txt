@@ -13,8 +13,8 @@ level: 1
  group:
  | group:
  | condition: turn 1
-   | (43136:83) The closer the deadline... + ...the more eager I get! + I-I'll cool down and focus...
-   | Jammer skyfall +15% for 2 turns + No description set + ATK -50% for 2 turns
+   | (43136:83) The closer the deadline... + ...the more revved-up I get! + I-I'll chill out and focus...
+   | Jammer skyfall +15% for 2 turns + Negate 1 combos for 2 turns + ATK -50% for 2 turns
  | group:
  | condition: turn 2
    | (43140:83) Adorn this love story... + ...with your splendid flowers!

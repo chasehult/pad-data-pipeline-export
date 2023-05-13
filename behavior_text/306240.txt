@@ -9,13 +9,13 @@ approved: False
 level: 1
  type: PREEMPT
  | (40041:83) Sacrificing Sword Stroke + Sendai Bamboo Protective Crest + "Saddle Cutter" Kagehide
- | Increase damage to 300% for the next 1 turn + No description set + Blind random 7~10 orbs for 1 turn, Deal 100% damage
+ | Increase damage to 300% for the next 1 turn + Negate 6 comboss for 1 turn + Blind random 7~10 orbs for 1 turn, Deal 100% damage
  group:
  | group:
    | group:
    | condition: turn 1 while HP > 2
      | (40046:83) Spirit of the One-Eyed God + Sendai Bamboo Protective Crest + "Great Kulika"
-     | Voids status ailments for 999 turns + No description set + Void damage >= 500,000,000 for 6 turns
+     | Voids status ailments for 999 turns + Negate 5 comboss for 3 turns + Void damage >= 500,000,000 for 6 turns
    | group:
    | condition: turns 2-6 while HP > 2
      | condition: 50% chance

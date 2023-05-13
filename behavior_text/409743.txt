@@ -19,7 +19,7 @@ level: 1
    | group:
    | condition: execute repeatedly, turn 2 of 2
      | (46671:83) 何故こんなことを平然と出来る！ + ラケルタビームサーベル
-     | Fix orb movement starting point to random position on the board + For 1 turn, 1% ATK for ???, Deal 100% damage
+     | Fix orb movement starting point to random position on the board + For 1 turn, 1% ATK for friend leader, Deal 100% damage
  | group:
  | condition: turn 1, hp <= 19
    | (46665:83) それでも！ + 守りたい世界があるんだッ！

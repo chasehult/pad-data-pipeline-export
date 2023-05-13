@@ -57,7 +57,7 @@ end_turn
 counter = 0
 
 #16: ESDebuffATKTarget(143:46479) -> ラケルタビームサーベル
-For 1 turn, 1% ATK for ???, Deal 100% damage
+For 1 turn, 1% ATK for friend leader, Deal 100% damage
 
 #17: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -12,7 +12,7 @@ level: 1
  | Reduce damage from Light attrs by 50%
  type: PREEMPT
  | (40016:83) Stratagem of the Rebel + I shall give you four turns. + Now it's time to carry out my plan.
- | Change player HP to 50% for 4 turns + Disable active skills for 4 turns + No description set
+ | Change player HP to 50% for 4 turns + Disable active skills for 4 turns + Negate 8 comboss for 4 turns
  group:
  | group:
  | condition: execute repeatedly, turn 1-3 of 4

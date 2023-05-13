@@ -17,7 +17,7 @@ level: 4
  | Damage which would reduce HP from above 50% to below 50% is nullified
  type: PREEMPT
  | (46079:83) ならば今すぐ愚民ども全てに + 英知を授けてみせろ！
- | Voids status ailments for 999 turns + No description set
+ | Voids status ailments for 999 turns + Negate 3 comboss for 3 turns
  group:
  | group:
    | group:

@@ -45,7 +45,7 @@ Branch on flag & 2, target rnd 14
 #12: ESFlagOperation(22:12) -> ESFlagOperation
 flag SET 0b11
 
-#13: ESBindAwoken(88:15520) -> Delete Power
+#13: ESBindAwoken(88:15520) -> Power Deletion
 Bind awoken skills for 1 turn
 
 #14: ESAttackMultihit(15:15521) -> Catastrophe Burst

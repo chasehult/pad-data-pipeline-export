@@ -21,7 +21,7 @@ level: 1
  | group:
  | condition: turn 2
    | (40108:83) Demonic Dragon Wings + Every Gunpoint Dragon lit up
-   | No description set + Lock all orbs
+   | Negate 7 comboss for 1 turn + Lock all orbs
  | group:
  | condition: turn 3
    | (40111:83) Demonic Dragon Release + Great power is being built up

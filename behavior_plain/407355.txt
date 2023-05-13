@@ -1,0 +1,8 @@
+#407355 - ラフレシアの夢邪霊・ジェラ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESResolve(73:24247) -> 根性
+Survive attacks with 1 HP when HP > 50%

@@ -14,7 +14,7 @@ level: 1
  | group:
  | condition: execute repeatedly, turn 1 of 2
    | (46548:83) ヒート・サーベル + ジャイアント・バズ + 拡散ビーム砲
-   | Change the 1st and 6th columns to Dark orbs + No description set + Blind all orbs on the board, Deal 30% damage
+   | Change the 1st and 6th columns to Dark orbs + Negate 4 comboss for 1 turn + Blind all orbs on the board, Deal 30% damage
  | group:
  | condition: execute repeatedly, turn 2 of 2
    | (46552:67) ホバー移動

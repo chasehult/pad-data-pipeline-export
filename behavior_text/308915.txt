@@ -35,7 +35,7 @@ level: 1
      | Specific orbs change every 1.0s for 1 turn + Fix orb movement starting point to random position on the board, Deal 90% damage
      | condition: 50% chance
      | (37356:83) Inferno Aura + Dark Blaze
-     | For 1 turn, 25% ATK for both leaders + Blind random 10~12 orbs for 1 turn, Deal 90% damage
+     | For 1 turn, 25% ATK for 1 random leader + Blind random 10~12 orbs for 1 turn, Deal 90% damage
  | group:
  | condition: hp <= 9
    | group:

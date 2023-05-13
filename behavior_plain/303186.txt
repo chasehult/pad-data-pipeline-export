@@ -80,8 +80,8 @@ flag SET 0b11
 #22: SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:39807) -> Sheath Torn to Pieces
 	Increase damage to 250% for the next 999 turns
-	[1] ESUnknown(150:39808) -> Imminent Battlefield
-	No description set
+	[1] ESNegateCombo(150:39808) -> Imminent Battlefield
+	Negate 6 comboss for 1 turn
 	[2] ESDebuffMovetime(39:39809) -> Synchronized Battle
 	Movetime 25% for 2 turns
 

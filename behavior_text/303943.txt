@@ -29,4 +29,4 @@ level: 1
  | group:
  | condition: turn 1, hp <= 49
    | (42555:83) Inferno Power + Flame Burned
-   | Increase damage to 1,000% for the next 999 turns + No description set
+   | Increase damage to 1,000% for the next 999 turns + Negate 5 comboss for 1 turn

@@ -63,7 +63,7 @@ counter + 1
 	[0] ESAbsorbCombo(67:46296) -> 何故こんなことを平然と出来る！
 	Absorb damage when combos <= 13 for 1 turn
 	[1] ESDebuffATKTarget(143:46297) -> ラケルタビームサーベル
-	For 1 turn, 1% ATK for ???, Deal 100% damage
+	For 1 turn, 1% ATK for friend leader, Deal 100% damage
 
 #16: ESEndPath(36:26) -> ESEndPath
 end_turn

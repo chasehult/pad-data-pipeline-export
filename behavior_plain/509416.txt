@@ -32,7 +32,7 @@ Branch on counter = 1, target rnd 11
 counter + 1
 
 #9: ESDebuffATKTarget(143:47374) -> まだまだいきます！
-For 1 turn, 50% ATK for ???, Deal 85% damage
+For 1 turn, 50% ATK for 2 random cards of player leader and subs, Deal 85% damage
 
 #10: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -50,15 +50,15 @@ Branch on hp < 50, target rnd 8
 	Condition: 50% chance (ai:0 rnd:50)
 	[0] ESColumnSpawnMulti(77:39912) -> Ripples of the Divine Spear
 	Change the 3rd column to Wood orbs and the 4th column to Water orbs, Deal 100% damage
-	[1] ESUnknown(150:39913) -> Pure Light on the Water's Surface
-	No description set
+	[1] ESNegateCombo(150:39913) -> Pure Light on the Water's Surface
+	Negate 5 comboss for 1 turn
 
 #10: SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)
 	[0] ESColumnSpawnMulti(77:39915) -> Ripples of the Divine Spear
 	Change the 1st column to Wood orbs and the 6th column to Water orbs, Deal 100% damage
-	[1] ESUnknown(150:39916) -> Pure Light on the Water's Surface
-	No description set
+	[1] ESNegateCombo(150:39916) -> Pure Light on the Water's Surface
+	Negate 6 comboss for 1 turn
 
 #11: ESEndPath(36:26) -> ESEndPath
 end_turn

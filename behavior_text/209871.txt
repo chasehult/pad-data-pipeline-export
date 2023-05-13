@@ -1,0 +1,35 @@
+#209871 - 無窮の龍群
+monster size: 5
+new AI: True
+start/max counter: 31
+counter increment: 0
+monster_id: 209871
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (47927:83) インフィニティバリア + ビリオンズハウル + ドラゴニックインベージョン + ウィングドラグーン
+ | Voids status ailments for 999 turns + Absorb damage when combos <= 13 for 1 turn + No description set + For 15 turns, None% chance for combo orb skyfall., Deal 600% damage
+ group:
+ | group:
+ | condition: turn 1
+   | (47932:83) ドラゴニックメテオ + ビリオンズハウリング + ミストディザスター
+   | Player -35% HP + Absorb damage when combos <= 12 for 1 turn + A 2×2 square of clouds appears for 1 turn at a random location, Deal 100% damage
+ | group:
+ | condition: turn 2
+   | (47935:83) ドラゴニックメテオ + ビリオンズハウリング + ディザスターカラミティ
+   | Player -50% HP + Absorb damage when combos <= 11 for 1 turn + No description set, Deal 100% damage
+ | group:
+ | condition: turn 3
+   | (47938:83) ドラゴニックメテオ + ビリオンズハウリング + ディザスターロード
+   | Player -75% HP + Absorb damage when combos <= 10 for 1 turn + Seal the 1st and 6th columns for 1 turn, Deal 100% damage
+ | group:
+ | condition: turn 4
+   | (47941:83) ドラゴニックメテオ + ビリオンズハウル + タイムディザスター
+   | Player -99% HP + Absorb damage when combos <= 9 for 1 turn + Movetime 25% for 1 turn
+ | group:
+   | (47944:83) ビリオンズセンス + ドラゴニックディザスター
+   | Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Deal 1,000% damage (5 hits, 200% each), Deal 1,000% damage (5 hits, 200% each)

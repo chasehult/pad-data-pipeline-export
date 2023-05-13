@@ -26,4 +26,4 @@ level: 1
  | group:
  | condition: execute repeatedly, turn 3 of 3
    | (46479:143) ラケルタビームサーベル
-   | For 1 turn, 1% ATK for ???, Deal 100% damage
+   | For 1 turn, 1% ATK for friend leader, Deal 100% damage

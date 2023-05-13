@@ -1,4 +1,4 @@
-#309691 - 超転生デスファリオン
+#309691 - Super Reincarnated Despharion
 monster size: 5
 new AI: True
 start/max counter: 1

@@ -31,8 +31,8 @@ counter + 1
 #8: SkillSet:
 	[0] ESColumnSpawnMulti(77:46549) -> ヒート・サーベル
 	Change the 1st and 6th columns to Dark orbs, Deal 30% damage
-	[1] ESUnknown(150:46550) -> ジャイアント・バズ
-	No description set
+	[1] ESNegateCombo(150:46550) -> ジャイアント・バズ
+	Negate 4 comboss for 1 turn
 	[2] ESBlind62(62:46551) -> 拡散ビーム砲
 	Blind all orbs on the board, Deal 15% damage
 

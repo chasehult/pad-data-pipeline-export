@@ -1,0 +1,29 @@
+#504907 - 仮面ライダー旧１号
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 504907
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (46914:89) ライダーファイト
+ | Delay active skills by 3 turns
+ group:
+ | group:
+ | condition: execute repeatedly, turn 1 of 4
+   | (46915:77) ライダーキック
+   | Change the 5th and 6th columns to Wood orbs, Deal 95% damage
+ | group:
+ | condition: execute repeatedly, turn 2 of 4
+   | (46916:50) ライダーシザース
+   | Player -99% HP
+ | group:
+ | condition: execute repeatedly, turn 3 of 4
+   | (46917:109) ライダー返し
+   | Random 1 orbs change every 0.5s for 1 turn, Deal 90% damage
+ | group:
+ | condition: execute repeatedly, turn 4 of 4
+   | (46918:85) 電光ライダーキック
+   | Change all orbs to Wood and Light, Deal 110% damage

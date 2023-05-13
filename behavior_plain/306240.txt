@@ -11,8 +11,8 @@ Enable preempt if level 1
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
 	[0] ESAttackUPRemainingEnemies(17:40042) -> Sacrificing Sword Stroke
 	Increase damage to 300% for the next 1 turn
-	[1] ESUnknown(150:40043) -> Sendai Bamboo Protective Crest
-	No description set
+	[1] ESNegateCombo(150:40043) -> Sendai Bamboo Protective Crest
+	Negate 6 comboss for 1 turn
 	[2] ESBlindStickyRandom(97:40044) -> "Saddle Cutter" Kagehide
 	Blind random 7~10 orbs for 1 turn, Deal 100% damage
 
@@ -51,8 +51,8 @@ Branch on counter >= 2, target rnd 7
 #11: SkillSet:
 	[0] ESStatusShield(20:40047) -> Spirit of the One-Eyed God
 	Voids status ailments for 999 turns
-	[1] ESUnknown(150:40048) -> Sendai Bamboo Protective Crest
-	No description set
+	[1] ESNegateCombo(150:40048) -> Sendai Bamboo Protective Crest
+	Negate 5 comboss for 3 turns
 	[2] ESVoidShieldBig(137:40049) -> "Great Kulika"
 	Void damage >= 500,000,000 for 6 turns
 

@@ -25,7 +25,7 @@ Branch on counter >= 6, target rnd 11
 #5: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 99, target rnd 8
 
-#6: ESBoardChangeAttackBits(85:44893) -> Time on the Sundial
+#6: ESBoardChangeAttackBits(85:44893) -> Time of the Sundial
 Change all orbs to Water and Heal, Deal 1,000% damage
 
 #7: ESEndPath(36:26) -> ESEndPath
@@ -33,12 +33,12 @@ end_turn
 
 #8: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESUnknown(150:44895) -> I won't wait for you anymore.
-	No description set
+	[0] ESNegateCombo(150:44895) -> I won't wait for you anymore.
+	Negate 5 comboss for 1 turn
 	[1] ESDebuffMovetime(39:44896) -> This is your last chance.
 	Movetime 25% for 1 turn
 
-#9: ESBoardChangeAttackBits(85:44893) -> Time on the Sundial
+#9: ESBoardChangeAttackBits(85:44893) -> Time of the Sundial
 Change all orbs to Water and Heal, Deal 1,000% damage
 
 #10: ESEndPath(36:26) -> ESEndPath

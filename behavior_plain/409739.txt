@@ -16,8 +16,8 @@ flag SET 0b1
 #4: SkillSet:
 	[0] ESBoardChangeAttackBits(85:46715) -> 行くぞゼロ………！
 	Change all orbs to Light, Deal 40% damage
-	[1] ESUnknown(150:46716) -> これが最後の出撃だ………！
-	No description set
+	[1] ESNegateCombo(150:46716) -> これが最後の出撃だ………！
+	Negate 5 comboss for 1 turn
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn

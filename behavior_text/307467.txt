@@ -30,14 +30,14 @@ level: 1
      | (42493:6) Tentacles Whip
      | Voids player buff effects, Deal 300% damage
      | (42494:150) Tentacles Whip
-     | No description set, Deal 300% damage
+     | Negate 4 comboss for 1 turn, Deal 300% damage
    | group:
      | (37042:15) Hellfire Blaze
      | Deal 5,000% damage (5 hits, 1,000% each)
  | group:
  | condition: turn 1, hp <= 49
    | (42494:150) Tentacles Whip
-   | No description set, Deal 300% damage
+   | Negate 4 comboss for 1 turn, Deal 300% damage
  type: REMAINING
  condition: when 1 enemies remain
  | group:
@@ -57,4 +57,4 @@ level: 1
    | (42493:6) Tentacles Whip
    | Voids player buff effects, Deal 300% damage
    | (42494:150) Tentacles Whip
-   | No description set, Deal 300% damage
+   | Negate 4 comboss for 1 turn, Deal 300% damage

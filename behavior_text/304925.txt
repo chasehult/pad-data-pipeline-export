@@ -1,0 +1,25 @@
+#304925 - 仮面ライダークウガ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 304925
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (46938:67) アマダムの力
+ | Absorb damage when combos <= 10 for 2 turns
+ group:
+ | group:
+ | condition: execute repeatedly, turn 1 of 3
+   | (46939:150) ジャンプ
+   | Negate 3 comboss for 1 turn, Deal 90% damage
+ | group:
+ | condition: execute repeatedly, turn 2 of 3
+   | (46940:79) マイティキック
+   | Change the 4th and 5th rows to Fire and Light orbs, Deal 100% damage
+ | group:
+ | condition: execute repeatedly, turn 3 of 3
+   | (46941:100) 回し蹴り
+   | Seal the 5th row for 1 turn, Deal 95% damage

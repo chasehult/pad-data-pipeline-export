@@ -1,0 +1,39 @@
+#300479 - 裏闇地獄・ブラッドデーモン
+monster size: 4
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 300479
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47527:73) 根性
+ | Survive attacks with 1 HP when HP > 50%
+ type: PREEMPT
+ | (47515:88) ブラッドサイス
+ | Bind awoken skills for 8 turns
+ | (47516:46) イビルスラッシュ
+ | Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage
+ group:
+ | group:
+ | condition: turn 2
+   | (47516:46) イビルスラッシュ
+   | Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage
+ | group:
+ | condition: turns 4-5
+   | (47516:46) イビルスラッシュ
+   | Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage
+ | group:
+   | (47532:15) 終焉の億兆滅
+   | Deal 5,000% damage (5 hits, 1,000% each)
+ type: REMAINING
+ condition: when 2 enemies remain, hp <= 100
+ | group:
+ | condition: turn 1
+   | (47534:19) 混沌の解放
+   | Increase damage to 1,000% for the next 999 turns
+ | group:
+ | condition: turns 2-5
+   | (47516:46) イビルスラッシュ
+   | Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage

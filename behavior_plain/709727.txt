@@ -16,8 +16,8 @@ flag SET 0b1
 #4: SkillSet:
 	[0] ESSkillDelay(89:46790) -> ならば今すぐ愚民ども全てに
 	Delay active skills by 3 turns
-	[1] ESUnknown(150:46791) -> 英知を授けてみせろ！
-	No description set
+	[1] ESNegateCombo(150:46791) -> 英知を授けてみせろ！
+	Negate 5 comboss for 3 turns
 
 #5: ESEndPath(36:26) -> ESEndPath
 end_turn

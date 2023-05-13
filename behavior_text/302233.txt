@@ -23,7 +23,7 @@ level: 1
    | condition: turns 1-3 while HP > 49
      | condition: 50% chance
      | (44535:83) Canon + Elemental Turn
-     | No description set + Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage
+     | Negate 3 comboss for 1 turn + Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage
      | condition: 50% chance
      | (44538:83) Ricordanza + Elemental Turn
      | Absorb damage when combos <= 9 for 1 turn + Change own attribute to random one of Fire, Water, Wood, Light, or Dark, Deal 100% damage

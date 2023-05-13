@@ -25,8 +25,8 @@ Enable preempt if level 1
 
 #4: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 2)
-	[0] ESUnknown(150:40109) -> Demonic Dragon Wings
-	No description set
+	[0] ESNegateCombo(150:40109) -> Demonic Dragon Wings
+	Negate 7 comboss for 1 turn
 	[1] ESOrbLock(94:40110) -> Every Gunpoint Dragon lit up
 	Lock all orbs
 

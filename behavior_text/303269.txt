@@ -1,4 +1,4 @@
-#303269 - 転生ヴィーナス
+#303269 - Reincarnated Venus
 monster size: 5
 new AI: True
 start/max counter: 1
@@ -8,8 +8,8 @@ approved: False
 
 level: 1
  type: PREEMPT
- | (39460:67) 慈愛の祈り
+ | (39460:67) Prayer of Affection
  | Absorb damage when combos <= 5 for 2 turns
  group:
- | (39461:151) ビューティフルフライ
+ | (39461:151) Beautiful Flight
  | No description set, Deal 100% damage

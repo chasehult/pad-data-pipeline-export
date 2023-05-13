@@ -1,4 +1,4 @@
-#209249 - 山の女神パールヴァティー
+#209249 - Parvati, the Mountain Goddess
 monster size: 5
 new AI: True
 start/max counter: 3
@@ -8,19 +8,19 @@ approved: False
 
 level: 1
  type: PASSIVE
- | (45260:129) 超根性70％
+ | (45260:129) Super Resolve 70%
  | Damage which would reduce HP from above 70% to below 70% is nullified
  type: PREEMPT
- | (45248:83) 大地の盾 + ルドラの神妃 + 吹き荒れる山風
+ | (45248:83) Earth Shield + Rudra's Consort + Raging Mountain Wind
  | Voids status ailments for 999 turns + Absorb damage when combos <= 8 for 1 turn + No description set
  group:
  | group:
    | condition: 50% chance
-   | (45254:83) 女神の束縛 + 吹き荒れる山風
+   | (45254:83) The Goddess' Binding + Raging Mountain Wind
    | Bind 2 random cards for 2 turns + No description set, Deal 100% damage
-   | (45257:83) 大地の憤怒 + 吹き荒れる山風
+   | (45257:83) Fury of the Earth + Raging Mountain Wind
    | Deal 102% damage (3 hits, 34% each) + No description set, Deal 102% damage (3 hits, 34% each)
  | group:
  | condition: turn 1, hp <= 69
-   | (45251:83) ルドラの神妃 + 大地の憤怒 + 吹き荒れる山風
+   | (45251:83) Rudra's Consort + Fury of the Earth + Raging Mountain Wind
    | Absorb damage when combos <= 9 for 1 turn + Deal 102% damage (3 hits, 34% each) + No description set, Deal 102% damage (3 hits, 34% each)

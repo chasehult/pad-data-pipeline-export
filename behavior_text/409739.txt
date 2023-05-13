@@ -9,7 +9,7 @@ approved: False
 level: 1
  type: PREEMPT
  | (46714:83) 行くぞゼロ………！ + これが最後の出撃だ………！
- | Change all orbs to Light + No description set, Deal 40% damage
+ | Change all orbs to Light + Negate 5 comboss for 1 turn, Deal 40% damage
  group:
  | group:
    | group:

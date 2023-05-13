@@ -1,0 +1,12 @@
+#708409 - 超ゴールドドラゴン
+monster size: 3
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 708409
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (45099:72) ＿闇以外軽減
+ | Reduce damage from Fire, Water, Wood, and Light attrs by 50%

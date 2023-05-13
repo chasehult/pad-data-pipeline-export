@@ -51,8 +51,8 @@ flag SET 0b1
 	Increase damage to 1,000% for the next 1 turn
 	[1] ESUnknown(151:39826) -> Weakening Flame Torch
 	No description set
-	[2] ESUnknown(150:39827) -> Falsehood
-	No description set
+	[2] ESNegateCombo(150:39827) -> Falsehood
+	Negate 6 comboss for 1 turn
 
 #15: ESEndPath(36:26) -> ESEndPath
 end_turn

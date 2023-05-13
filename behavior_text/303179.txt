@@ -14,7 +14,7 @@ level: 1
  | group:
  | condition: turn 1
    | (39824:83) Enkindled Flame + Weakening Flame Torch + Falsehood
-   | Increase damage to 1,000% for the next 1 turn + No description set + No description set
+   | Increase damage to 1,000% for the next 1 turn + No description set + Negate 6 comboss for 1 turn
  | group:
  | condition: turns 2-6
    | (39822:48) Life Flame Torch

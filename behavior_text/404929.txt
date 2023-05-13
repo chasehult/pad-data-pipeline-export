@@ -1,0 +1,21 @@
+#404929 - 仮面ライダーＷ
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+monster_id: 404929
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (46942:83) マキシマムドライブ + ジョーカーエクストリーム
+ | Bind awoken skills for 3 turns + Change the 1st and 6th columns to Dark orbs and the 2nd and 5th columns to Wood orbs, Deal 60% damage
+ group:
+ | group:
+ | condition: execute repeatedly, turn 1 of 2
+   | (46945:92) サイクロンナックル
+   | Spawn 10 random Jammer and Poison orbs, Deal 100% damage
+ | group:
+ | condition: execute repeatedly, turn 2 of 2
+   | (46946:107) ダブルフィーラー
+   | Unable to match Fire and Light orbs for 1 turn, Deal 80% damage

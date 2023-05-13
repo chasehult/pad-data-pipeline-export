@@ -1,0 +1,79 @@
+#209368 - 烈破の双拳士・コンラート
+monster size: 5
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: SkillSet:
+	Condition: One-time use (ai:100 rnd:0) (cost: 1)
+	[0] ESStatusShield(20:47776) -> 双拳士の守り
+	Voids status ailments for 999 turns
+	[1] ESVoidShieldBig(137:47777) -> 烈火の剛壁
+	Void damage >= 2,000,000,000 for 1 turn, Deal 50% damage
+	[2] ESNegateCombo(150:47778) -> ブラストラッシュ
+	Negate 5 comboss for 1 turn, Deal 50% damage
+
+#3: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#4: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 7, target rnd 15
+
+#5: ESBranchCounter(32:22) -> ESBranchCounter
+Branch on counter >= 4, target rnd 11
+
+#6: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 3, target rnd 10
+
+#7: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 2, target rnd 9
+
+#8: SkillSet:
+	[0] ESAbsorbCombo(67:47781) -> 破風の拳気
+	Absorb damage when combos <= 7 for 1 turn, Deal 50% damage
+	[1] ESNegateCombo(150:47782) -> ブラストラッシュ
+	Negate 3 comboss for 3 turns, Deal 50% damage
+
+#9: SkillSet:
+	[0] ESVoidShieldBig(137:47784) -> 烈火の剛壁
+	Void damage >= 2,000,000,000 for 1 turn
+	[1] ESBindAttack(63:47785) -> ブラストフィスト
+	Bind 4 random subs for 1 turn, Deal 125% damage
+
+#10: SkillSet:
+	[0] ESAbsorbCombo(67:47787) -> 破風の拳気
+	Absorb damage when combos <= 6 for 1 turn
+	[1] ESBindAttack(63:47788) -> ブラストフィスト
+	Bind both leaders for 1 turn, Deal 150% damage
+
+#11: ESAttackMultihit(15:47779) -> 烈風炎剛破
+Deal 1,000% damage (2 hits, 500% each)
+
+#12: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#13: ESAttackMultihit(15:47779) -> 烈風炎剛破
+Deal 1,000% damage (2 hits, 500% each)
+
+#14: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#15: SkillSet:
+	[0] ESBindAwoken(88:47531) -> 混沌の波動
+	Bind awoken skills for 1 turn
+	[1] ESAttackMultihit(15:47532) -> 終焉の億兆滅
+	Deal 5,000% damage (5 hits, 1,000% each)
+
+#16: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#17: ESResolve(73:47527) -> 根性
+Survive attacks with 1 HP when HP > 50%
+
+#18: SkillSet:
+	Condition: On death (ai:0 rnd:0)
+	[0] ESBoardChange(84:47992) -> 双拳陣
+	Change all orbs to Wood and Heal

@@ -39,14 +39,14 @@ Branch on hp < 50, target rnd 10
 #7: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
 	[0] ESDebuffATKTarget(143:42927) -> Scenery of Abject Desolation
-	For 1 turn, 25% ATK for both leaders
+	For 1 turn, 25% ATK for 1 random leader
 	[1] ESAttackMultihit(15:42928) -> Essence of the Longevity Dragon's Wilderness Beauty
 	Deal 105% damage (3 hits, 35% each)
 
 #8: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
-	[0] ESUnknown(150:42638) -> Scenery of Bleak Solitude
-	No description set
+	[0] ESNegateCombo(150:42638) -> Scenery of Bleak Solitude
+	Negate 3 comboss for 1 turn
 	[1] ESOrbLock(94:42639) -> Essence of the Longevity Dragon's Wilderness Beauty
 	Lock 10 random orbs, Deal 90% damage
 
@@ -93,8 +93,8 @@ end_turn
 
 #17: SkillSet:
 	Condition: 25% chance (ai:0 rnd:25)
-	[0] ESUnknown(150:42641) -> Scenery of Bleak Solitude
-	No description set
+	[0] ESNegateCombo(150:42641) -> Scenery of Bleak Solitude
+	Negate 4 comboss for 1 turn
 	[1] ESOrbLock(94:42642) -> Essence of the Longevity Dragon's Wilderness Beauty
 	Lock 15 random orbs, Deal 95% damage
 

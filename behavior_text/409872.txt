@@ -1,0 +1,75 @@
+#409872 - 億兆龍・アグリゲート
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 409872
+approved: False
+
+level: 1
+ type: PASSIVE
+ | (47529:129) 超根性
+ | Damage which would reduce HP from above 50% to below 50% is nullified
+ type: PREEMPT
+ | (47948:83) イノーマスオーラ + ビリオンズスケイル + ドラゴニックロアー + ユニゾンディザスター
+ | Voids status ailments for 999 turns + Void damage >= 2,500,000,000 for 999 turns + ATK -75% for 10 turns + No description set, Deal 50% damage
+ group:
+ | group:
+   | group:
+   | condition: turns 1-9 while HP > 49
+     | condition: 20% chance
+     | (47962:83) ダークディザスター + ビリオンズブレス
+     | Blind all orbs on the board + No description set, Deal 50% damage
+     | condition: 20% chance
+     | (47965:83) ダストディザスター + ビリオンズブレス
+     | Change 1 random orb type to Jammer orbs + Lock 10 random orbs, Deal 50% damage
+     | condition: 20% chance
+     | (47968:83) ベノムディザスター + ビリオンズブレス
+     | Change a random attribute to Poison orbs + No description set, Deal 50% damage
+     | condition: 20% chance
+     | (47971:83) ダウンディザスター + ビリオンズブレス
+     | For 3 turns, 1% ATK for 1 random card + No description set, Deal 50% damage
+     | condition: 20% chance
+     | (47974:83) ディザスタークロー + ビリオンズメテオ
+     | Player -35% HP + Deal 99% damage (3 hits, 33% each), Deal 99% damage (3 hits, 33% each)
+   | group:
+   | condition: turn 10 while HP > 4
+     | (47977:83) ディザスターパワー + ディザスタークロー + ビリオンズノヴァ
+     | Increase damage to 150% for the next 4 turns + Player -35% HP + Deal 100% damage (4 hits, 25% each), Deal 100% damage (4 hits, 25% each)
+   | group:
+   | condition: turns 11-14 while HP > 4
+     | condition: 20% chance
+     | (47962:83) ダークディザスター + ビリオンズブレス
+     | Blind all orbs on the board + No description set, Deal 50% damage
+     | condition: 20% chance
+     | (47965:83) ダストディザスター + ビリオンズブレス
+     | Change 1 random orb type to Jammer orbs + Lock 10 random orbs, Deal 50% damage
+     | condition: 20% chance
+     | (47968:83) ベノムディザスター + ビリオンズブレス
+     | Change a random attribute to Poison orbs + No description set, Deal 50% damage
+     | condition: 20% chance
+     | (47971:83) ダウンディザスター + ビリオンズブレス
+     | For 3 turns, 1% ATK for 1 random card + No description set, Deal 50% damage
+     | condition: 20% chance
+     | (47974:83) ディザスタークロー + ビリオンズメテオ
+     | Player -35% HP + Deal 99% damage (3 hits, 33% each), Deal 99% damage (3 hits, 33% each)
+   | group:
+   | condition: turn 15 while HP > 4
+     | (47980:83) ディザスターパワー + カラーアグリゲイション + ビリオンズノヴァ
+     | Increase damage to 250% for the next 999 turns + Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Deal 100% damage (4 hits, 25% each), Deal 100% damage (4 hits, 25% each)
+   | group:
+     | (47998:83) カラーアグリゲイション + ビリオンズノヴァ
+     | Change own attribute to random one of Fire, Water, Wood, Light, or Dark + Deal 100% damage (4 hits, 25% each), Deal 100% damage (4 hits, 25% each)
+ | group:
+ | condition: turn 1 while HP > 4, hp <= 49
+   | (47958:83) ディザスタークロー + ダークアグリゲイション + ビリオンズカラミティ
+   | Player -400% HP + For 5 turns, 15% chance for skyfall orbs to be blinded for turn + No description set, Deal 20% damage
+ | group:
+ | condition: hp <= 4
+   | group:
+   | condition: turn 1
+     | (47953:83) ビリオンズフィアー + ディザスタークロー + デスアグリゲイション
+     | Bind awoken skills for 1 turn + Player -99% HP + Change all orbs to Light, Heal, Jammer, and Poison
+   | group:
+     | (47957:15) ビリオンズカタストロフィ
+     | Deal 1,000% damage (10 hits, 100% each)

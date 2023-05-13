@@ -27,7 +27,7 @@ level: 1
  | group:
  | condition: turn 1
    | (39806:83) Sheath Torn to Pieces + Imminent Battlefield + Synchronized Battle
-   | Increase damage to 250% for the next 999 turns + No description set + Movetime 25% for 2 turns
+   | Increase damage to 250% for the next 999 turns + Negate 6 comboss for 1 turn + Movetime 25% for 2 turns
  | group:
  | condition: turns 2-6
    | condition: 33% chance

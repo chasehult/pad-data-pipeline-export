@@ -1,0 +1,29 @@
+#304931 - 仮面ライダービルド
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+monster_id: 304931
+approved: False
+
+level: 1
+ type: PREEMPT
+ | (46909:74) 勝利の法則は決まった！
+ | Reduce damage from all sources by 50% for 3 turns
+ group:
+ | group:
+ | condition: turn 1
+   | (46910:104) さぁ、実験を始めようか
+   | A row of clouds appears for 5 turns at 5th row, 1st column
+ | group:
+ | condition: turn 2
+   | (46911:85) 凄いでしょ！最高でしょ！天才でしょ！！
+   | Change all orbs to Fire, Water, and Heal, Deal 105% damage
+ | group:
+ | condition: execute repeatedly, turn 1 of 2
+   | (46912:151) ボルテックブレイク！
+   | No description set, Deal 100% damage
+ | group:
+ | condition: execute repeatedly, turn 2 of 2
+   | (46913:15) ボルテックフィニッシュ！
+   | Deal 104% damage (4 hits, 26% each)

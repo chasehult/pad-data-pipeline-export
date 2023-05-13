@@ -11,7 +11,7 @@ level: 1
  | (42619:73) Resolve
  | Survive attacks with 1 HP when HP > 50%
  type: PREEMPT
- | (44877:83) Flare Shield + Armored Body + Ignition Burst + Axle Chain
+ | (44877:83) Flare Shield + Armored Body + Ignition Burst + Accelerating Chain
  | Voids status ailments for 999 turns + Void damage >= 500,000,000 for 4 turns + Delay active skills by 5~8 turns + Locked random skyfall +25% for 10 turns
  group:
  | group:

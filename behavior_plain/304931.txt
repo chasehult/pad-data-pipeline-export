@@ -1,0 +1,49 @@
+#304931 - 仮面ライダービルド
+monster size: 5
+new AI: True
+start/max counter: 3
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: ESBranchFlag(43:10) -> ESBranchFlag
+Branch on flag & 1, target rnd 6
+
+#3: ESFlagOperation(22:12) -> ESFlagOperation
+flag SET 0b1
+
+#4: ESDamageShield(74:46909) -> 勝利の法則は決まった！
+Reduce damage from all sources by 50% for 3 turns
+
+#5: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#6: ESCloud(104:46910) -> さぁ、実験を始めようか
+Condition: One-time use (ai:100 rnd:0) (cost: 2)
+A row of clouds appears for 5 turns at 5th row, 1st column
+
+#7: ESBoardChangeAttackBits(85:46911) -> 凄いでしょ！最高でしょ！天才でしょ！！
+Condition: One-time use (ai:100 rnd:0) (cost: 1)
+Change all orbs to Fire, Water, and Heal, Deal 105% damage
+
+#8: ESBranchCounter(31:21) -> ESBranchCounter
+Branch on counter = 1, target rnd 12
+
+#9: ESSetCounter(26:16) -> ESSetCounter
+counter + 1
+
+#10: ESUnknown(151:46912) -> ボルテックブレイク！
+No description set, Deal 100% damage
+
+#11: ESEndPath(36:26) -> ESEndPath
+end_turn
+
+#12: ESSetCounter(25:15) -> ESSetCounter
+counter = 0
+
+#13: ESAttackMultihit(15:46913) -> ボルテックフィニッシュ！
+Deal 104% damage (4 hits, 26% each)
+
+#14: ESEndPath(36:26) -> ESEndPath
+end_turn

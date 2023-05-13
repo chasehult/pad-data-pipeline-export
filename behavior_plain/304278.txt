@@ -32,8 +32,8 @@ Branch on hp < 50, target rnd 10
 	Condition: 50% chance (ai:0 rnd:50)
 	[0] ESAbsorbCombo(67:44766) -> Burning Instinct
 	Absorb damage when combos <= 8 for 1 turn
-	[1] ESUnknown(150:44767) -> Ground Collapse
-	No description set, Deal 100% damage
+	[1] ESNegateCombo(150:44767) -> Ground Collapse
+	Negate 3 comboss for 1 turn, Deal 100% damage
 
 #8: SkillSet:
 	Condition: 50% chance (ai:0 rnd:50)

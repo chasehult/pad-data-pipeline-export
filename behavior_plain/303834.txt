@@ -30,8 +30,8 @@ Branch on hp < 50, target rnd 8
 
 #7: SkillSet:
 	Condition: One-time use (ai:100 rnd:0) (cost: 1)
-	[0] ESUnknown(150:39925) -> Struggling Military Position
-	No description set
+	[0] ESNegateCombo(150:39925) -> Struggling Military Position
+	Negate 8 comboss for 1 turn
 	[1] ESOrbLock(94:39926) -> Helios' Chains
 	Lock all orbs
 	[2] ESVoidShieldBig(137:39927) -> The Will of the Great Sun

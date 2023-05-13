@@ -23,8 +23,8 @@ end_turn
 	No description set
 	[1] ESStatusShield(20:46080) -> ならば今すぐ愚民ども全てに
 	Voids status ailments for 999 turns
-	[2] ESUnknown(150:46081) -> 英知を授けてみせろ！
-	No description set
+	[2] ESNegateCombo(150:46081) -> 英知を授けてみせろ！
+	Negate 3 comboss for 3 turns
 
 #6: ESBranchHP(28:18) -> ESBranchHP
 Branch on hp < 50, target rnd 22

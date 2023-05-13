@@ -82,8 +82,8 @@ counter = 0
 #20: SkillSet:
 	[0] ESOrbSealRow(100:41098) -> Streamer Cannon
 	Seal the 5th row for 1 turn
-	[1] ESUnknown(150:41099) -> Eruption of Cheers
-	No description set, Deal 90% damage
+	[1] ESNegateCombo(150:41099) -> Eruption of Cheers
+	Negate 3 comboss for 1 turn, Deal 90% damage
 
 #21: ESEndPath(36:26) -> ESEndPath
 end_turn

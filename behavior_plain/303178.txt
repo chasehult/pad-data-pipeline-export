@@ -39,9 +39,9 @@ Haste random sub's skills by 10 turns, Deal 100% damage
 Condition: 50% chance (ai:0 rnd:50)
 Haste both leaders' skills by 2 turns, Deal 100% damage
 
-#11: ESUnknown(150:39868) -> Chain Breaking Fangs
+#11: ESNegateCombo(150:39868) -> Chain Breaking Fangs
 Condition: 50% chance (ai:0 rnd:50)
-No description set, Deal 100% damage
+Negate 5 comboss for 1 turn, Deal 100% damage
 
 #12: ESEndPath(36:26) -> ESEndPath
 end_turn
@@ -55,8 +55,8 @@ flag SET 0b1
 #15: SkillSet:
 	[0] ESAttackUPRemainingEnemies(17:39870) -> Tiger Snake Bellow
 	Increase damage to 1,000% for the next 1 turn
-	[1] ESUnknown(150:39871) -> Decaying Life
-	No description set
+	[1] ESNegateCombo(150:39871) -> Decaying Life
+	Negate 6 comboss for 1 turn
 	[2] ESTargetedSkillHaste(139:39872) -> Tiger Snake's Howl
 	Haste both leaders' skills by 10 turns
 

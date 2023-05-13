@@ -1,0 +1,18 @@
+#406703 - 真式神・コタツ
+monster size: 2
+new AI: True
+start/max counter: 1
+counter increment: 0
+
+#1: ESPreemptive(49:318) -> ESPreemptive
+Enable preempt if level 1
+
+#2: ESSkillDelay(89:44951) -> でんでんゲイル
+Condition: One-time use (ai:100 rnd:0) (cost: 1)
+Delay active skills by 0~2 turns
+
+#3: ESAttackMultihit(15:44954) -> タツブレス
+Deal 60% damage (2 hits, 30% each)
+
+#4: ESEndPath(36:26) -> ESEndPath
+end_turn

@@ -40,8 +40,8 @@ end_turn
 #11: ESSetCounter(26:16) -> ESSetCounter
 counter + 1
 
-#12: ESUnknown(150:47313) -> テンポアップ！
-No description set, Deal 95% damage
+#12: ESNegateCombo(150:47313) -> テンポアップ！
+Negate 3 comboss for 1 turn, Deal 95% damage
 
 #13: ESEndPath(36:26) -> ESEndPath
 end_turn

@@ -43,4 +43,4 @@ level: 4
  | group:
  | condition: turn 1, hp <= 49
    | (43565:83) But I can't... + ...just let things go!
-   | No description set + Reduce damage from all sources by 50% for 3 turns, Deal 101% damage
+   | Negate 2 comboss for 2 turns + Reduce damage from all sources by 50% for 3 turns, Deal 101% damage

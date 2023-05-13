@@ -55,8 +55,8 @@ flag SET 0b1
 #11: SkillSet:
 	[0] ESAttributeBlock(107:40150) -> Sahasrabhuja Vanishment
 	Unable to match Wood orbs for 10 turns
-	[1] ESUnknown(150:40151) -> Loss Embrace
-	No description set
+	[1] ESNegateCombo(150:40151) -> Loss Embrace
+	Negate 3 comboss for 1 turn
 	[2] ESUnknown(151:40152) -> One Thousand Washers
 	No description set, Deal 180% damage
 
@@ -93,8 +93,8 @@ end_turn
 	Increase damage to 1,000% for the next 999 turns
 	[1] ESTargetedSkillHaste(139:40155) -> Sahasrabhuja Stream
 	Haste both leaders' skills by 99 turns
-	[2] ESUnknown(150:40156) -> Loss Embrace
-	No description set
+	[2] ESNegateCombo(150:40156) -> Loss Embrace
+	Negate 3 comboss for 1 turn
 
 #18: ESAttackMultihit(15:40157) -> One Thousand Novas
 Deal 1,000% damage (10 hits, 100% each)

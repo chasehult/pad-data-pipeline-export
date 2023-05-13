@@ -30,7 +30,7 @@ level: 1
    | group:
    | condition: execute repeatedly, turn 4 of 4
      | (41097:83) Streamer Cannon + Eruption of Cheers
-     | Seal the 5th row for 1 turn + No description set, Deal 90% damage
+     | Seal the 5th row for 1 turn + Negate 3 comboss for 1 turn, Deal 90% damage
  | group:
  | condition: turn 1, hp <= 49
    | (41085:83) We're just getting started! + Everyone, put your hands in the air!
